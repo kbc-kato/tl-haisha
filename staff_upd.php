@@ -59,7 +59,7 @@
 修正しました。
   <br><br>
 
-  <a href = 'pdo_staff.php'>戻る</a>
+  <a href = 'index.php'>戻る</a>
   
 </body>
 </html>
