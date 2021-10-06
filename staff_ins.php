@@ -21,10 +21,12 @@
     $biko = htmlspecialchars($biko,ENT_QUOTES,'UTF-8');
  
 
-    //DB名、ユーザー名、パスワード
-    $dsn = 'mysql:dbname=heroku_6f8d251016271cf;host=us-cdbr-east-04.cleardb.com;charset=utf8';
-    $user = 'b0a0ba98ce8296';
-    $password = 'c02ebd5f';
+    include ("userfile.php");
+
+//HEROKUへ接続        //DB名、ユーザー名、パスワード
+//    $dsn = 'mysql:dbname=heroku_6f8d251016271cf;host=us-cdbr-east-04.cleardb.com;charset=utf8';
+//    $user = 'b0a0ba98ce8296';
+//    $password = 'c02ebd5f';
 //MYSQLへ接続
 //    $dsn = 'mysql:dbname=mydb;host=localhost;charset=utf8';
 //    $user = 'root';
