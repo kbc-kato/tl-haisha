@@ -69,12 +69,11 @@ CD：<?php print $id; ?>
 この名前を削除してもよろしいですか？
 <br><br>
 
+<?php $sid = .session_id(); ?>
 
 <form method="GET" action="staff_del.php">    
     <input type='hidden' name='id' value='<?php print $id; ?>'>      
-    <input type='hidden' name='sid' value='<?php session_id(); ?>'>  <!--秘密情報としてsession_id()をセット-->
-
-<?php //  echo 'session_id= '.session_id(); ?>
+    <input type='hidden' name='sid' value='<?php $sid; ?>'>  <!--秘密情報としてsession_id()をセット-->
     <input type='button' onclick='history.back()' value='戻る'>
     <input type='submit' value='ＯＫ'>
 </form>
