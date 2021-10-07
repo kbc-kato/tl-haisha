@@ -73,6 +73,8 @@ CD：<?php print $id; ?>
 <form method="post" action="staff_del.php">    
     <input type='hidden' name='id' value='<?php print $id; ?>'>      
     <input type='hidden' name='sid' value='<?php session_id(); ?>'>  <!--秘密情報としてsession_id()をセット-->
+
+ <?php   echo 'session_id= '.session_id(); ?>
     <input type='button' onclick='history.back()' value='戻る'>
     <input type='submit' value='ＯＫ'>
 </form>
