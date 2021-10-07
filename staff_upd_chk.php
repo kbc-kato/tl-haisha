@@ -46,7 +46,7 @@
     }
     else
     {
-        print "<form method = 'post' action='staff_upd.php'>";
+        print "<form method = 'GET' action='staff_upd.php'>";
         print "<input type='hidden' name='id' value='".$id."'>";        //次画面に引き継ぐ値をセット
         print "<input type='hidden' name='name' value='".$name."'>";           
         print "<input type='hidden' name='address' value='".$address."'>";

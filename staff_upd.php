@@ -11,19 +11,24 @@
 
 <?php
   try {
+    session_start();                    //セッションの開始
+
     //input_post.phpの値を取得
-    $id = $_POST['id'];
-    $name = $_POST['name'];    
-    $address = $_POST['address'];
-    $biko = $_POST['biko'];
-    $sid = $_POST['sid'];
+    $id = $_GET['id'];
+    $name = $_GET['name'];    
+    $address = $_GET['address'];
+    $biko = $_GET['biko'];
+//    $sid = $_POST['sid'];
+
+    echo '$sid= '.$_POST['sid'] .'<br>';
+    echo 'session_id= '.session_id();
 
     $id = htmlspecialchars($id,ENT_QUOTES,'UTF-8');             //変数をエスケープする
     $name = htmlspecialchars($name,ENT_QUOTES,'UTF-8');             //変数をエスケープする
     $address = htmlspecialchars($address,ENT_QUOTES,'UTF-8');
     $biko = htmlspecialchars($biko,ENT_QUOTES,'UTF-8');
 
-    if( $sid != session_id() ) { exit(); }
+    if( $_POST['sid'] != session_id() ) { exit(); }
 
 
     include ('userfile.php');

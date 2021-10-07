@@ -17,8 +17,8 @@
     $id = $_POST['id'];
 //    $sid = $_POST['sid'];
 
-    echo '$sid= '.$_POST['sid'] .'<br>';
-    echo 'session_id= '.session_id();
+//    echo '$sid= '.$_POST['sid'] .'<br>';
+//    echo 'session_id= '.session_id();
 
 
     $id = htmlspecialchars($id,ENT_QUOTES,'UTF-8');             //変数をエスケープする
