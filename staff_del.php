@@ -11,6 +11,8 @@
 
 <?php
   try {
+    session_start();                    //セッションの開始
+        
     //input_post.phpの値を取得
     $id = $_POST['id'];
     $sid = $_POST['sid'];
