@@ -13,8 +13,11 @@
   try {
     //input_post.phpの値を取得
     $id = $_POST['id'];
-
+    $sid = $_POST['sid'];
+    
     $id = htmlspecialchars($id,ENT_QUOTES,'UTF-8');             //変数をエスケープする
+
+    if( $sid != session_id() ) { exit(); }
 
     include ('userfile.php');
 
