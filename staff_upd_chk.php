@@ -8,6 +8,7 @@
 
 <?php
     session_start();                    //セッションの開始
+    $sid = session_id(); 
 
     $id = $_POST['id'];                 //前画面からのデータを変数にセット
     $name = $_POST['name'];                 
@@ -51,7 +52,7 @@
         print "<input type='hidden' name='name' value='".$name."'>";           
         print "<input type='hidden' name='address' value='".$address."'>";
         print "<input type='hidden' name='biko' value='".$biko."'>";
-        print "<input type='hidden' name='sid' value='".session_id()."'>";  //秘密情報としてsession_id()をセット
+        print "<input type='hidden' name='sid' value='".$sid."'>";      //秘密情報としてsession_id()をセット
         print "<br>";
         print "<input type='button' onclick='history.back()' value='戻る'>";
         print "<input type='submit' value='ＯＫ'>";
