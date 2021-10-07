@@ -13,7 +13,8 @@ try
     session_start();                    //セッションの開始
     
     $id = $_GET['id'];
-
+    $sid = session_id(); 
+    
     include ('userfile.php');
 
 //HEROKUへ接続    
@@ -69,7 +70,6 @@ CD：<?php print $id; ?>
 この名前を削除してもよろしいですか？
 <br><br>
 
-<?php $sid = .session_id(); ?>
 
 <form method="GET" action="staff_del.php">    
     <input type='hidden' name='id' value='<?php print $id; ?>'>      
