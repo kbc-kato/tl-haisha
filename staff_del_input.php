@@ -71,7 +71,7 @@ CD：<?php print $id; ?>
 <br><br>
 
 
-<form method="GET" action="staff_del.php">    
+<form method="POST" action="staff_del.php">    
     <input type='hidden' name='id' value='<?php print $id; ?>'>      
     <input type='hidden' name='sid' value='<?php print $sid; ?>'>  <!--秘密情報としてsession_id()をセット-->
     <input type='button' onclick='history.back()' value='戻る'>
