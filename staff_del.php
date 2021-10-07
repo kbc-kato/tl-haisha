@@ -14,10 +14,10 @@
     session_start();                    //セッションの開始
 
     //input_post.phpの値を取得
-    $id = $_POST['id'];
+    $id = $_GET['id'];
 //    $sid = $_POST['sid'];
 
-    echo '$sid= '.$_POST['sid'] .'<br>';
+    echo '$sid= '.$_GET['sid'] .'<br>';
     echo 'session_id= '.session_id();
 
 
