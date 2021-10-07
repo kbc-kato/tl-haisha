@@ -20,7 +20,7 @@
     $biko = $_GET['biko'];
 //    $sid = $_POST['sid'];
 
-    echo '$sid= '.$_POST['sid'] .'<br>';
+    echo '$sid= '.$_GET['sid'] .'<br>';
     echo 'session_id= '.session_id();
 
     $id = htmlspecialchars($id,ENT_QUOTES,'UTF-8');             //変数をエスケープする
