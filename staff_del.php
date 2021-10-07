@@ -12,18 +12,18 @@
 <?php
   try {
     session_start();                    //セッションの開始
-        
+
     //input_post.phpの値を取得
     $id = $_POST['id'];
-    $sid = $_POST['sid'];
+//    $sid = $_POST['sid'];
 
-    echo '$sid= '.$sid .'<br>';
+    echo '$sid= '.$_POST['sid'] .'<br>';
     echo 'session_id= '.session_id();
 
 
     $id = htmlspecialchars($id,ENT_QUOTES,'UTF-8');             //変数をエスケープする
 
-    if( $sid != session_id() ) { exit(); }
+    if( $_POST['sid'] != session_id() ) { exit(); }
 
     include ('userfile.php');
 
