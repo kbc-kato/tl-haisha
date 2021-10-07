@@ -7,11 +7,14 @@
 <body>
 
 <?php
+    session_start();                    //セッションの開始
+
     $id = $_POST['id'];                 //前画面からのデータを変数にセット
     $name = $_POST['name'];                 
     $address = $_POST['address'];
     $biko = $_POST['biko'];
 
+    $id = htmlspecialchars($id,ENT_QUOTES,'UTF-8');             //変数をエスケープする
     $name = htmlspecialchars($name,ENT_QUOTES,'UTF-8');             //変数をエスケープする
     $address = htmlspecialchars($address,ENT_QUOTES,'UTF-8');
     $biko = htmlspecialchars($biko,ENT_QUOTES,'UTF-8');
@@ -48,6 +51,7 @@
         print "<input type='hidden' name='name' value='".$name."'>";           
         print "<input type='hidden' name='address' value='".$address."'>";
         print "<input type='hidden' name='biko' value='".$biko."'>";
+        print "<input type='hidden' name='sid' value='".session_id()."'>";  //秘密情報としてsession_id()をセット
         print "<br>";
         print "<input type='button' onclick='history.back()' value='戻る'>";
         print "<input type='submit' value='ＯＫ'>";

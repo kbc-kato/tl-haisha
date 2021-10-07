@@ -16,12 +16,17 @@
     $name = $_POST['name'];    
     $address = $_POST['address'];
     $biko = $_POST['biko'];
+    $sid = $_POST['sid'];
 
+    $id = htmlspecialchars($id,ENT_QUOTES,'UTF-8');             //変数をエスケープする
     $name = htmlspecialchars($name,ENT_QUOTES,'UTF-8');             //変数をエスケープする
     $address = htmlspecialchars($address,ENT_QUOTES,'UTF-8');
     $biko = htmlspecialchars($biko,ENT_QUOTES,'UTF-8');
 
-    include ("userfile.php");
+    if( $sid != session_id() ) { exit(); }
+
+
+    include ('userfile.php');
 
 //HEROKUへ接続    
 //DB名、ユーザー名、パスワード
@@ -52,6 +57,8 @@
     $stmt->execute($params); //挿入する値が入った変数をexecuteにセットしてSQLを実行
 
     $PDO = null;        //データベースから切断
+
+    session_destroy();  //セッションの破棄
 
   } catch (PDOException $e) {
     exit('データベースに接続できませんでした。' . $e->getMessage());

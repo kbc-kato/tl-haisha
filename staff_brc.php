@@ -1,9 +1,5 @@
 <?php
 
-$id = $_POST['id'];
-//print "id:".$id; 
-
-
 if (isset($_POST['insert'])==true)              //新規登録
 {
     header ('Location:staff_ins_input.php');
@@ -19,6 +15,8 @@ if (isset($_POST['edit'])==true)                //修正
 
     $id = $_POST['id'];    
 
+    $id = htmlspecialchars($id,ENT_QUOTES,'UTF-8');             //変数をエスケープする
+
     header ('Location:staff_upd_input.php?id='.$id);
     exit();
 }
@@ -31,6 +29,10 @@ if (isset($_POST['delete'])==true)              //削除
         exit();
     }
 
+    $id = $_POST['id'];
+
+    $id = htmlspecialchars($id,ENT_QUOTES,'UTF-8');             //変数をエスケープする
+    
     header ('Location:staff_del_input.php?id='.$id);
     exit();
 }

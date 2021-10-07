@@ -19,7 +19,7 @@
 
 try
 {
-    include ("userfile.php");
+    include ('userfile.php');
 
 //HEROKUへ接続
 //    $dsn = 'mysql:dbname=heroku_6f8d251016271cf;host=us-cdbr-east-04.cleardb.com;charset=utf8';

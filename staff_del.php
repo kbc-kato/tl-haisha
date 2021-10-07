@@ -13,8 +13,10 @@
   try {
     //input_post.phpの値を取得
     $id = $_POST['id'];
- 
-    include ("userfile.php");
+
+    $id = htmlspecialchars($id,ENT_QUOTES,'UTF-8');             //変数をエスケープする
+
+    include ('userfile.php');
 
 //HEROKUへ接続    
 //    //DB名、ユーザー名、パスワード
