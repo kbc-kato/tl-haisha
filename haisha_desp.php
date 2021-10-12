@@ -18,6 +18,15 @@ try
     $month= $post["month"];
     $day= $post["day"];
 
+
+
+    print " year= ".$year; 
+    print " month= ".$month; 
+    print " day= ".$day; 
+
+
+
+
     include ('userfile.php');
 
     $dbh = new PDO($dsn, $user, $password); //SqlServerのデータベースに接続
@@ -37,9 +46,9 @@ try
     WHERE (ST_HA000.HANOGY_OR1 = ST_KE000.KENOGY AND ST_HA000.HANOBK_OR1 = ST_KE000.KENOBK)
       AND (ST_KE000.KEHANY_KA = ST_HANM.HACDHA)
       AND (ST_HA000.HASHAR = ST_SHRM_NEW.SHCDSH)
-      AND SUBSTR(ST_HA000.HAHIHA,1,4)=?
-      AND SUBSTR(ST_HA000.HAHIHA,6,2)=?
-      AND SUBSTR(ST_HA000.HAHIHA,9,2)=?      
+      AND substr(ST_HA000.HAHIHA,1,4)=?
+      AND substr(ST_HA000.HAHIHA,6,2)=?
+      AND substr(ST_HA000.HAHIHA,9,2)=?      
     ORDER BY ST_HA000.HANOHA, ST_HA000.HANOHA_EDA";         // SELECT文を変数に格納。
 
     $stmt = $dbh->prepare($sql); //挿入する値は空のまま、SQL実行の準備をする
