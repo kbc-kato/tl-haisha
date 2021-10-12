@@ -12,7 +12,7 @@
 </head>
 <body>
 <table>
-<caption>配車情報</caption>
+<caption>社員ログイン</caption>
 <br>
 
 <?php
@@ -22,8 +22,7 @@
     print "<input type ='text' name = 'code' style = 'width:20px'>";
     print "<br>";
     print "<input type ='submit' value = 'ログイン'>";
-
-    print("</form>");
+    print "</form>";
 
 ?>
 </table>
