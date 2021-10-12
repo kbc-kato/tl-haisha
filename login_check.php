@@ -35,7 +35,7 @@ try
     
     $rec = $stmt->fetch(PDO::FETCH_ASSOC);
 
-    if ($rec==false)
+    if($rec==false)
     {
         print "cdが間違っています。<br>";
         print "<a href = 'index.php'>戻る</a>";
