@@ -16,15 +16,15 @@ try
     
     $code = $post["code"];             //変数をエスケープする
 
-    $dsn = 'mysql:dbname=heroku_66919c9a0fb2a45;host=us-cdbr-east-04.cleardb.com;charset=utf8';
-    $user = 'b3e646fe28037f';
-    $password = '2eebb511';
-//    include ('userfile.php');
+    $dsn = "mysql:dbname=heroku_66919c9a0fb2a45;host=us-cdbr-east-04.cleardb.com;charset=utf8";
+    $user = "b3e646fe28037f";
+    $password = "2eebb511";
+//    include ("userfile.php");
 
     $dbh = new PDO($dsn, $user, $password); //SqlServerのデータベースに接続
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); //PDOのエラーレポートを表示
     
-    $sql = "SELECT ST_JGTM.* WHERE st_jgtm.JGCDJG=?"; // SELECT文を変数に格納。
+    $sql = "SELECT * FROM ST_JGTM WHERE st_jgtm.JGCDJG=?"; // SELECT文を変数に格納。
 
     $stmt = $dbh->prepare($sql); //挿入する値は空のまま、SQL実行の準備をする
     $params[] = $code;          // 挿入する値を配列に格納する
