@@ -16,6 +16,10 @@ try
     
     $code = $post["code"];             //変数をエスケープする
 
+
+    print "$code= ".$code "<br>"; 
+
+
 //   $dsn = "mysql:dbname=heroku_66919c9a0fb2a45;host=us-cdbr-east-04.cleardb.com;charset=utf8";
 //    $user = "b3e646fe28037f";
 //    $password = "2eebb511";
