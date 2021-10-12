@@ -24,7 +24,7 @@ try
     $dbh = new PDO($dsn, $user, $password); //SqlServerのデータベースに接続
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); //PDOのエラーレポートを表示
     
-    $sql = "SELECT ST_JGTM.* WHERE JGCDJG=?"; // SELECT文を変数に格納。
+    $sql = "SELECT ST_JGTM.* WHERE st_jgtm.JGCDJG=?"; // SELECT文を変数に格納。
 
     $stmt = $dbh->prepare($sql); //挿入する値は空のまま、SQL実行の準備をする
     $params[] = $code;          // 挿入する値を配列に格納する
