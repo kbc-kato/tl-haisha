@@ -19,7 +19,7 @@
 
     print "<form method='post' action='login_check.php'>";
     print "社員cd<br>";
-    print "<input type ='text' name = 'code' style = 'width:20px'>";
+    print "<input type ='text' name = 'code'>";
     print "<br>";
     print "<input type ='submit' value = 'ログイン'>";
     print "</form>";
