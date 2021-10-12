@@ -20,9 +20,9 @@ try
 
 
 
-    print " year= ".$year; 
-    print " month= ".$month; 
-    print " day= ".$day; 
+//    print " year= ".$year; 
+//    print " month= ".$month; 
+//    print " day= ".$day; 
 
 
 
