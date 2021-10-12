@@ -16,10 +16,10 @@ try
     
     $code = $post["code"];             //変数をエスケープする
 
-    $dsn = "mysql:dbname=heroku_66919c9a0fb2a45;host=us-cdbr-east-04.cleardb.com;charset=utf8";
-    $user = "b3e646fe28037f";
-    $password = "2eebb511";
-//    include ("userfile.php");
+//   $dsn = "mysql:dbname=heroku_66919c9a0fb2a45;host=us-cdbr-east-04.cleardb.com;charset=utf8";
+//    $user = "b3e646fe28037f";
+//    $password = "2eebb511";
+    include ("userfile.php");
 
     $dbh = new PDO($dsn, $user, $password); //SqlServerのデータベースに接続
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); //PDOのエラーレポートを表示
@@ -38,14 +38,14 @@ try
     if ($rec==false)
     {
         print "cdが間違っています。<br>";
-        print "<a href = 'index.php'戻る</a>";
+        print "<a href = 'index.php'>戻る</a>";
     }
     else
     {
         session_start();
         $_SESSION["login"]=1;
         $_SESSION["login_code"]=$code;
-        $_SESSION["login_name"]=$rec["name"];
+        $_SESSION["login_name"]=$rec["JGNMJG"];
         
         header("location:haisha_top.php");
         exit;
