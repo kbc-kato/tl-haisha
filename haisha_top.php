@@ -33,12 +33,12 @@
     require_once ("common.php")
 ?>
 表示したい配車日を入力してください。<br>
-    <form method="post" action="haisha_desp.php">
-        <php pulldown_year(); ?>
+    <form method="POST" action="haisha_desp.php">
+        <?php pulldown_year(); ?>
         年
-        <php pulldown_month(); ?>
+        <?php pulldown_month(); ?>
         月
-        <php pulldown_day(); ?>        
+        <?php pulldown_day(); ?>        
         日<br>
         <br>
         <input type='submit' value='検索'>
