@@ -11,10 +11,10 @@
 </style>
 </head>
 <body>
-<table>
+
 <caption>社員ログイン</caption>
 <br>
-
+<table>
 <?php
 
     print "<form method='post' action='login_check.php'>";

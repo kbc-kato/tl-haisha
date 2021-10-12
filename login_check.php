@@ -16,8 +16,10 @@ try
     
     $code = $post["code"];             //変数をエスケープする
 
-    
-    include ('userfile.php');
+    $dsn = 'mysql:dbname=heroku_66919c9a0fb2a45;host=us-cdbr-east-04.cleardb.com;charset=utf8';
+    $user = 'b3e646fe28037f';
+    $password = '2eebb511';
+//    include ('userfile.php');
 
     $dbh = new PDO($dsn, $user, $password); //SqlServerのデータベースに接続
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); //PDOのエラーレポートを表示
