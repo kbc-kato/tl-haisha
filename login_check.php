@@ -12,7 +12,7 @@ try
  
     require_once("common.php");
 
-    $post = sanitize($_GET);                 //前画面からのデータを変数にセット
+    $post = sanitize($_POST);                 //前画面からのデータを変数にセット
     
     $code = $post["code"];             //変数をエスケープする
 

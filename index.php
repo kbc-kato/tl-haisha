@@ -17,7 +17,7 @@
 <table>
 <?php
 
-    print "<form method='GET' action='login_check.php'>";
+    print "<form method='POST' action='login_check.php'>";
     print "社員cd<br>";
     print "<input type ='text' name = 'code'>";
     print "<br>";
