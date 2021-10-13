@@ -20,7 +20,7 @@
         border-top: 1px solid #3c6690;
         border-bottom: 1px solid #3c6690;
         box-shadow: 0px 1px 1px rgba(255,255,255,0.3) inset;
-        width: 25%;
+<!--        width: 25%; -->
         padding: 10px 0;
         }
 
@@ -30,7 +30,7 @@
         border-bottom: 1px solid #a8b7c5;
         border-top:none;
         box-shadow: 0px -3px 5px 1px #eee inset;
-        width: 25%;
+<!--         width: 25%; -->
         padding: 10px 0;
         }
 
