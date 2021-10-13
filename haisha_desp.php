@@ -96,8 +96,8 @@ try
         
     print " HAHIHA= ".$rec['HAHIHA']; 
     print " HATMHA1= ".$rec['HATMHA1'];     
-        $d=DATE_FORMAT($rec['HAHIHA'], '%Y/%m/%d');
-        $t=DATE_FORMAT($rec['HATMHA1'], '%T');
+        $d= date('Y-m-d', DATE_FORMAT($rec['HAHIHA']);
+        $t= date('H:i',$rec['HATMHA1']);
     print " DATE= ".$d; 
     print " TIME= ".$t; 
 
