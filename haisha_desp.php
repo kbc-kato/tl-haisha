@@ -94,11 +94,11 @@ try
         }
 
     $now = new DateTime();
-
+    print " now= ".$now;
     $now->format('Y-m-d H:i:s');        // 現在日時が 「2018-07-23 12:34:09」のような形式で表示される
-    print " now= ".$now; 
-    $now->format('Y月m月d日 H時i分s秒');
     print " now2= ".$now; 
+    $now->format('Y月m月d日 H時i分s秒');
+    print " now3= ".$now; 
 
     $d= $rec['HAHIHA'];
     print " HAHIHA= ".$d; 
