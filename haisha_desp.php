@@ -95,7 +95,7 @@ try
 
         
     print " HAHIHA= ".$rec['HAHIHA']; 
-    print " HATMHA1= ".rec['HATMHA1'];     
+    print " HATMHA1= ".$rec['HATMHA1'];     
         $d=DATE_FORMAT($rec['HAHIHA'], '%Y/%m/%d');
         $t=DATE_FORMAT($rec['HATMHA1'], '%T');
     print " DATE= ".$d; 
