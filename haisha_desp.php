@@ -5,7 +5,7 @@
     <TITLE>配車情報　表示</TITLE>
 </head>
 <body>
-<table>
+
     
 <?php    
 try
@@ -83,7 +83,7 @@ try
     
 
     print "配車　検索結果<br><br>";
-    
+    print ("<table>");
     while(true)
     {
         $rec = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -106,6 +106,7 @@ try
         print("<td>".$rec['KEHANY_TANI']."</td>");
         print("</tr>");
     }
+    print("</table>");
     print("<br>");
     print("<a href='haisha_top.php'>日付選択へ</a><br>");    
     print("<br>");
@@ -118,6 +119,6 @@ catch (exception $e)
 }
 
 ?>    
-</table>
+
 </body>    
 </html>
