@@ -95,8 +95,8 @@ try
         
         print("<tr>");
         print("<td>".$rec['HANMRY1']."</td>");
-        print("<td>".$rec['HAHIHA']."</td>");
-        print("<td>".$rec['HATMHA1']."</td>");
+        print("<td>".DATE_FORMAT($rec['HAHIHA'], '%Y/%m/%d')."</td>");
+        print("<td>".DATE_FORMAT($rec['HATMHA1'],'%T')."</td>");
         print("<td>".$rec['HACDUN_JI_NM']."</td>");
         print("<td>".$rec['SHNMSH']."</td>");
         print("<td>".$rec['HANOSH']."</td>");
