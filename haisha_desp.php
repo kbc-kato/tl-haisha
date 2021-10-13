@@ -98,23 +98,23 @@ try
     
 
 //    $d= $rec['HAHIHA'];
-    print " HAHIHA= ".$rec['HAHIHA']; 
-    $d= date('Y/m/d',strtotime($rec['HAHIHA']));   
-
+//    print " HAHIHA= ".$rec['HAHIHA']; 
+//    $d= date('Y/m/d',strtotime($rec['HAHIHA']));   
+//
 //    $t= $rec['HATMHA1'];    
-    print " HATMHA1= ".$rec['HATMHA1'];     
-    $t= date('H:i',strtotime($rec['HATMHA1'])); 
-    
-    
-    print " DATE2= ".$d; 
-    print " TIME2= ".$t; 
+//    print " HATMHA1= ".$rec['HATMHA1'];     
+//    $t= date('H:i',strtotime($rec['HATMHA1'])); 
+//    
+//    
+//    print " DATE2= ".$d; 
+//    print " TIME2= ".$t; 
 
 
 
         print("<tr>");
         print("<td>".$rec['HANMRY1']."</td>");
-        print("<td>".DATE_FORMAT($rec['HAHIHA'], '%Y/%m/%d')."</td>");
-        print("<td>".DATE_FORMAT($rec['HATMHA1'],'%T')."</td>");
+        print("<td>".date('Y/m/d',strtotime($rec['HAHIHA']))."</td>");
+        print("<td>".date('H:i',strtotime($rec['HATMHA1']))."</td>");
         print("<td>".$rec['HACDUN_JI_NM']."</td>");
         print("<td>".$rec['SHNMSH']."</td>");
         print("<td>".$rec['HANOSH']."</td>");
