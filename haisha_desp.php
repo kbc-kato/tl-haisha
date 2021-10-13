@@ -98,16 +98,16 @@ try
     print "配車　検索結果<br><br>";
     print ("<table>");
     print("<tr>");
-    print("<th>".現場名."</th>");
-    print("<th>".搬入日."</th>");
-    print("<th>".時間."</th>");
-    print("<th>".実車会社."</th>");
-    print("<th>".車輛."</th>");
-    print("<th>".車番."</th>");
-    print("<th>".運転者."</th>");
-    print("<th>".TEL."</th>");
-    print("<th>".搬入会社."</th>");
-    print("<th>".人工."</th>");
+    print("<th>"."現場名"."</th>");
+    print("<th>"."搬入日"."</th>");
+    print("<th>"."時間"."</th>");
+    print("<th>"."実車会社"."</th>");
+    print("<th>"."車輛"."</th>");
+    print("<th>"."車番"."</th>");
+    print("<th>"."運転者"."</th>");
+    print("<th>"."TEL"."</th>");
+    print("<th>"."搬入会社"."</th>");
+    print("<th>"."人工"."</th>");
     print("</tr>");
 
     while(true)
