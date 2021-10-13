@@ -95,11 +95,11 @@ try
 
     $d= $rec['HAHIHA'];
     print " HAHIHA= ".$d; 
-    $d->format('Y/m/d');   
+    $d->date('Y/m/d',$d);   
 
     $t= $rec['HATMHA1'];    
     print " HATMHA1= ".$t;     
-    $t->format('H:i'); 
+    $t->date('H:i',$t); 
     
     
     print " DATE2= ".$d; 
