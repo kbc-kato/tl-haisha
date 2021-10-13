@@ -93,13 +93,14 @@ try
             break;
         }
 
-        
-    print " HAHIHA= ".$rec['HAHIHA']; 
-    print " HATMHA1= ".$rec['HATMHA1'];     
-        $d= date_format( $rec['HAHIHA'],'Y-m-d');
-        $t= date_format($rec['HATMHA1'],'H:i');
-    print " DATE= ".$d; 
-    print " TIME= ".$t; 
+        $d= $rec['HAHIHA'];
+        $t= $rec['HATMHA1'];    
+    print " HAHIHA= ".$d; 
+    print " HATMHA1= ".$t;     
+        $d= date_format($d,'Y-m-d');
+        $t= date_format($t,'H:i');
+    print " DATE2= ".$d; 
+    print " TIME2= ".$t; 
 
 
 
