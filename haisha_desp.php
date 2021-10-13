@@ -63,27 +63,12 @@ try
     $dbh = new PDO($dsn, $user, $password); //SqlServerのデータベースに接続
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); //PDOのエラーレポートを表示
 
-    $sql = " SELECT ST_HA000.HANMRY1
-        , ST_HA000.HAHIHA
-        , ST_HA000.HATMHA1
-        , ST_HA000.HACDUN_JI_NM
-        , ST_SHRM_NEW.SHNMSH
-        , ST_HA000.HANOSH
-        , ST_HA000.HANMDR_JI
-        , ST_HA000.HATLDR_JI
-        , ST_HANM.HARYHA
-        , ST_KE000.KEHANY_TANI
-    FROM ((ST_HA000
-        INNER JOIN ST_KE000
-            ON  ST_HA000.HANOGY_OR1 = ST_KE000.KENOGY AND ST_HA000.HANOBK_OR1 = ST_KE000.KENOBK)
-        INNER JOIN ST_HANM
-            ON  ST_KE000.KEHANY_KA = ST_HANM.HACDHA)
-        INNER JOIN ST_SHRM_NEW    
-            ON ST_HA000.HASHAR = ST_SHRM_NEW.SHCDSH
-    WHERE substring(ST_HA000.HAHIHA,1,4)=?
-      AND substring(ST_HA000.HAHIHA,6,2)=?
-      AND substring(ST_HA000.HAHIHA,9,2)=?      
-    ORDER BY ST_HA000.HANOHA, ST_HA000.HANOHA_EDA";         // SELECT文を変数に格納。
+    $sql = " SELECT *
+    FROM ST_HA000_MYSQL
+    WHERE substring(HAHIHA,1,4)=?
+      AND substring(HAHIHA,6,2)=?
+      AND substring(HAHIHA,9,2)=?      
+    ORDER BY ST_HA000_MYSQL.HANOHA, ST_HA000_MYSQL.HANOHA_EDA";         // SELECT文を変数に格納。
 
     $stmt = $dbh->prepare($sql); //挿入する値は空のまま、SQL実行の準備をする
     $params[] = $year;          // 挿入する値を配列に格納する
