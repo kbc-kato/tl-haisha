@@ -11,6 +11,29 @@
         width:1000px;
         }
     .hdr{background-color:gainsboro}
+
+    table th{
+        text-align: center;
+        color:white;
+        background: linear-gradient(#829ebc,#225588);
+        border-left: 1px solid #3c6690;
+        border-top: 1px solid #3c6690;
+        border-bottom: 1px solid #3c6690;
+        box-shadow: 0px 1px 1px rgba(255,255,255,0.3) inset;
+        width: 25%;
+        padding: 10px 0;
+        }
+
+    table td{
+        text-align: center;
+        border-left: 1px solid #a8b7c5;
+        border-bottom: 1px solid #a8b7c5;
+        border-top:none;
+        box-shadow: 0px -3px 5px 1px #eee inset;
+        width: 25%;
+        padding: 10px 0;
+        }
+
 </style></head>
 <body>
 
@@ -74,6 +97,19 @@ try
 
     print "配車　検索結果<br><br>";
     print ("<table>");
+    print("<tr>");
+    print("<th>".現場名."</th>");
+    print("<th>".搬入日."</th>");
+    print("<th>".時間."</th>");
+    print("<th>".実車会社."</th>");
+    print("<th>".車輛."</th>");
+    print("<th>".車番."</th>");
+    print("<th>".運転者."</th>");
+    print("<th>".TEL."</th>");
+    print("<th>".搬入会社."</th>");
+    print("<th>".人工."</th>");
+    print("</tr>");
+
     while(true)
     {
         $rec = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -86,7 +122,6 @@ try
 
 //    print " now= ".date('Y/n/d');
     
-
 //    $d= $rec['HAHIHA'];
 //    print " HAHIHA= ".$rec['HAHIHA']; 
 //    $d= date('Y/m/d',strtotime($rec['HAHIHA']));   
@@ -94,7 +129,6 @@ try
 //    $t= $rec['HATMHA1'];    
 //    print " HATMHA1= ".$rec['HATMHA1'];     
 //    $t= date('H:i',strtotime($rec['HATMHA1'])); 
-//    
 //    
 //    print " DATE2= ".$d; 
 //    print " TIME2= ".$t; 
