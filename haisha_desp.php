@@ -93,6 +93,13 @@ try
             break;
         }
         
+        $date=DATE_FORMAT($rec['HAHIHA'], '%Y/%m/%d');
+        $time=DATE_FORMAT($rec['HATMHA1'], '%T');
+    print " DATE= ".$date; 
+    print " TIME= ".$time; 
+
+
+
         print("<tr>");
         print("<td>".$rec['HANMRY1']."</td>");
         print("<td>".DATE_FORMAT($rec['HAHIHA'], '%Y/%m/%d')."</td>");
