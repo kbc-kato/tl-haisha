@@ -49,9 +49,9 @@ try
             ON  ST_KE000.KEHANY_KA = ST_HANM.HACDHA)
         INNER JOIN ST_SHRM_NEW    
             ON ST_HA000.HASHAR = ST_SHRM_NEW.SHCDSH
-    WHERE substr(ST_HA000.HAHIHA,1,4)=?
-      AND substr(ST_HA000.HAHIHA,6,2)=?
-      AND substr(ST_HA000.HAHIHA,9,2)=?      
+    WHERE substring(ST_HA000.HAHIHA,1,4)=?
+      AND substring(ST_HA000.HAHIHA,6,2)=?
+      AND substring(ST_HA000.HAHIHA,9,2)=?      
     ORDER BY ST_HA000.HANOHA, ST_HA000.HANOHA_EDA";         // SELECT文を変数に格納。
 //   $sql = " SELECT ST_HA000.HANMRY1
 //   , ST_HA000.HAHIHA
