@@ -94,16 +94,16 @@ try
         }
 
 
-    print " now= ".date('Y/n/d');
+//    print " now= ".date('Y/n/d');
     
 
-    $d= $rec['HAHIHA'];
-    print " HAHIHA= ".$d; 
-    $d= date('Y/m/d',strtotime($d));   
+//    $d= $rec['HAHIHA'];
+    print " HAHIHA= ".$rec['HAHIHA']; 
+    $d= date('Y/m/d',strtotime($rec['HAHIHA']));   
 
-    $t= $rec['HATMHA1'];    
-    print " HATMHA1= ".$t;     
-    $t= date('H:i',strtotime($t)); 
+//    $t= $rec['HATMHA1'];    
+    print " HATMHA1= ".$rec['HATMHA1'];     
+    $t= date('H:i',strtotime($rec['HATMHA1'])); 
     
     
     print " DATE2= ".$d; 
