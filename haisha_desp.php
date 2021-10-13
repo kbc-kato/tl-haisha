@@ -88,7 +88,7 @@ try
     {
         $rec = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        if (rec==false)
+        if ($rec==false)
         {
             break;
         }
