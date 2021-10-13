@@ -14,7 +14,7 @@
 
 <caption>社員ログイン</caption>
 <br>
-<table>
+
 <?php
 
     print "<form method='POST' action='login_check.php'>";
@@ -25,6 +25,6 @@
     print "</form>";
 
 ?>
-</table>
+
 </body>
 </html>
