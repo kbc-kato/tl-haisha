@@ -25,7 +25,7 @@ try
     $year= $_SESSION["haisha_year"];            //$post["year"];
     $month= $_SESSION["haisha_month"];          //$post["month"];
     $day= $_SESSION["haisha_day"];              //$post["day"];
-print "ymd=".$year."/".$month."/".$day;
+//print "ymd=".$year."/".$month."/".$day;
 
     include ('userfile.php');
 
