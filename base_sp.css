@@ -5,7 +5,7 @@
 ==============================*/
 body {
     width: 100%;                            /*ページ全体の横幅*/
-    background-color:#e0e0e0;       /*ページ全体の背景色*/
+    background-color:#ffffff;       /*ページ全体の背景色*/
     background-image: none;                 /*ウェブページ全体の背景画像を無しにする*/
     font-size: 100%;                        /*フォントサイズを100%にする*/
 }
