@@ -16,11 +16,13 @@
 try
 {
     session_start();
+    session_regenerate_id(true);            //セッションIDを変える
+    
     require_once('common.php');
 
 //    $post = sanitize($_POST);                 //前画面からのデータを変数にセット
 
-    $year= $_SESSION["haisha_yaer"];            //$post["year"];
+    $year= $_SESSION["haisha_year"];            //$post["year"];
     $month= $_SESSION["haisha_month"];          //$post["month"];
     $day= $_SESSION["haisha_day"];              //$post["day"];
 print "ymd=".$year."/".$month."/".$day;
