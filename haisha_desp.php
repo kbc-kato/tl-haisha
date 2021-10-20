@@ -15,7 +15,7 @@
 <?php    
 try
 {
-    session_start();
+//    session_start();
     require_once('common.php');
 
 //    $post = sanitize($_POST);                 //前画面からのデータを変数にセット
