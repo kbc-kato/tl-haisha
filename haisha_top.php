@@ -45,7 +45,7 @@
                     <?php pulldown_day(); ?>        
                     日<br>
                     <br>
-                    <input type='submit' value='検索'>
+                    <input type='submit' value=' 検索 '>
                 </form>
             </div>
             <br>
