@@ -4,7 +4,7 @@
 入力フォーム
 ==============================*/
 #form1 select {
-        font-size: 16px;                    /*フォントサイズ*/
+        font-size: 20px;                    /*フォントサイズ*/
         border: 1px solid #999999;        /*ボーダーをつける*/
         padding: 2px;                       /*パディング(内側余白)を設定(全て2px)*/
         border-radius: 3px;                 /*角丸にする*/
