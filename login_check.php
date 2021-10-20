@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset ="UTF-8">
-    <TITLE>入力チェック</TITLE>
-</head>
-<body>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scele=1">
+        <link rel="stylesheet" href="base.css">
+        <link rel="stylesheet" media= "screen and (max-width:800px)" href="base_sp.css">
+        <title>株式会社 高崎リビング</title>
+    </head>
+    <body>
 
 <?php
 try
@@ -12,14 +15,11 @@ try
  
     require_once("common.php");
 
-    $post = sanitize($_POST);                 //前画面からのデータを変数にセット
+    $post = sanitize($_POST);               //前画面からのデータを変数にセット
     
-    $code = $post["code"];             //変数をエスケープする
+    $code = $post["code"];                  //変数をエスケープする
 
-//   $dsn = "mysql:dbname=heroku_66919c9a0fb2a45;host=us-cdbr-east-04.cleardb.com;charset=utf8";
-//    $user = "b3e646fe28037f";
-//    $password = "2eebb511";
-    include ("userfile.php");
+    include ("userfile.php");               //$dsn,$user,$password
 
     $dbh = new PDO($dsn, $user, $password); //SqlServerのデータベースに接続
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); //PDOのエラーレポートを表示

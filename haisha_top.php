@@ -1,6 +1,11 @@
 <html>
-<head><title>PHP HAISHA</title>
-<style type="text/css">
+    <head>
+    <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scele=1">
+        <link rel="stylesheet" href="base.css">
+        <link rel="stylesheet" media= "screen and (max-width:800px)" href="base_sp.css">
+        <title>株式会社 高崎リビング</title>
+<!--<style type="text/css">
     table{
         border-color:skyblue;
         border-style:solid;
@@ -8,10 +13,11 @@
         width:1000px;
         }
     .hdr{background-color:gainsboro}
-</style>
-</head>
-<body>
-<br>
+</style> -->
+    </head>
+    <body>
+        <div id = "pagebody">
+             <br>
 
 <?php
     session_start();
@@ -24,8 +30,12 @@
     }
     else    
     {
+        print "<div id='session'>";
+        print "<p>";
         print $_SESSION["login_name"];
         print "さん　ログイン中<br>";
+        print "</p>";
+        print "</div>";
         print "<br>";
     }
 ?>
@@ -33,17 +43,20 @@
     require_once ("common.php")
 ?>
 表示したい配車日を入力してください。<br>
-    <form method="POST" action="haisha_desp.php">
-        <?php pulldown_year(); ?>
-        年
-        <?php pulldown_month(); ?>
-        月
-        <?php pulldown_day(); ?>        
-        日<br>
-        <br>
-        <input type='submit' value='検索'>
-    </form>
-    <br>
-    <a href= 'haisha_logout.php'>ログアウト</a><br>
-</body>
+            <div id='hiha'>
+                <form method="POST" action="haisha_desp.php">
+                    <?php pulldown_year(); ?>
+                    年
+                    <?php pulldown_month(); ?>
+                    月
+                    <?php pulldown_day(); ?>        
+                    日<br>
+                    <br>
+                    <input type='submit' value='検索'>
+                </form>
+            </div>
+            <br>
+            <a href= 'haisha_logout.php'>ログアウト</a><br>
+        </div>
+    </body>
 </html>
