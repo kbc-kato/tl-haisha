@@ -12,6 +12,9 @@ table.haisha_tbl th{
         text-align: center;
         color:white;
         background-color: #225588;
+        border-top: 1px solid #333333;
+        border-left: 1px solid #333333;
+        border-right: 1px solid #333333;
         border-bottom: 1px solid #333333;
         padding: 10px 0;
         }
@@ -19,6 +22,9 @@ table.haisha_tbl th{
 table.haisha_tbl td{
         text-align: center;
         background-color: #eeeeff;              /*セルの背景色*/
+        border-top: 1px solid #333333;
+        border-left: 1px solid #333333;
+        border-right: 1px solid #333333;
         border-bottom: 1px solid #333333;
         padding: 10px 0;
         }
