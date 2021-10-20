@@ -4,30 +4,21 @@
 テーブル
 ==============================*/
 table.haisha_tbl{
-    border-color:skyblue;
-    border-style:solid;
-    border-width:1px;
     width:1000px;
     border-collapse: collapse;          /*セル同士の間に隙間を空けない*/
     }
-.hdr{background-color:gainsboro}
 
 table.haisha_tbl th{
     text-align: center;
     color:white;
-    background: linear-gradient(#829ebc,#225588);
-    border-left: 1px solid #3c6690;
-    border-top: 1px solid #3c6690;
-    border-bottom: 1px solid #3c6690;
-    box-shadow: 0px 1px 1px rgba(255,255,255,0.3) inset;
+    background-color: #225588;
+    border-bottom: 1px solid #666666;
     padding: 10px 0;
     }
 
 table.haisha_tbl td{
     text-align: center;
-    border-left: 1px solid #a8b7c5;
-    border-bottom: 1px solid #a8b7c5;
-    border-top:none;
-    box-shadow: 0px -3px 5px 1px #eee inset;
+    background-color: #eeeeff;              /*セルの背景色*/
+    border-bottom: 1px solid #666666;
     padding: 10px 0;
     }

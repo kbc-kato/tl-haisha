@@ -4,15 +4,11 @@
 テーブル
 ==============================*/
 table.haisha_tbl{
-        border-color:skyblue;
-        border-style:solid;
-        border-width:1px;
         width:100%;
         border-collapse: collapse;          /*セル同士の間に隙間を空けない*/
-}
-/*    .hdr{background-color:gainsboro}  */
+        }
     
-    table.haisha_tbl th{
+table.haisha_tbl th{
         text-align: center;
         color:white;
         background-color: #225588;
@@ -20,7 +16,7 @@ table.haisha_tbl{
         padding: 10px 0;
         }
     
-    table.haisha_tbl td{
+table.haisha_tbl td{
         text-align: center;
         background-color: #eeeeff;              /*セルの背景色*/
         border-bottom: 1px solid #666666;
