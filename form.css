@@ -3,7 +3,14 @@
 /*==============================
 入力フォーム
 ==============================*/
-select,input {
+select {
+        border: 1px solid #999999;        /*ボーダーをつける*/
+        font-size: 20px;                    /*フォントサイズ*/
+        padding: 2px;                       /*パディング(内側余白)を設定(全て2px)*/
+        border-radius: 3px;                 /*角丸にする*/
+        box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.1) inset;      /*内側に影をつける*/
+}
+input {
         border: 1px solid #999999;        /*ボーダーをつける*/
         font-size: 20px;                    /*フォントサイズ*/
         padding: 2px;                       /*パディング(内側余白)を設定(全て2px)*/
