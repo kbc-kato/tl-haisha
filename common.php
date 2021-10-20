@@ -10,21 +10,12 @@
         return $after;    
     }
     
-    function get_ymd()
-    {
-        global $y,$m,$d;
-        $y=date("Y");
-        $m=date("n"); 
-        $d=date("d");
-        print "ymd= ".$y."/".$m."/".$d;   
-    }
-    
     function pulldown_year()
     {
-
         $y=date("Y");
+
         print "<select name = 'year'>";
-        for ($i=2010; $i <= 2030; $i++) {
+        for ($i=2020; $i <= 2030; $i++) {
 	
             if($i == $y){
                 print "<option value='".$i."' selected>".$i."</option>";

@@ -15,13 +15,14 @@
 <?php    
 try
 {
+    session_start();
     require_once('common.php');
 
-    $post = sanitize($_POST);                 //前画面からのデータを変数にセット
+//    $post = sanitize($_POST);                 //前画面からのデータを変数にセット
 
-    $year= $post["year"];
-    $month= $post["month"];
-    $day= $post["day"];
+    $year= $_SESSION["haisha_yaer"];            //$post["year"];
+    $month= $_SESSION["haisha_month"];          //$post["month"];
+    $day= $_SESSION["haisha_day"];              //$post["day"];
 
     include ('userfile.php');
 
