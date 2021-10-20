@@ -20,7 +20,7 @@
     print "<input type ='text' size='10' name = 'code'>"  ;
     print "<input type ='submit' value = 'ログイン'>";
     print "</form>";
-    print "<hr>";
+//    print "<hr>";
     print "</div>";
 ?>
         </div>

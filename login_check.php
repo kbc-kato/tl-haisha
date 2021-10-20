@@ -8,7 +8,7 @@
         <title>株式会社 高崎リビング</title>
     </head>
     <body>
-
+        <div id = "pagebody">
 <?php
 try
 {
@@ -57,5 +57,6 @@ catch (exception $e)
     print "ただいま障害により大変ご迷惑をお掛けしております。" ;
 }
 ?>    
-</body>    
+        </div>
+    </body>
 </html>
