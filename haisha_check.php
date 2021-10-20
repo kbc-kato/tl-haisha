@@ -40,6 +40,8 @@ try
         $_SESSION["haisha_month"]=$month;
         $_SESSION["haisha_day"]=$day;
         
+        print "ymd=".$_SESSION["haisha_year"]."/".$_SESSION["haisha_month"]."/".$_SESSION["haisha_day"];
+
         header("location:haisha_desp.php");
         exit;
     }
