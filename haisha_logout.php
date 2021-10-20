@@ -19,6 +19,7 @@
     </head>
     <body>
         <div id = "pagebody">
+            <br><br>
             ログアウトしました。<br>
             <br>
             <a href="index.php">ログイン画面へ</a>    
