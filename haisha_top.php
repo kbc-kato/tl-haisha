@@ -42,8 +42,8 @@
 <?php
     require_once ("common.php")
 ?>
-表示したい配車日を入力してください。<br>
             <div id='hiha'>
+                表示したい配車日を入力してください。<br>
                 <form method="POST" action="haisha_desp.php">
                     <?php pulldown_year(); ?>
                     年
