@@ -16,7 +16,7 @@
 <?php
     print "<div id='login'>";
     print "<form method='POST' action='login_check.php'>";
-    print "社員cd<br>";
+    print "社員コード<br>";
     print "<input type ='text' size='10' name = 'code'>"  ;
     print "<input type ='submit' value = 'ログイン'>";
     print "</form>";
