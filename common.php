@@ -42,7 +42,7 @@
     {
         print "<select name = 'month'>";
         for ($i=1; $i <= 12; $i++) {
-	
+
             if($i == $m){
                 print "<option value='".$i."' selected>".$i."</option>";
             }else{
