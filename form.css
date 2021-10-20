@@ -3,7 +3,8 @@
 /*==============================
 入力フォーム
 ==============================*/
-.hiha select {
+#form1 select {
+        border :1px solid #eee;
         font-size: 20px;                    /*フォントサイズ*/
         border: 1px solid #999999;        /*ボーダーをつける*/
         padding: 2px;                       /*パディング(内側余白)を設定(全て2px)*/
