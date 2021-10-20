@@ -35,10 +35,10 @@ try
 //        print "<input type ='submit' value = 'ログイン'>";
 //        print "</form>";
 
-//        session_start();
-//        $_SESSION["haisha_year"]=$year;
-//        $_SESSION["haisha_month"]=$month;
-//        $_SESSION["haisha_day"]=$day;
+        session_start();
+        $_SESSION["haisha_year"]=$year;
+        $_SESSION["haisha_month"]=$month;
+        $_SESSION["haisha_day"]=$day;
         
         header("location:haisha_desp.php");
         exit;
