@@ -59,7 +59,7 @@ try
     print "<th>"."TEL"."</th>";
     print "<th>"."搬入会社"."</th>";
     print "<th>"."人工"."</th>";
-    print "</tr>");
+    print "</tr>";
 
     while(true)
     {
