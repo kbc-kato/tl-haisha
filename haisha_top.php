@@ -33,7 +33,7 @@
     }
 ?>
 <?php
-    require_once ("common.php");
+    require ("common.php");
     get_ymd();
 ?>
             <div id='hiha'>
