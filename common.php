@@ -10,28 +10,39 @@
         return $after;    
     }
     
-    
+    function get_ymd()
+    {
+        global $y,$m,$d;
+        $y=date("Y");
+        $m=date("n"); 
+        $d=date("d");
+        print "ymd= ".$y."/".$m."/".$d;   
+    }
     
     function pulldown_year()
     {
+
+        $y=date("Y");
         print "<select name = 'year'>";
-//        for ($i=2020; $i <= 2030; $i++) {
-//	
-//            if($i == $y){
-//                print "<option value='".$i."' selected>".$i."</option>";
-//            }else{
-//                print "<option value ='".$i."'>".$i."</option>";
-//            }
-//        
-//        }
+        for ($i=2010; $i <= 2030; $i++) {
+	
+            if($i == $y){
+                print "<option value='".$i."' selected>".$i."</option>";
+            }else{
+                print "<option value ='".$i."'>".$i."</option>";
+            }
         
-        print "<option value ='2021'>2021</option>";
-        print "<option value ='2022'>2022</option>";
+        }
+        
+//        print "<option value ='2021'>2021</option>";
+//        print "<option value ='2022'>2022</option>";
         print "</select>";
     } 
     
     function pulldown_month()
     {
+        get_ymd();
+
         print "<select name = 'month'>";
 //        for ($i=1; $i <= 12; $i++) {
 //
@@ -59,6 +70,8 @@
 
     function pulldown_day()
     {
+        get_ymd();
+
         print "<select name = 'day'>";
 //        for ($i=1; $i <= 31; $i++) {
 //	

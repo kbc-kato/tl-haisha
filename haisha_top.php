@@ -33,11 +33,8 @@
     }
 ?>
 <?php
-    require ("common.php");
-    $y=date("Y");
-    $m=date("n"); 
-    $d=date("d");
-    print "ymd= ".$y."/".$m."/".$d;
+    require_once ("common.php");
+//    get_ymd();
 ?>
             <div id='hiha'>
                 表示したい配車日を入力してください。<br>
