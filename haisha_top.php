@@ -37,7 +37,7 @@
 ?>
             <div id='hiha'>
                 表示したい配車日を入力してください。<br>
-                <form method="POST" name="form1" action="haisha_desp.php">
+                <form method="POST" name="form1" action="haisha_check.php">
                     <?php pulldown_year(); ?>
                     年
                     <?php pulldown_month(); ?>
