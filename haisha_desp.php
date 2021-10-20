@@ -45,8 +45,10 @@ try
     $PDO = null;        //データベースから切断
     
 
-    print "<div id='hiha'>";
+    print "<div id='header'>";
     print "配車　検索結果<br><br>";
+    print "</div>";
+    print "<div id='hiha'>";
     print "<table class= 'haisha_tbl'>";
     print "<tr>";
     print "<th>"."現場名"."</th>";
