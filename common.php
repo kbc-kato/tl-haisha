@@ -10,17 +10,38 @@
         return $after;    
     }
     
+    function get_ymd()
+    {
+      $y=date("Y");
+//      print "年=".$y."<br>";　
+      $m=date("n"); 
+//      print "月=".$m."<br>";
+      $d=date("d");
+//      print "日=".$d."<br>";
+    }
+    
     function pulldown_year()
     {
         print "<select name = 'year'>";
-        print "<option value ='2021'>2021</option>";
-        print "<option value ='2022'>2022</option>";
+        for ($i=2020; $i <= 2030; $i++) {
+	
+            if($i == $y){
+                print "<option value='".$i."' selected>".$i."</option>";
+            }else{
+                print "<option value ='".$i."'>".$i."</option>";
+            }
+        
+        }
+        
+//        print "<option value ='2021'>2021</option>";
+//        print "<option value ='2022'>2022</option>";
         print "</select>";
     } 
     
     function pulldown_month()
     {
         print "<select name = 'month'>";
+
         print "<option value ='01'>01</option>";
         print "<option value ='02'>02</option>";
         print "<option value ='03'>03</option>";

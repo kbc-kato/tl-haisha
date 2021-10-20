@@ -16,11 +16,12 @@
     session_regenerate_id(true);            //セッションIDを変える
     if (isset($_SESSION["login"])==false)
     {
+        print "<br><br>";
         print "ログインされていません。<br>";
         print "<a href = 'index.php'>ログイン画面へ</a>";
-        exit();        
+        exit();
     }
-    else    
+    else
     {
         print "<div id='session'>";
         print "<p>";
@@ -32,7 +33,8 @@
     }
 ?>
 <?php
-    require_once ("common.php")
+    require_once ("common.php");
+    get_ymd();
 ?>
             <div id='hiha'>
                 表示したい配車日を入力してください。<br>
