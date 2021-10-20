@@ -38,7 +38,7 @@ try
     if($rec==false)
     {
         print "<br><br>";
-        print "cdが間違っています。<br>";
+        print "社員コードが間違っています。<br>";
         print "<a href = 'index.php'>戻る</a>";
     }
     else

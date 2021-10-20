@@ -22,7 +22,6 @@
             }else{
                 print "<option value ='".$i."'>".$i."</option>";
             }
-        
         }
         
 //        print "<option value ='2021'>2021</option>";
@@ -42,7 +41,6 @@
             }else{
                 print "<option value ='".$i."'>".$i."</option>";
             }
-        
         }
 //        print "<option value ='01'>01</option>";
 //        print "<option value ='02'>02</option>";
@@ -71,7 +69,6 @@
             }else{
                 print "<option value ='".$i."'>".$i."</option>";
             }
-        
         }
 //        print "<option value ='01'>01</option>";
 //        print "<option value ='02'>02</option>";
