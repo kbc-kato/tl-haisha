@@ -5,15 +5,6 @@
         <link rel="stylesheet" href="base.css">
         <link rel="stylesheet" media= "screen and (max-width:800px)" href="base_sp.css">
         <title>株式会社 高崎リビング</title>
-<!--<style type="text/css">
-    table{
-        border-color:skyblue;
-        border-style:solid;
-        boder-widht:1px;
-        width:1000px;
-        }
-    .hdr{background-color:gainsboro}
-</style> -->
     </head>
     <body>
         <div id = "pagebody">
