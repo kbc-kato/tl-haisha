@@ -37,6 +37,7 @@
     $y=date("Y");
     $m=date("n"); 
     $d=date("d");
+    print "ymd= ".$y."/".$m."/".$d;
 ?>
             <div id='hiha'>
                 表示したい配車日を入力してください。<br>
