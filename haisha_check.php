@@ -30,10 +30,15 @@ try
     }
     else
     {
-        session_start();
-        $_SESSION["haisha_year"]=$year;
-        $_SESSION["haisha_month"]=$month;
-        $_SESSION["haisha_day"]=$day;
+//        print "<form method='POST' action='haisha_desp.php'>";
+//        print "<input type ='hidden' name = 'year' value=".$year.">"  ;
+//        print "<input type ='submit' value = 'ログイン'>";
+//        print "</form>";
+
+//        session_start();
+//        $_SESSION["haisha_year"]=$year;
+//        $_SESSION["haisha_month"]=$month;
+//        $_SESSION["haisha_day"]=$day;
         
         header("location:haisha_desp.php");
         exit;
