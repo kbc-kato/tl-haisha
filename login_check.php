@@ -35,23 +35,31 @@ try
     
     $rec = $stmt->fetch(PDO::FETCH_ASSOC);
 
-    if($rec==false)
+    if($code=='')
     {
         print "<br><br>";
-        print "社員コードが間違っています。<br>";
+        print "社員コードが未入力です。<br>";
         print "<a href = 'index.php'>戻る</a>";
     }
     else
     {
-        session_start();
-        $_SESSION["login"]=1;
-        $_SESSION["login_code"]=$code;
-        $_SESSION["login_name"]=$rec["JGNMJG"];
+        if($rec==false)
+        {
+            print "<br><br>";
+            print "社員コードが間違っています。<br>";
+            print "<a href = 'index.php'>戻る</a>";
+        }
+        else
+        {
+            session_start();
+            $_SESSION["login"]=1;
+            $_SESSION["login_code"]=$code;
+            $_SESSION["login_name"]=$rec["JGNMJG"];
         
-        header("location:haisha_top.php");
-        exit;
+            header("location:haisha_top.php");
+            exit;
+        }
     }
-    
 }
 catch (exception $e)
 {
