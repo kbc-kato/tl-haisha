@@ -34,7 +34,9 @@
 ?>
 <?php
     require ("common.php");
-    get_ymd();
+    $y=date("Y");
+    $m=date("n"); 
+    $d=date("d");
 ?>
             <div id='hiha'>
                 表示したい配車日を入力してください。<br>
