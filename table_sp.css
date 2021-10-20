@@ -9,22 +9,22 @@ table.haisha_tbl{
         }
     
 table.haisha_tbl th{
-        text-align: center;
-        color:white;
-        background-color: #225588;
-        border-top: 1px solid #666666;
-        border-left: 1px solid #666666;
-        border-right: 1px solid #666666;
-        border-bottom: 1px solid #666666;
-        padding: 10px 0;
+        text-align: center;                 /*センター揃えにする*/
+        color:white;                            /*文字色*/
+        background-color: #225588;              /*セルの背景色*/
+        border-top: 1px solid #666666;      /*セルのボーダー(上)*/
+        border-left: 1px solid #666666;     /*セルのボーダー(左)*/
+        border-right: 1px solid #666666;    /*セルのボーダー(右)*/
+        border-bottom: 1px solid #666666;   /*セルのボーダー(下)*/
+        padding: 5px;                           /*パディング(内側余白)を全て5px*/
         }
     
 table.haisha_tbl td{
         text-align: center;
         background-color: #eeeeff;              /*セルの背景色*/
-        border-top: 1px solid #666666;
-        border-left: 1px solid #666666;
-        border-right: 1px solid #666666;
-        border-bottom: 1px solid #666666;
-        padding: 10px 0;
+        border-top: 1px solid #666666;      /*セルのボーダー(上)*/
+        border-left: 1px solid #666666;     /*セルのボーダー(左)*/
+        border-right: 1px solid #666666;    /*セルのボーダー(右)*/
+        border-bottom: 1px solid #666666;   /*セルのボーダー(下)*/
+        padding: 5px;                           /*パディング(内側余白)を全て5px*/
         }
