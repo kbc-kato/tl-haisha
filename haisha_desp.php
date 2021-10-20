@@ -45,7 +45,7 @@ try
     $PDO = null;        //データベースから切断
     
 
-    print "<div id='header'>";
+    print "<div id='session'>";
     print "配車　検索結果<br><br>";
     print "</div>";
     print "<div id='hiha'>";
