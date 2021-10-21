@@ -1,6 +1,6 @@
 <?php
 
-    function sanitize($before)
+function sanitize($before)
     {
 
         foreach($before as $key => $value)
