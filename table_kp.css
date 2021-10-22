@@ -1,0 +1,45 @@
+@charset "utf-8";
+
+/*==============================
+全体的なスタイル
+==============================*/
+div#pagebody {
+    width:2000px; margin:0 auto;      /*内容全体をセンタリング:上下マージン無し、左右マージンを自動算出*/
+    background-color: #ffffff;      /*内容全体の背景色*/
+/*    background-image: url("images/bg_pagebody.png");        /*コンテンツ全体の背景画像*/
+/*    background-repeat: repeat-y;                            /*背景画像を縦方向に繰り返す*/
+}
+
+
+
+
+
+/*==============================
+テーブル
+==============================*/
+table.keppin_tbl{
+    width:2000px;                       /*テーブル全体の幅*/
+    border-collapse: collapse;          /*セル同士の間に隙間を空けない*/
+    }
+
+table.keppin_tbl th{
+    text-align: center;                 /*センター揃え*/
+    white-space: nowrap;                /*セル内の改行を禁止する*/
+    color:white;                        /*文字色*/
+    background-color: #225588;          /*セルの背景色*/
+    border-top: 1px solid #666666;      /*セルのボーダー(上)*/
+    border-left: 1px solid #666666;     /*セルのボーダー(左)*/
+    border-right: 1px solid #666666;    /*セルのボーダー(右)*/
+    border-bottom: 1px solid #666666;   /*セルのボーダー(下)*/
+    padding: 10px;                              /*パディング(内側余白)を全て10px*/
+    }
+
+table.keppin_tbl td{
+    text-align: center;                /*センター揃え*/
+    background-color: #eeeeff;              /*セルの背景色*/
+    border-top: 1px solid #666666;      /*セルのボーダー(上)*/
+    border-left: 1px solid #666666;     /*セルのボーダー(左)*/
+    border-right: 1px solid #666666;    /*セルのボーダー(右)*/
+    border-bottom: 1px solid #666666;   /*セルのボーダー(下)*/
+    padding: 10px;                              /*パディング(内側余白)を全て10px*/
+    }
