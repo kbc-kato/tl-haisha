@@ -54,7 +54,7 @@ try
     print "<table class= 'keppin_tbl'>";
     print "<tr>";
     print "<th>"."工事№"."</th>";
-    print "<th width='30'>"."工事名称"."</th>";
+    print "<th width='50'>"."工事名称"."</th>";
     print "<th>"."棟名"."</th>";
     print "<th>"."フロア"."</th>";
     print "<th>"."部屋番"."</th>";
@@ -66,15 +66,15 @@ try
     print "<th>"."部屋番"."</th>";
     print "<th>"."搬入日"."</th>";
     print "<th>"."移動日"."</th>";
-    print "<th width='20'>"."今ドコ？"."</th>";
+    print "<th width='40'>"."今ドコ？"."</th>";
     print "<th>"."発注№"."</th>";
     print "<th>"."発注日"."</th>";
-    print "<th width='30'>"."備考"."</th>";
+    print "<th width='50'>"."備考"."</th>";
     print "<th>"."荷数"."</th>";
     print "<th>"."荷姿"."</th>";
     print "<th>"."数量"."</th>";
     print "<th>"."単位"."</th>";
-    print "<th width='30'>"."備考2"."</th>";
+    print "<th width='50'>"."備考2"."</th>";
     print "</tr>";
 
     while(true)
@@ -88,7 +88,7 @@ try
 
         print "<tr>";
         print "<td>".$rec['BKNOKA']."</td>";
-        print "<td>".$rec['BKRYKJ']."</td>";
+        print "<td width='50'>".$rec['BKRYKJ']."</td>";
         print "<td>".$rec['KENMTO']."</td>";
         print "<td>".$rec['KESUFL']."</td>";
         print "<td>".$rec['KEHEYA']."</td>";
@@ -96,19 +96,19 @@ try
         print "<td>".$rec['KESEKB_NM']."</td>";
         print "<td>".$rec['KELTHA']."</td>";
         print "<td>".$rec['SMLTSE']."</td>";
-        print "<td>".$rec['SMKONK']." " .$rec['SMHIN']." " .$rec['SMSIYO']."</td>";
+        print "<td width='50'>".$rec['SMKONK']." " .$rec['SMHIN']." " .$rec['SMSIYO']."</td>";
         print "<td>".$rec['SMHEYA']."</td>";
         print "<td>".date('Y/m/d',strtotime($rec['KEHIKE']))."</td>";
         print "<td>".date('Y/m/d',strtotime($rec['SMIDO']))."</td>";
-        print "<td>".$rec['SMDOKO']."</td>";
+        print "<td width='40'>".$rec['SMDOKO']."</td>";
         print "<td>".$rec['SMNOHC']."</td>";
         print "<td>".date('Y/m/d',strtotime($rec['SMHIHC_KAKU']))."</td>";
-        print "<td>".$rec['SMBIKO_ME']."</td>";
+        print "<td width='50'>".$rec['SMBIKO_ME']."</td>";
         print "<td>".$rec['SMSUSO_NI']."</td>";
         print "<td>".$rec['SMNISU']."</td>";
         print "<td>".$rec['SMSUSO']."</td>";
         print "<td>".$rec['SMTANI']."</td>";
-        print "<td>".$rec['SMBIKO']."</td>";
+        print "<td width='50'>".$rec['SMBIKO']."</td>";
         print "</tr>";
     }
     print "</table>";
