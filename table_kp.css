@@ -17,9 +17,6 @@ div#pagebody {
 /*==============================
 テーブル
 ==============================*/
-table {
-    table-layout: fixed;
-}
 table.keppin_tbl{
     width:3000px;                       /*テーブル全体の幅*/
     border-collapse: collapse;          /*セル同士の間に隙間を空けない*/
