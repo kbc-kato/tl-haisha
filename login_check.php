@@ -56,7 +56,7 @@ try
             $_SESSION["login_code"]=$code;
             $_SESSION["login_name"]=$rec["JGNMJG"];
         
-            header("location:haisha_top.php");
+            header("location:menu.php");
             exit;
         }
     }
