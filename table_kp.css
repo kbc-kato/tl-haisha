@@ -17,7 +17,7 @@ div#pagebody {
 /*==============================
 テーブル
 ==============================*/
-table.layout-fixed {
+table {
     table-layout: fixed;
 }
 table.keppin_tbl{
