@@ -54,7 +54,7 @@ try
     print "<table class= 'keppin_tbl'>";
     print "<tr>";
     print "<th>"."工事№"."</th>";
-    print "<th>"."工事名称"."</th>";
+    print "<th width='30'>"."工事名称"."</th>";
     print "<th>"."棟名"."</th>";
     print "<th>"."フロア"."</th>";
     print "<th>"."部屋番"."</th>";
@@ -62,19 +62,19 @@ try
     print "<th>"."施工区分"."</th>";
     print "<th>"."搬入番号"."</th>";
     print "<th>"."項目番号"."</th>";
-    print "<th>"."商品情報"."</th>";
+    print "<th width='50'>"."商品情報"."</th>";
     print "<th>"."部屋番"."</th>";
     print "<th>"."搬入日"."</th>";
     print "<th>"."移動日"."</th>";
-    print "<th>"."今ドコ？"."</th>";
+    print "<th width='20'>"."今ドコ？"."</th>";
     print "<th>"."発注№"."</th>";
     print "<th>"."発注日"."</th>";
-    print "<th>"."備考"."</th>";
+    print "<th width='30'>"."備考"."</th>";
     print "<th>"."荷数"."</th>";
     print "<th>"."荷姿"."</th>";
     print "<th>"."数量"."</th>";
     print "<th>"."単位"."</th>";
-    print "<th>"."備考2"."</th>";
+    print "<th width='30'>"."備考2"."</th>";
     print "</tr>";
 
     while(true)
