@@ -20,6 +20,7 @@ div#pagebody {
 table.keppin_tbl{
     width:2000px;                       /*テーブル全体の幅*/
     border-collapse: collapse;          /*セル同士の間に隙間を空けない*/
+    table-layout: fixed;                /*tableの列幅を固定レイアウト化*/
     }
 
 table.keppin_tbl th{
