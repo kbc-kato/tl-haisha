@@ -11,12 +11,15 @@
         <div id="pagebody">
             <br><br>
 <?php
-    print "<p id='menu'>";
+    print "<div id='menu'>";
+    print "<p>";
     print "<a href = 'haisha_top.php'>配車情報　検索</a>";
     print "<br><br>";
     print "<a href = 'keppin.php'>欠品遅れ情報</a>";
     print "</p>";
-    
+    print "</div>";   
+    print "<br><br>";
+    print "<a href= 'haisha_logout.php'>ログアウト</a><br>";
 ?>
         </div>
     </body>

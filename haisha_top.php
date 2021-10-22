@@ -49,7 +49,7 @@
                 </form>
             </div>
             <br>
-            <a href= 'haisha_logout.php'>ログアウト</a><br>
+            <a href= 'menu.php'>メニューへ戻る</a><br>
         </div>
     </body>
 </html>
