@@ -88,7 +88,7 @@ try
 
         print "<tr>";
         print "<td>".$rec['BKNOKA']."</td>";
-        print "<td width='50'>".$rec['BKRYKJ']."</td>";
+        print "<td>".$rec['BKRYKJ']."</td>";
         print "<td>".$rec['KENMTO']."</td>";
         print "<td>".$rec['KESUFL']."</td>";
         print "<td>".$rec['KEHEYA']."</td>";
@@ -96,19 +96,19 @@ try
         print "<td>".$rec['KESEKB_NM']."</td>";
         print "<td>".$rec['KELTHA']."</td>";
         print "<td>".$rec['SMLTSE']."</td>";
-        print "<td width='50'>".$rec['SMKONK']." " .$rec['SMHIN']." " .$rec['SMSIYO']."</td>";
+        print "<td>".$rec['SMKONK']." " .$rec['SMHIN']." " .$rec['SMSIYO']."</td>";
         print "<td>".$rec['SMHEYA']."</td>";
         print "<td>".date('Y/m/d',strtotime($rec['KEHIKE']))."</td>";
         print "<td>".date('Y/m/d',strtotime($rec['SMIDO']))."</td>";
-        print "<td width='40'>".$rec['SMDOKO']."</td>";
+        print "<td>".$rec['SMDOKO']."</td>";
         print "<td>".$rec['SMNOHC']."</td>";
         print "<td>".date('Y/m/d',strtotime($rec['SMHIHC_KAKU']))."</td>";
-        print "<td width='50'>".$rec['SMBIKO_ME']."</td>";
+        print "<td>".$rec['SMBIKO_ME']."</td>";
         print "<td>".$rec['SMSUSO_NI']."</td>";
         print "<td>".$rec['SMNISU']."</td>";
         print "<td>".$rec['SMSUSO']."</td>";
         print "<td>".$rec['SMTANI']."</td>";
-        print "<td width='50'>".$rec['SMBIKO']."</td>";
+        print "<td>".$rec['SMBIKO']."</td>";
         print "</tr>";
     }
     print "</table>";
