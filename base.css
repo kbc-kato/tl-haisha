@@ -61,7 +61,7 @@ div#hiha {
 div#keppin {
     padding:10px 0px 5px 20px;      /*位置調整(上 右 下 左)*/
     text-align: center;             /*テキストをセンター揃えにする*/
-    font-size: 18px;                /*文字サイズ*/
+    font-size: 14px;                /*文字サイズ*/
     font-family:Arial, Helvetica, sans-serif;       /*フォントの種類*/
 }
 hr {
