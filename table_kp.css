@@ -20,7 +20,6 @@ div#pagebody {
 table.keppin_tbl{
     width:2000px;                       /*テーブル全体の幅*/
     border-collapse: collapse;          /*セル同士の間に隙間を空けない*/
-    table-layout: fixed;                /*tableの列幅を固定レイアウト化*/
     }
 
 table.keppin_tbl th{
@@ -32,7 +31,7 @@ table.keppin_tbl th{
     border-left: 1px solid #666666;     /*セルのボーダー(左)*/
     border-right: 1px solid #666666;    /*セルのボーダー(右)*/
     border-bottom: 1px solid #666666;   /*セルのボーダー(下)*/
-    padding: 10px;                              /*パディング(内側余白)を全て10px*/
+    padding: 2px;                              /*パディング(内側余白)を全て10px*/
     }
 
 table.keppin_tbl td{
@@ -42,5 +41,5 @@ table.keppin_tbl td{
     border-left: 1px solid #666666;     /*セルのボーダー(左)*/
     border-right: 1px solid #666666;    /*セルのボーダー(右)*/
     border-bottom: 1px solid #666666;   /*セルのボーダー(下)*/
-    padding: 10px;                              /*パディング(内側余白)を全て10px*/
+    padding: 2px;                              /*パディング(内側余白)を全て10px*/
     }
