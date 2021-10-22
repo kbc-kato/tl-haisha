@@ -15,7 +15,7 @@
     print "<p>";
     print "<a href = 'haisha_top.php'>配車情報　検索</a>";
     print "<br><br>";
-    print "<a href = 'keppin.php'>欠品遅れ情報</a>";
+    print "<a href = 'keppin_desp.php'>欠品遅れ情報</a>";
     print "</p>";
     print "</div>";   
     print "<br><br>";
