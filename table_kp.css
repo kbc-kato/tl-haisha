@@ -4,7 +4,7 @@
 全体的なスタイル
 ==============================*/
 div#pagebody {
-    width:3000px; margin:0 auto;      /*内容全体をセンタリング:上下マージン無し、左右マージンを自動算出*/
+    width:2000px; margin:0 auto;      /*内容全体をセンタリング:上下マージン無し、左右マージンを自動算出*/
     background-color: #ffffff;      /*内容全体の背景色*/
 /*    background-image: url("images/bg_pagebody.png");        /*コンテンツ全体の背景画像*/
 /*    background-repeat: repeat-y;                            /*背景画像を縦方向に繰り返す*/
@@ -18,9 +18,9 @@ div#pagebody {
 テーブル
 ==============================*/
 table.keppin_tbl{
-    width:3000px;                       /*テーブル全体の幅*/
+    width:2000px;                       /*テーブル全体の幅*/
     border-collapse: collapse;          /*セル同士の間に隙間を空けない*/
-/*    table-layout: fixed;                /*tableの列幅を固定レイアウト化*/
+    table-layout: fixed;                /*tableの列幅を固定レイアウト化*/
     }
 
 table.keppin_tbl th{
