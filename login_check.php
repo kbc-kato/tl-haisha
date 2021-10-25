@@ -5,22 +5,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scele=1">
         <link rel="stylesheet" href="base.css">
         <link rel="stylesheet" media= "screen and (max-width:800px)" href="base_sp.css">
-        <title>login check|株式会社 高崎リビング</title>
+        <title>株式会社 高崎リビング</title>
     </head>
     <body>
         <div id = "pagebody">
 <?php
 try
 {
-print "$_post=".$_post;
     require_once("common.php");
 
-
     $post = sanitize($_POST);               //前画面からのデータを変数にセット
-print "$post=". $post;
 
     $code = $post["code"];                  //変数をエスケープする
-print "$code=". $code;
 
     include ("userfile.php");               //$dsn,$user,$password
 
@@ -66,7 +62,7 @@ print "$code=". $code;
 }
 catch (exception $e)
 {
-    print $e->getMessage()."<br>";
+//    print $e->getMessage()."<br>";
     print "ただいま障害により大変ご迷惑をお掛けしております。" ;
 }
 ?>    

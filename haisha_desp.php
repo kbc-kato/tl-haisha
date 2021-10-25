@@ -63,6 +63,8 @@ try
     print "<th>"."車番"."</th>";
     print "<th>"."運転者"."</th>";
     print "<th>"."TEL"."</th>";
+    print "<th>"."荷受人"."</th>";
+    print "<th>"."TEL"."</th>";    
     print "<th>"."搬入会社"."</th>";
     print "<th>"."人工"."</th>";
     print "</tr>";
@@ -85,6 +87,8 @@ try
         print "<td>".$rec['HANOSH']."</td>";
         print "<td>".$rec['HANMDR_JI']."</td>";
         print "<td>".$rec['HATLDR_JI']."</td>";
+        print "<td>".$rec['HANMUK']."</td>";
+        print "<td>".$rec['HATLUK']."</td>";
         print "<td>".$rec['HARYHA']."</td>";
         print "<td>".$rec['KEHANY_TANI']."</td>";
         print "</tr>";
