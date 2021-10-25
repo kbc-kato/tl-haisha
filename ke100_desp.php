@@ -97,7 +97,7 @@ print "ymd=".$year."/".$month."/".$day;
 
         print "<tr>";
         print "<td>".$rec['BKNOKA']."</td>";
-        print "<td>".$rec['BKKBN_NMJ']."</td>";
+        print "<td>".$rec['BKKBN_NM']."</td>";
         print "<td>".$rec['BKNMKJ']."</td>";
         print "<td>".$rec['BKSHUB_NM']."</td>";
         print "<td>".$rec['KELTHA']."</td>";
@@ -121,7 +121,7 @@ print "ymd=".$year."/".$month."/".$day;
         print "<td>".date('Y/m/d',strtotime($rec['KENOKI_TORI']))."</td>";
         print "<td>".$rec['BKSYST_KO_NM']."</td>";
         print "<td>".$rec['BKKAGU_KO_NM']."</td>";
-        print "<td>".$rec['BKSOUT_KO_NM']."</td>";
+        print "<td>".$rec['BKCOUT_KO_NM']."</td>";
         print "<td>".$rec['BKTANA_KO_NM']."</td>";
         print "<td>".$rec['BKTOBR_KO_NM']."</td>";
         print "</tr>";
