@@ -109,7 +109,7 @@ try
         print "<td>".$rec['KESEKB_NM']."</td>";
         print "<td>".$rec['KESETX']."</td>";
         print "<td>".$rec['KESETM']."</td>";
-        print "<td>".$rec['KESUKO']."</td>";
+        print "<td>".$rec['KESEKO']."</td>";
         print "<td>".date('Y/m/d',strtotime($rec['KEHIKE']))."</td>";
         print "<td>".$rec['KEKBKE_NM']."</td>";
         print "<td>".date('H:i',strtotime($rec['KETMKE']))."</td>";
