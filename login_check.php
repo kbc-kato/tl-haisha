@@ -27,7 +27,7 @@ print "$code=". $code;
     $dbh = new PDO($dsn, $user, $password); //SqlServerのデータベースに接続
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); //PDOのエラーレポートを表示
     
-    $sql = "SELECT * FROM st_jgtm_mysql WHERE st_jgtm_mysql.JGCDJG=?"; // SELECT文を変数に格納。
+    $sql = "SELECT * FROM ST_JGTM_MYSQL WHERE st_jgtm_mysql.JGCDJG=?"; // SELECT文を変数に格納。
 
     $stmt = $dbh->prepare($sql); //挿入する値は空のまま、SQL実行の準備をする
     $params[] = $code;          // 挿入する値を配列に格納する
