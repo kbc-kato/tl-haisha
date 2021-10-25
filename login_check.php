@@ -14,9 +14,11 @@ try
 {
  
     require_once("common.php");
+print $_post;
 
     $post = sanitize($_POST);               //前画面からのデータを変数にセット
-    
+print $post;
+
     $code = $post["code"];                  //変数をエスケープする
 print $code;
 
