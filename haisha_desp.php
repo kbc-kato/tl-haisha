@@ -81,7 +81,14 @@ try
         print "<tr>";
         print "<td>".$rec['HANMRY1']."</td>";
         print "<td>".date('Y/m/d',strtotime($rec['HAHIHA']))."</td>";
-        print "<td>".date('H:i',strtotime($rec['HATMHA1']))."</td>";
+        if ($rec['HATMHA1']=="1900-01-01 00:00:00")
+        {
+            print "<td> </td>";
+        }
+        else
+        {
+            print "<td>".date('H:i',strtotime($rec['HATMHA1']))."</td>";
+        }
         print "<td>".$rec['HACDUN_JI_NM']."</td>";
         print "<td>".$rec['SHNMSH']."</td>";
         print "<td>".$rec['HANOSH']."</td>";
