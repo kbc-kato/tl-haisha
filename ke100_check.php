@@ -32,9 +32,9 @@ try
     {
 
         session_start();
-        $_SESSION["haisha_year"]=$year;
-        $_SESSION["haisha_month"]=$month;
-        $_SESSION["haisha_day"]=$day;
+        $_SESSION["hanyu_year"]=$year;
+        $_SESSION["hanyu_month"]=$month;
+        $_SESSION["hanyu_day"]=$day;
 
         header("location:ke100_desp.php");
         exit;
