@@ -115,7 +115,6 @@ try
     print "<br>";
     print "<a href='menu.php'>メニューへ</a><br>";    
     print "<br>";
-
 }
 catch (exception $e)
 {
