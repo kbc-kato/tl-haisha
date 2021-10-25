@@ -20,7 +20,7 @@ try
     $year= $post["year"];
     $month= $post["month"];
     $day= $post["day"];
-print "ymd=".$year."/".$month."/".$day;
+//print "ymd=".$year."/".$month."/".$day;
 
     if(checkdate($month,$day,$year)==false)
     {
@@ -32,9 +32,9 @@ print "ymd=".$year."/".$month."/".$day;
     {
 
         session_start();
-        $_SESSION["hanyu_year"]=$year;
-        $_SESSION["hanyu_month"]=$month;
-        $_SESSION["hanyu_day"]=$day;
+        $_SESSION["haisha_year"]=$year;
+        $_SESSION["haisha_month"]=$month;
+        $_SESSION["haisha_day"]=$day;
 
         header("location:ke100_desp.php");
         exit;
