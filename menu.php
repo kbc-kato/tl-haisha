@@ -9,7 +9,7 @@
     </head>
     <body>
         <div id="pagebody">
-            <br><br>
+            <br><br><br>
 <?php
     print "<div id='menu'>";
     print "<p>";
