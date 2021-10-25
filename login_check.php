@@ -18,6 +18,7 @@ try
     $post = sanitize($_POST);               //前画面からのデータを変数にセット
     
     $code = $post["code"];                  //変数をエスケープする
+print $code;
 
     include ("userfile.php");               //$dsn,$user,$password
 
