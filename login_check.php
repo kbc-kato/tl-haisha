@@ -12,15 +12,15 @@
 <?php
 try
 {
-print $_post;
+print "$_post=".$_post;
     require_once("common.php");
 
 
     $post = sanitize($_POST);               //前画面からのデータを変数にセット
-print $post;
+print "$post=". $post;
 
     $code = $post["code"];                  //変数をエスケープする
-print $code;
+print "$code=". $code;
 
     include ("userfile.php");               //$dsn,$user,$password
 
