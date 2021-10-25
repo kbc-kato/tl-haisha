@@ -51,8 +51,8 @@ try
     print "<div id='session'>";
     print "搬入計画一覧<br><br>";
     print "</div>";
-    print "<div id='hanyu'>";
-    print "<table class= 'haisha_tbl'>";
+    print "<div id='keppin'>";
+    print "<table class= 'keppin_tbl'>";
     print "<tr>";
     print "<th>"."工事№"."</th>";
     print "<th>"."工事状態"."</th>";
