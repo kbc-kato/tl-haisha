@@ -58,6 +58,8 @@ print "ymd=".$year."/".$month."/".$day;
     print "<th>"."工事状態"."</th>";
     print "<th>"."工事名称"."</th>";
     print "<th>"."工事種別"."</th>";
+    print "<th>"."搬入"."</th>";
+    print "<th>"."行№"."</th>";
     print "<th>"."棟名"."</th>";
     print "<th>"."フロア"."</th>";
     print "<th>"."部屋番"."</th>";
