@@ -112,13 +112,56 @@ try
         print "<td>".$rec['KESEKO']."</td>";
         print "<td>".date('Y/m/d',strtotime($rec['KEHIKE']))."</td>";
         print "<td>".$rec['KEKBKE_NM']."</td>";
-        print "<td>".date('H:i',strtotime($rec['KETMKE']))."</td>";
+
+        if (is_null($rec['KETMKE']))
+        {
+            print "<td> </td>";
+        }
+        else
+        {
+            print "<td>".date('H:i',strtotime($rec['KETMKE']))."</td>";
+        }
         print "<td>".$rec['KESITEI']."</td>";
-        print "<td>".date('Y/m/d',strtotime($rec['KEHISY_ME']))."</td>";
-        print "<td>".date('Y/m/d',strtotime($rec['KEKANO_ME']))."</td>";
-        print "<td>".date('Y/m/d',strtotime($rec['KENOKI_SEISK']))."</td>";
-        print "<td>".date('Y/m/d',strtotime($rec['KENOKI_ZUMN']))."</td>";
-        print "<td>".date('Y/m/d',strtotime($rec['KENOKI_TORI']))."</td>";
+        if (is_null($rec['KEHISY_ME']))
+        {
+            print "<td> </td>";
+        }
+        else
+        {
+            print "<td>".date('Y/m/d',strtotime($rec['KEHISY_ME']))."</td>";
+        }
+        if (is_null($rec['KEKANO_ME']))
+        {
+            print "<td> </td>";
+        }
+        else
+        {
+            print "<td>".date('Y/m/d',strtotime($rec['KEKANO_ME']))."</td>";
+        }
+        if (is_null($rec['KENOKI_SEISK']))
+        {
+            print "<td> </td>";
+        }
+        else
+        {
+            print "<td>".date('Y/m/d',strtotime($rec['KENOKI_SEISK']))."</td>";
+        }
+        if (is_null($rec['KENOKI_ZUMN']))
+        {
+            print "<td> </td>";
+        }
+        else
+        {
+            print "<td>".date('Y/m/d',strtotime($rec['KENOKI_ZUMN']))."</td>";
+        }
+        if (is_null($rec['KENOKI_TORI']))
+        {
+            print "<td> </td>";
+        }
+        else
+        {
+            print "<td>".date('Y/m/d',strtotime($rec['KENOKI_TORI']))."</td>";
+        }
         print "<td>".$rec['BKSYST_KO_NM']."</td>";
         print "<td>".$rec['BKKAGU_KO_NM']."</td>";
         print "<td>".$rec['BKCOUT_KO_NM']."</td>";
