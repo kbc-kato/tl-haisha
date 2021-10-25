@@ -52,7 +52,7 @@ try
     print "搬入計画一覧<br><br>";
     print "</div>";
     print "<div id='hanyu'>";
-    print "<table class= 'hanyu_tbl'>";
+    print "<table class= 'haisha_tbl'>";
     print "<tr>";
     print "<th>"."工事№"."</th>";
     print "<th>"."工事状態"."</th>";
