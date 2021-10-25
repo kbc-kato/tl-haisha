@@ -26,7 +26,7 @@ print "ymd=".$year."/".$month."/".$day;
     {
         print "<br><br>";
         print "日付が間違っています。<br>";
-        print "<a href = 'haisha_top.php'>日付選択へ</a>";
+        print "<a href = 'ke100_top.php'>日付選択へ</a>";
     }
     else
     {
