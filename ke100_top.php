@@ -35,7 +35,7 @@
 <?php
     require_once ("common.php");
 ?>
-            <div id='hike'>
+            <div id='hiha'>
                 表示したい搬入決定日を入力してください。<br>
                 <form method="POST" name="form1" action="ke100_check.php">
                     <?php pulldown_year(); ?>
