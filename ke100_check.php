@@ -20,7 +20,7 @@ try
     $year= $post["year"];
     $month= $post["month"];
     $day= $post["day"];
-
+print "ymd=".$year."/".$month."/".$day;
 
     if(checkdate($month,$day,$year)==false)
     {
