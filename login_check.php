@@ -17,6 +17,7 @@ try
     $post = sanitize($_POST);               //前画面からのデータを変数にセット
 
     $code = $post["code"];                  //変数をエスケープする
+    $pass = $post["pass"];
 
     include ("userfile.php");               //$dsn,$user,$password
 
@@ -50,13 +51,32 @@ try
         }
         else
         {
-            session_start();
-            $_SESSION["login"]=1;
-            $_SESSION["login_code"]=$code;
-            $_SESSION["login_name"]=$rec["JGNMJG"];
-        
-            header("location:menu.php");
-            exit;
+            if($pass=='')
+            {
+                print "<br><br>";
+                print "パスワードが未入力です。<br>";
+                print "<a href = 'index.php'>戻る</a>";
+            }
+            else
+            {
+                if($pass!=$rec["JGPASS"])
+                {
+                    print "<br><br>";
+                    print "パスワードが間違っています。<br>";
+                    print "<a href = 'index.php'>戻る</a>";                    
+                }
+                else
+                {
+                    session_start();
+                    $_SESSION["login"]=1;
+                    $_SESSION["login_code"]=$code;
+                    $_SESSION["login_name"]=$rec["JGNMJG"];
+                    $_SESSION["login_kbjg"]=$rec["JGKBJG"];
+
+                    header("location:menu.php");
+                    exit;
+                }
+            }
         }
     }
 }
