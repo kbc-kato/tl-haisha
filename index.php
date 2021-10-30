@@ -17,11 +17,11 @@
 <?php
     print "<div id='login'>";
     print "<form method='POST' name='form2' action='login_check.php'>";
-    print "社員コード<br>";
-    print "<input type ='text' size='10' name = 'code' autocomplete='off'>";
+    print "<label>社員コード :";
+    print "<input type ='text' size='10' name = 'code' autocomplete='off'></label>";
     print "<br><br>";
-    print "パスワード<br>";
-    print "<input type ='password' size='10' name = 'pass' autocomplete='off'>";
+    print "<label>パスワード :";
+    print "<input type ='password' size='10' name = 'pass' autocomplete='off'></label>";
     print "<br><br>";
     print "<input type ='submit' value = 'ログイン'>";
     print "</form>";
