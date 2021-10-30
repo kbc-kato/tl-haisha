@@ -22,6 +22,9 @@ try
 
 //    $post = sanitize($_POST);                 //前画面からのデータを変数にセット
 
+    $code= $_SESSION["login_code"];
+    $kbjg= $_SESSION["login_kbjg"];
+
     $year= $_SESSION["haisha_year"];            //$post["year"];
     $month= $_SESSION["haisha_month"];          //$post["month"];
     $day= $_SESSION["haisha_day"];              //$post["day"];
@@ -32,17 +35,30 @@ try
     $dbh = new PDO($dsn, $user, $password); //SqlServerのデータベースに接続
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); //PDOのエラーレポートを表示
 
-    $sql = " SELECT *
-    FROM ST_HA000_MYSQL
-    WHERE substring(HAHIHA,1,4)=?
-      AND substring(HAHIHA,6,2)=?
-      AND substring(HAHIHA,9,2)=?      
-    ORDER BY ST_HA000_MYSQL.HANOHA, ST_HA000_MYSQL.HANOHA_EDA";         // SELECT文を変数に格納。
-
+    if($kbjg==1)
+    {
+        $sql = " SELECT *
+        FROM ST_HA000_MYSQL
+        WHERE substring(HAHIHA,1,4)=?
+          AND substring(HAHIHA,6,2)=?
+          AND substring(HAHIHA,9,2)=?
+        ORDER BY ST_HA000_MYSQL.HANOHA, ST_HA000_MYSQL.HANOHA_EDA";         // SELECT文を変数に格納。
+    }
+    else
+    {
+        $sql = " SELECT *
+        FROM ST_HA000_MYSQL
+        WHERE substring(HAHIHA,1,4)=?
+          AND substring(HAHIHA,6,2)=?
+          AND substring(HAHIHA,9,2)=?
+          AND HACDUK=?
+        ORDER BY ST_HA000_MYSQL.HANOHA, ST_HA000_MYSQL.HANOHA_EDA";         // SELECT文を変数に格納。
+    }
     $stmt = $dbh->prepare($sql); //挿入する値は空のまま、SQL実行の準備をする
     $params[] = $year;          // 挿入する値を配列に格納する
     $params[] = $month;          
     $params[] = $day;          
+    $params[] = $code;          
 
     $stmt->execute($params); //挿入する値が入った変数をexecuteにセットしてSQLを実行
     
