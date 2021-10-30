@@ -19,9 +19,10 @@
     print "<form method='POST' name='form2' action='login_check.php'>";
     print "社員コード<br>";
     print "<input type ='text' size='10' name = 'code' autocomplete='off'>";
-    print "<br>";
+    print "<br><br>";
     print "パスワード<br>";
     print "<input type ='password' size='10' name = 'pass' autocomplete='off'>";
+    print "<br><br>";
     print "<input type ='submit' value = 'ログイン'>";
     print "</form>";
 //    print "<hr>";
