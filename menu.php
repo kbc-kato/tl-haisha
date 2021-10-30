@@ -18,7 +18,7 @@
     print "<p>";
     print "<a href = 'haisha_top.php'>配車情報　検索</a>";
 
-    if($_SESSION["login_name"]==1)
+    if($_SESSION["login_kbjg"]==1)
     {
         print "<br><br>";
         print "<a href = 'keppin_desp.php'>欠品遅れ情報</a>";
