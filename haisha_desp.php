@@ -43,6 +43,11 @@ try
           AND substring(HAHIHA,6,2)=?
           AND substring(HAHIHA,9,2)=?
         ORDER BY ST_HA000_MYSQL.HANOHA, ST_HA000_MYSQL.HANOHA_EDA";         // SELECT文を変数に格納。
+
+        $stmt = $dbh->prepare($sql); //挿入する値は空のまま、SQL実行の準備をする
+        $params[] = $year;          // 挿入する値を配列に格納する
+        $params[] = $month;          
+        $params[] = $day;          
     }
     else
     {
@@ -53,13 +58,13 @@ try
           AND substring(HAHIHA,9,2)=?
           AND HACDUK=?
         ORDER BY ST_HA000_MYSQL.HANOHA, ST_HA000_MYSQL.HANOHA_EDA";         // SELECT文を変数に格納。
-    }
-    $stmt = $dbh->prepare($sql); //挿入する値は空のまま、SQL実行の準備をする
-    $params[] = $year;          // 挿入する値を配列に格納する
-    $params[] = $month;          
-    $params[] = $day;          
-    $params[] = $code;          
 
+        $stmt = $dbh->prepare($sql); //挿入する値は空のまま、SQL実行の準備をする
+        $params[] = $year;          // 挿入する値を配列に格納する
+        $params[] = $month;          
+        $params[] = $day;          
+        $params[] = $code;          
+    }
     $stmt->execute($params); //挿入する値が入った変数をexecuteにセットしてSQLを実行
     
     $PDO = null;        //データベースから切断
