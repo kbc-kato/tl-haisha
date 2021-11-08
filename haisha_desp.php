@@ -1,3 +1,23 @@
+<?php 
+// ライブラリの読み込み
+require_once('TCPDF/tcpdf.php');
+ 
+// TCPDFインスタンスを作成
+$orientation = 'Landscape'; // 用紙の向き
+$unit = 'mm'; // 単位
+$format = 'A4'; // 用紙フォーマット
+$unicode = true; // ドキュメントテキストがUnicodeの場合にTRUEとする
+$encoding = 'UTF-8'; // 文字コード
+$diskcache = false; // ディスクキャッシュを使うかどうか
+$tcpdf = new TCPDF($orientation, $unit, $format, $unicode, $encoding, $diskcache);
+
+$tcpdf->AddPage(); // 新しいpdfページを追加
+ 
+$tcpdf->SetFont("kozgopromedium", "", 10); // デフォルトで用意されている日本語フォント
+ 
+
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -10,7 +30,8 @@
         <title>株式会社 高崎リビング</title>
     </head>
     <body>
-        <div id = "pagebody">
+
+    <div id = "pagebody">
     
 <?php    
 try
@@ -69,26 +90,27 @@ try
     
     $PDO = null;        //データベースから切断
     
-
-    print "<div id='session'>";
-    print "配車　検索結果<br><br>";
-    print "</div>";
-    print "<div id='hiha'>";
-    print "<table class= 'haisha_tbl'>";
-    print "<tr>";
-    print "<th>"."現場名"."</th>";
-    print "<th>"."搬入日"."</th>";
-    print "<th>"."時間"."</th>";
-    print "<th>"."実車会社"."</th>";
-    print "<th>"."車輛"."</th>";
-    print "<th>"."車番"."</th>";
-    print "<th>"."運転者"."</th>";
-    print "<th>"."TEL"."</th>";
-    print "<th>"."荷受人"."</th>";
-    print "<th>"."TEL"."</th>";    
-    print "<th>"."搬入会社"."</th>";
-    print "<th>"."人工"."</th>";
-    print "</tr>";
+    $html =<<< EOF
+    <div id='session'>
+    配車　検索結果<br><br>
+    </div>
+    <div id='hiha'>
+    <table class= 'haisha_tbl'>
+    <tr>
+    <th>現場名</th>
+    <th>搬入日</th>
+    <th>時間</th>
+    <th>実車会社</th>
+    <th>車輛</th>
+    <th>車番</th>
+    <th>運転者</th>
+    <th>TEL</th>
+    <th>荷受人</th>
+    <th>TEL</th>
+    <th>搬入会社</th>
+    <th>人工</th>
+    </tr>
+EOF;
 
     while(true)
     {
@@ -98,35 +120,56 @@ try
         {
             break;
         }
-
-        print "<tr>";
-        print "<td>".$rec['HANMRY1']."</td>";
-        print "<td>".date('Y/m/d',strtotime($rec['HAHIHA']))."</td>";
+        //$recの内容をworkにセット
+        $hanmry1=$rec['HANMRY1'];
+        $hahiha=date('Y/m/d',strtotime($rec['HAHIHA']));
         if ($rec['HATMHA1']=="1900-01-01 00:00:00")
         {
-            print "<td> </td>";
+            $hatmha='';
         }
         else
         {
-            print "<td>".date('H:i',strtotime($rec['HATMHA1']))."</td>";
+            $hatmha=date('H:i',strtotime($rec['HATMHA1']));
         }
-        print "<td>".$rec['HACDUN_JI_NM']."</td>";
-        print "<td>".$rec['SHNMSH']."</td>";
-        print "<td>".$rec['HANOSH']."</td>";
-        print "<td>".$rec['HANMDR_JI']."</td>";
-        print "<td>".$rec['HATLDR_JI']."</td>";
-        print "<td>".$rec['HANMUK']."</td>";
-        print "<td>".$rec['HATLUK']."</td>";
-        print "<td>".$rec['HARYHA']."</td>";
-        print "<td>".$rec['KEHANY_TANI']."</td>";
-        print "</tr>";
+        $hacdhn_ji_nm=$rec['HACDUN_JI_NM'];
+        $shnmsh=$rec['SHNMSH'];
+        $hanosh=$rec['HANOSH'];
+        $hanmdr_ji=$rec['HANMDR_JI'];
+        $hatldr_ji=$rec['HATLDR_JI'];
+        $hanmuk=$rec['HANMUK'];
+        $hatluk=$rec['HATLUK'];
+        $haryha=$rec['HARYHA'];
+        $hehany_tani=$rec['KEHANY_TANI'];
+
+
+        $html .=<<< EOF
+        <tr>
+        <td>$hanmry1</td>
+        <td>$hahiha</td>
+        <td>$hatmha</td>
+        <td>$hacdun_ji_nm</td>
+        <td>$shnmsh</td>
+        <td>$hanosh</td>
+        <td>$hanmdr_ji</td>
+        <td>$hatldr_ji</td>
+        <td>$hanmuk</td>
+        <td>$hatluk</td>
+        <td>$haryha</td>
+        <td>$kehany_tani</td>
+        </tr>
+EOF;
+
     }
-    print "</table>";
-    print "</div>";
-    print "<br>";
-    print "<a href='haisha_top.php'>日付選択へ</a><br>";    
-    print "<br>";
-        
+    $html .=<<< EOF
+    </table>
+    </div>
+    <br>
+    <a href='haisha_top.php'>日付選択へ</a><br>    
+    <br>
+EOF;
+
+    $tcpdf->writeHTML($html);
+    $tcpdf->Output("haisha.pdf");
 }
 catch (exception $e)
 {
