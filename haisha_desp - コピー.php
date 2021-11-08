@@ -180,7 +180,7 @@ EOF;
 
 
  
-//    $tcpdf->writeHTML($html);
+    $tcpdf->writeHTML($html);
 //    $tcpdf->Output("haisha.pdf");
 }
 catch (exception $e)
