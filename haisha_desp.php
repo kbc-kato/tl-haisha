@@ -168,8 +168,17 @@ EOF;
     <br>
 EOF;
 
-    $tcpdf->writeHTML($html);
-    $tcpdf->Output("haisha.pdf");
+// ファイルを出力
+    $fileName = 'haisha.pdf';
+    $pdfData = $tcpdf->Output(rawurlencode($fileName), 'S');
+ 
+// ブラウザにそのまま表示
+    header('Content-Type: application/pdf');
+    header("Content-Disposition: inline; filename*=UTF-8''".rawurlencode($fileName));
+    echo $pdfData;
+ 
+//    $tcpdf->writeHTML($html);
+//    $tcpdf->Output("haisha.pdf");
 }
 catch (exception $e)
 {
