@@ -169,8 +169,8 @@ EOF;
 EOF;
 
  
-    $tcpdf->writeHTML($html);
-    $tcpdf->Output("haisha.pdf");
+//    $tcpdf->writeHTML($html);
+//    $tcpdf->Output("haisha.pdf");
 }
 catch (exception $e)
 {
