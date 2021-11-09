@@ -36,7 +36,7 @@ $tcpdf->SetFont("kozgopromedium", "", 10); // デフォルトで用意されて�
     <body>
 
     <div id = "pagebody">
-    
+
 <?php    
 try
 {
@@ -55,7 +55,7 @@ try
       $day= 25;         //$_SESSION["haisha_day"];              //$post["day"];
 //print "ymd=".$year."/".$month."/".$day;
 
-    include ('userfile.php');
+//    include ('userfile.php');
 
     $dbh = new PDO($dsn, $user, $password); //SqlServerのデータベースに接続
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); //PDOのエラーレポートを表示
@@ -182,12 +182,12 @@ EOF;
 
 //var_dump($response);
 
-
+var_dump($html);
  
     $tcpdf->writeHTML($html);
     $tcpdf->Output("haisha.pdf");
 
-var_dump($html);
+
 
 }
 catch (exception $e)
