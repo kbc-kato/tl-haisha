@@ -1,19 +1,19 @@
 <?php 
 // ライブラリの読み込み
-require_once('TCPDF/tcpdf.php');
+//require_once('TCPDF/tcpdf.php');
  
 // TCPDFインスタンスを作成
-$orientation = 'Landscape'; // 用紙の向き
-$unit = 'mm'; // 単位
-$format = 'A4'; // 用紙フォーマット
-$unicode = true; // ドキュメントテキストがUnicodeの場合にTRUEとする
-$encoding = 'UTF-8'; // 文字コード
-$diskcache = false; // ディスクキャッシュを使うかどうか
-$tcpdf = new TCPDF($orientation, $unit, $format, $unicode, $encoding, $diskcache);
-
-$tcpdf->AddPage(); // 新しいpdfページを追加
- 
-$tcpdf->SetFont("kozgopromedium", "", 10); // デフォルトで用意されている日本語フォント
+//$orientation = 'Landscape'; // 用紙の向き
+//$unit = 'mm'; // 単位
+//$format = 'A4'; // 用紙フォーマット
+//$unicode = true; // ドキュメントテキストがUnicodeの場合にTRUEとする
+//$encoding = 'UTF-8'; // 文字コード
+//$diskcache = false; // ディスクキャッシュを使うかどうか
+//$tcpdf = new TCPDF($orientation, $unit, $format, $unicode, $encoding, $diskcache);
+//
+//$tcpdf->AddPage(); // 新しいpdfページを追加
+// 
+//$tcpdf->SetFont("kozgopromedium", "", 10); // デフォルトで用意されている日本語フォント
  
 
 ?>

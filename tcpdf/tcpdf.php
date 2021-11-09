@@ -1848,7 +1848,7 @@ class TCPDF {
 	//------------------------------------------------------------
 	// METHODS
 	//------------------------------------------------------------
-
+	
 	/**
 	 * This is the class constructor.
 	 * It allows to set up the page format, the orientation and the measure unit used in all the methods (except for the font sizes).
@@ -2231,7 +2231,7 @@ class TCPDF {
 		}
 		$this->setPageOrientation($orientation);
 	}
-
+	
 	/**
 	 * Set page orientation.
 	 * @param string $orientation page orientation. Possible values are (case insensitive):<ul><li>P or Portrait (default)</li><li>L or Landscape</li><li>'' (empty string) for automatic orientation</li></ul>
