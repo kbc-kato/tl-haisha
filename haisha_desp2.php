@@ -95,7 +95,8 @@ try
     $PDO = null;        //データベースから切断
 
     ob_start();
-    $html =<<< EOF
+//    $html =<<< EOF
+<<< EOF
     <div id='session'>
     配車　検索結果<br><br>
     </div>
@@ -147,7 +148,8 @@ EOF;
         $hehanytani=$rec['KEHANY_TANI'];
 
 
-        $html .=<<< EOF
+        //$html .=<<< EOF
+<<< EOF
         <tr>
         <td>$hanmry1</td>
         <td>$hahiha</td>
@@ -165,7 +167,8 @@ EOF;
 EOF;
 
     }
-    $html .=<<< EOF
+    //$html .=<<< EOF
+<<< EOF
     </table>
     </div>
     <br>
