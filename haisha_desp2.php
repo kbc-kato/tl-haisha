@@ -93,7 +93,8 @@ try
     $stmt->execute($params); //挿入する値が入った変数をexecuteにセットしてSQLを実行
     
     $PDO = null;        //データベースから切断
-    
+
+    ob_start();
     $html =<<< EOF
     <div id='session'>
     配車　検索結果<br><br>
@@ -171,7 +172,8 @@ EOF;
     <a href='haisha_top.php'>日付選択へ</a><br>    
     <br>
 EOF;
-
+    $html = ob_get_contents();
+    echo $html;
 
 
 //// Using default PHP curl library
@@ -186,7 +188,7 @@ EOF;
  
     $tcpdf->writeHTML($html);
     ob_end_clean();
-    $tcpdf->Output("haisha.pdf");
+    $tcpdf->Output("haisha.pdf","I");
 
 
 
