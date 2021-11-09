@@ -53,7 +53,7 @@ try
       $year= 2021;      //$_SESSION["haisha_year"];            //$post["year"];
       $month= 10;       //$_SESSION["haisha_month"];          //$post["month"];
       $day= 25;         //$_SESSION["haisha_day"];              //$post["day"];
-print "ymd=".$year."/".$month."/".$day;
+//print "ymd=".$year."/".$month."/".$day;
 
     include ('userfile.php');
 
@@ -184,11 +184,11 @@ EOF;
 
 //var_dump($response);
 
-//var_dump($html);
+var_dump($html);
  
-    $tcpdf->writeHTML($html);
-    ob_end_clean();
-    $tcpdf->Output("haisha.pdf","I");
+//    $tcpdf->writeHTML($html);
+//    ob_end_clean();
+//    $tcpdf->Output("haisha.pdf","I");
 
 
 
