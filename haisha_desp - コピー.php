@@ -43,12 +43,12 @@ try
 
 //    $post = sanitize($_POST);                 //前画面からのデータを変数にセット
 
-    //$code= $_SESSION["login_code"];
-    //$kbjg= $_SESSION["login_kbjg"];
+      $code= 2;         //$_SESSION["login_code"];
+      $kbjg= 1;         //$_SESSION["login_kbjg"];
 
-    //$year= $_SESSION["haisha_year"];            //$post["year"];
-    //$month= $_SESSION["haisha_month"];          //$post["month"];
-    //$day= $_SESSION["haisha_day"];              //$post["day"];
+      $year= 2021;      //$_SESSION["haisha_year"];            //$post["year"];
+      $month= 10;       //$_SESSION["haisha_month"];          //$post["month"];
+      $day= 25;         //$_SESSION["haisha_day"];              //$post["day"];
 //print "ymd=".$year."/".$month."/".$day;
 
     include ('userfile.php');
@@ -66,9 +66,9 @@ try
         ORDER BY ST_HA000_MYSQL.HANOHA, ST_HA000_MYSQL.HANOHA_EDA";         // SELECT文を変数に格納。
 
         $stmt = $dbh->prepare($sql); //挿入する値は空のまま、SQL実行の準備をする
-        $params[] = 2021;    //$year;          // 挿入する値を配列に格納する
-        $params[] = 10;      //$month;          
-        $params[] = 25;      //$day;          
+        $params[] = $year;          // 挿入する値を配列に格納する
+        $params[] = $month;          
+        $params[] = $day;          
     }
     else
     {
@@ -81,10 +81,10 @@ try
         ORDER BY ST_HA000_MYSQL.HANOHA, ST_HA000_MYSQL.HANOHA_EDA";         // SELECT文を変数に格納。
 
         $stmt = $dbh->prepare($sql); //挿入する値は空のまま、SQL実行の準備をする
-        $params[] = 2021;   //$year;          // 挿入する値を配列に格納する
-        $params[] = 10;     //$month;          
-        $params[] = 25;     //$day;          
-        $params[] = 73;     //$code;          
+        $params[] = $year;          // 挿入する値を配列に格納する
+        $params[] = $month;          
+        $params[] = $day;          
+        $params[] = $code;          
     }
     $stmt->execute($params); //挿入する値が入った変数をexecuteにセットしてSQLを実行
     
