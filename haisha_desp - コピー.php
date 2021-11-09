@@ -1,19 +1,19 @@
 <?php 
 // ライブラリの読み込み
-//require_once('TCPDF/tcpdf.php');
+require_once('TCPDF/tcpdf.php');
  
 // TCPDFインスタンスを作成
-//$orientation = 'Landscape'; // 用紙の向き
-//$unit = 'mm'; // 単位
-//$format = 'A4'; // 用紙フォーマット
-//$unicode = true; // ドキュメントテキストがUnicodeの場合にTRUEとする
-//$encoding = 'UTF-8'; // 文字コード
-//$diskcache = false; // ディスクキャッシュを使うかどうか
-//$tcpdf = new TCPDF($orientation, $unit, $format, $unicode, $encoding, $diskcache);
-//
-//$tcpdf->AddPage(); // 新しいpdfページを追加
-// 
-//$tcpdf->SetFont("kozgopromedium", "", 10); // デフォルトで用意されている日本語フォント
+$orientation = 'Landscape'; // 用紙の向き
+$unit = 'mm'; // 単位
+$format = 'A4'; // 用紙フォーマット
+$unicode = true; // ドキュメントテキストがUnicodeの場合にTRUEとする
+$encoding = 'UTF-8'; // 文字コード
+$diskcache = false; // ディスクキャッシュを使うかどうか
+$tcpdf = new TCPDF($orientation, $unit, $format, $unicode, $encoding, $diskcache);
+
+$tcpdf->AddPage(); // 新しいpdfページを追加
+ 
+$tcpdf->SetFont("kozgopromedium", "", 10); // デフォルトで用意されている日本語フォント
  
 
 ?>
@@ -131,7 +131,7 @@ EOF;
         {
             $hatmha=date('H:i',strtotime($rec['HATMHA1']));
         }
-        $hacdun_ji_nm=$rec['HACDUN_JI_NM'];
+        $hacdunjinm=$rec['HACDUN_JI_NM'];
         $shnmsh=$rec['SHNMSH'];
         $hanosh=$rec['HANOSH'];
         $hanmdr_ji=$rec['HANMDR_JI'];
@@ -139,7 +139,7 @@ EOF;
         $hanmuk=$rec['HANMUK'];
         $hatluk=$rec['HATLUK'];
         $haryha=$rec['HARYHA'];
-        $hehany_tani=$rec['KEHANY_TANI'];
+        $hehanytani=$rec['KEHANY_TANI'];
 
 
         $html .=<<< EOF
@@ -147,7 +147,7 @@ EOF;
         <td>$hanmry1</td>
         <td>$hahiha</td>
         <td>$hatmha</td>
-        <td>$hacdun_ji_nm</td>
+        <td>$hacdunjinm</td>
         <td>$shnmsh</td>
         <td>$hanosh</td>
         <td>$hanmdr_ji</td>
@@ -155,7 +155,7 @@ EOF;
         <td>$hanmuk</td>
         <td>$hatluk</td>
         <td>$haryha</td>
-        <td>$hehany_tani</td>
+        <td>$hehanytani</td>
         </tr>
 EOF;
 
