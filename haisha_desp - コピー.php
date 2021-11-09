@@ -36,8 +36,8 @@
 <?php    
 try
 {
-    session_start();
-    session_regenerate_id(true);            //セッションIDを変える
+//    session_start();
+//    session_regenerate_id(true);            //セッションIDを変える
     
     require_once('common.php');
 
@@ -131,7 +131,7 @@ EOF;
         {
             $hatmha=date('H:i',strtotime($rec['HATMHA1']));
         }
-        $hacdhn_ji_nm=$rec['HACDUN_JI_NM'];
+        $hacdun_ji_nm=$rec['HACDUN_JI_NM'];
         $shnmsh=$rec['SHNMSH'];
         $hanosh=$rec['HANOSH'];
         $hanmdr_ji=$rec['HANMDR_JI'];
@@ -155,7 +155,7 @@ EOF;
         <td>$hanmuk</td>
         <td>$hatluk</td>
         <td>$haryha</td>
-        <td>$kehany_tani</td>
+        <td>$hehany_tani</td>
         </tr>
 EOF;
 
