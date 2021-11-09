@@ -195,7 +195,7 @@ print "<br>";
 //    print $tcpdf;
 //    print "<br>";
     ob_end_clean();
-    $tcpdf->Output("haisha.pdf","I");
+//    $tcpdf->Output("haisha.pdf","I");
 
 
 
