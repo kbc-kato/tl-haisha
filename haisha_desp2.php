@@ -179,9 +179,9 @@ EOF;
     <a href='haisha_top.php'>日付選択へ</a><br>    
     <br>
 EOF;
-print "debug3:";
-print $html;
-print "<br>";
+//print "debug3:";
+//print $html;
+//print "<br>";
 
 //$html = ob_get_contents();
 //    echo $html;
@@ -195,7 +195,7 @@ print "<br>";
 //    print $tcpdf;
 //    print "<br>";
 //    ob_end_clean();
-//    $tcpdf->Output("haisha.pdf","I");
+    $tcpdf->Output("haisha.pdf","I");
 
 
 
