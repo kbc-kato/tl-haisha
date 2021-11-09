@@ -53,7 +53,7 @@ try
       $year= 2021;      //$_SESSION["haisha_year"];            //$post["year"];
       $month= 10;       //$_SESSION["haisha_month"];          //$post["month"];
       $day= 25;         //$_SESSION["haisha_day"];              //$post["day"];
-print "ymd=".$year."/".$month."/".$day;
+//print "ymd=".$year."/".$month."/".$day;
 
     include ('userfile.php');
 
