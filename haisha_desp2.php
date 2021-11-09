@@ -1,6 +1,9 @@
 <?php 
+ini_set( 'display_errors', 1 );
+ini_set( 'error_reporting', E_ALL );
+
 // ライブラリの読み込み
-require_once('/TCPDF/tcpdf.php');
+require_once('./TCPDF/tcpdf.php');
  
 // TCPDFインスタンスを作成
 $orientation = 'Landscape'; // 用紙の向き
