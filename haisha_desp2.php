@@ -116,6 +116,9 @@ try
     <th>人工</th>
     </tr>
 EOF;
+print "debug1:";
+var_dump($html);
+print "<BR>";
 
     while(true)
     {
@@ -163,6 +166,10 @@ EOF;
         <td>$hehanytani</td>
         </tr>
 EOF;
+print "debug2:";
+var_dump($html);
+print "<BR>";
+
 
     }
     $html .=<<< EOF
@@ -172,7 +179,11 @@ EOF;
     <a href='haisha_top.php'>日付選択へ</a><br>    
     <br>
 EOF;
-    $html = ob_get_contents();
+print "debug3:";
+var_dump($html);
+print "<BR>";
+
+$html = ob_get_contents();
     echo $html;
 
 
