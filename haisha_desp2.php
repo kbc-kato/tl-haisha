@@ -53,9 +53,9 @@ try
       $year= 2021;      //$_SESSION["haisha_year"];            //$post["year"];
       $month= 10;       //$_SESSION["haisha_month"];          //$post["month"];
       $day= 25;         //$_SESSION["haisha_day"];              //$post["day"];
-//print "ymd=".$year."/".$month."/".$day;
+print "ymd=".$year."/".$month."/".$day;
 
-//    include ('userfile.php');
+    include ('userfile.php');
 
     $dbh = new PDO($dsn, $user, $password); //SqlServerのデータベースに接続
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); //PDOのエラーレポートを表示
@@ -185,6 +185,7 @@ EOF;
 var_dump($html);
  
     $tcpdf->writeHTML($html);
+    ob_end_clean();
     $tcpdf->Output("haisha.pdf");
 
 
