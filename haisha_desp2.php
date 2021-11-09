@@ -53,7 +53,7 @@ try
       $year= 2021;      //$_SESSION["haisha_year"];            //$post["year"];
       $month= 10;       //$_SESSION["haisha_month"];          //$post["month"];
       $day= 25;         //$_SESSION["haisha_day"];              //$post["day"];
-//print "ymd=".$year."/".$month."/".$day;
+print "ymd=".$year."/".$month."/".$day;
 
     include ('userfile.php');
 
@@ -95,8 +95,7 @@ try
     $PDO = null;        //データベースから切断
 
     ob_start();
-//    $html =<<< EOF
-<<< EOF
+    $html =<<< EOF
     <div id='session'>
     配車　検索結果<br><br>
     </div>
@@ -148,8 +147,7 @@ EOF;
         $hehanytani=$rec['KEHANY_TANI'];
 
 
-        //$html .=<<< EOF
-<<< EOF
+        $html .=<<< EOF
         <tr>
         <td>$hanmry1</td>
         <td>$hahiha</td>
@@ -167,8 +165,7 @@ EOF;
 EOF;
 
     }
-    //$html .=<<< EOF
-<<< EOF
+    $html .=<<< EOF
     </table>
     </div>
     <br>
