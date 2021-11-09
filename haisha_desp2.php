@@ -118,7 +118,7 @@ try
 EOF;
 //print "debug1:";
 //var_dump($html);
-//print "<BR>";
+//print "<br>";
 
     while(true)
     {
@@ -168,7 +168,7 @@ EOF;
 EOF;
 //print "debug2:";
 //var_dump($html);
-//print "<BR>";
+//print "<br>";
 
 
     }
@@ -180,8 +180,8 @@ EOF;
     <br>
 EOF;
 print "debug3:";
-var_dump($html);
-print "<BR>";
+print $html;
+print "<br>";
 
 //$html = ob_get_contents();
 //    echo $html;
