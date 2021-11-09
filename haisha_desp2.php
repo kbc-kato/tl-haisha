@@ -197,9 +197,9 @@ EOF;
 
 //var_dump($html);
  
-    $tcpdf->writeHTML($html);
-    ob_end_clean();
-    $tcpdf->Output("haisha.pdf","I");
+//    $tcpdf->writeHTML($html);
+//    ob_end_clean();
+//    $tcpdf->Output("haisha.pdf","I");
 
 
 
