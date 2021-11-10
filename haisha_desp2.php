@@ -7,17 +7,19 @@ ini_set( 'error_reporting', E_ALL );
 require_once('tcpdf/tcpdf.php');
  
 // TCPDFインスタンスを作成
-$orientation = 'Landscape'; // 用紙の向き
+$orientation = 'Landscape'; // 用紙の向き Portrait (default) 縦 Portrait (default) 縦
 $unit = 'mm'; // 単位
 $format = 'A4'; // 用紙フォーマット
 $unicode = true; // ドキュメントテキストがUnicodeの場合にTRUEとする
 $encoding = 'UTF-8'; // 文字コード
 $diskcache = false; // ディスクキャッシュを使うかどうか
 $tcpdf = new TCPDF($orientation, $unit, $format, $unicode, $encoding, $diskcache);
+$tcpdf->setPrintHeader(false);
+$tcpdf->setPrintFooter(false);
 
 $tcpdf->AddPage(); // 新しいpdfページを追加
-$tcpdf->SetMargins( 0, 0, true );
-$tcpdf->SetAutoPageBreak( false );
+//$tcpdf->SetMargins( 0, 0, true );
+//$tcpdf->SetAutoPageBreak( false );
 
 $tcpdf->SetFont("kozgopromedium", "", 10); // デフォルトで用意されている日本語フォント
 
@@ -195,7 +197,8 @@ EOF;
 //var_dump($html);
  
     $tcpdf->writeHTML($html);
-//    ob_end_clean();
+    $tcpdf->SetDisplayMode('real', 'default');
+    //    ob_end_clean();
     $tcpdf->Output("haisha.pdf","I");
 
 
