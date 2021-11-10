@@ -18,7 +18,6 @@ $tcpdf = new TCPDF($orientation, $unit, $format, $unicode, $encoding, $diskcache
 $tcpdf->AddPage(); // 新しいpdfページを追加
  
 $tcpdf->SetFont("kozgopromedium", "", 10); // デフォルトで用意されている日本語フォント
- 
 
 ?>
 
@@ -27,11 +26,23 @@ $tcpdf->SetFont("kozgopromedium", "", 10); // デフォルトで用意されて�
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scele=1">
-        <link rel="stylesheet" href="base.css">
-        <link rel="stylesheet" media= "screen and (max-width:800px)" href="base_sp.css">
-        <link rel="stylesheet" href="table.css">
-        <link rel="stylesheet" media="screen and (max-width:800px)" href="table_sp.css">
+<!--        <link rel="stylesheet" href="base.css">     -->
+<!--        <link rel="stylesheet" media= "screen and (max-width:800px)" href="base_sp.css">     -->
+<!--        <link rel="stylesheet" href="table.css">     -->
+<!--        <link rel="stylesheet" media="screen and (max-width:800px)" href="table_sp.css">     -->
         <title>株式会社 高崎リビング</title>
+        <style>
+            .tbl-tr {
+                border: solid 1px;
+            }
+            .tbl-td {
+                border: solid 1px;
+            }
+            .tbl{
+                border-collapse: collapse;
+                border-spacing: 0px;
+            }
+        </style>
     </head>
     <body>
 
@@ -100,7 +111,7 @@ try
     配車　検索結果<br><br>
     </div>
     <div id='hiha'>
-    <table class= 'haisha_tbl'>
+    <table class= 'tbl'>
     <tr>
     <th>現場名</th>
     <th>搬入日</th>
@@ -183,17 +194,10 @@ EOF;
 //print $html;
 //print "<br>";
 
-//$html = ob_get_contents();
-//    echo $html;
-
-
-
 
 //var_dump($html);
  
     $tcpdf->writeHTML($html);
-//    print $tcpdf;
-//    print "<br>";
 //    ob_end_clean();
     $tcpdf->Output("haisha.pdf","I");
 
