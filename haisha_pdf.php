@@ -105,19 +105,23 @@ try
         border: 0.1px solid #000;
         text-align: center;
     }
+    <!-- 幅10㎜ -->　
     .tbl-th-10 {
         border: 0.1px solid #000;
         text-align: center;
-        width: 35px;            <!-- 幅10㎜ -->　
+        width: 35px;            
     }
+    <!-- 幅25㎜ -->
     .tbl-th-25 {
         border: 0.1px solid #000;
         text-align: center;
-        width: 80px;            <!-- 幅25㎜ -->　
-    }.tbl-th-30 {
+        width: 80px;            　
+    }
+    <!-- 幅30㎜ -->　
+    .tbl-th-30 {
         border: 0.1px solid #000;
         text-align: center;
-        width: 100px;            <!-- 幅30㎜ -->　
+        width: 100px;            
     }
     .tbl-td {
         border: 0.1px solid #000;
