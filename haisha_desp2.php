@@ -16,7 +16,9 @@ $diskcache = false; // ディスクキャッシュを使うかどうか
 $tcpdf = new TCPDF($orientation, $unit, $format, $unicode, $encoding, $diskcache);
 
 $tcpdf->AddPage(); // 新しいpdfページを追加
- 
+$tcpdf->SetMargins( 0, 0, true );
+$tcpdf->SetAutoPageBreak( false );
+
 $tcpdf->SetFont("kozgopromedium", "", 10); // デフォルトで用意されている日本語フォント
 
 ?>
@@ -184,9 +186,6 @@ EOF;
     $html .=<<< EOF
     </table>
     </div>
-    <br>
-    <a href='haisha_top.php'>日付選択へ</a><br>    
-    <br>
 EOF;
 //print "debug3:";
 //print $html;
