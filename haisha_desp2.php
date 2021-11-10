@@ -101,6 +101,15 @@ try
     ob_start();
     $html =<<< EOF
     <style>
+    .tbl-th {
+        border: 0.1px solid #000;
+        text-align: center;
+    }
+    .tbl-th-1 {
+        border: 0.1px solid #000;
+        text-align: center;
+        width: 35px;
+    }
     .tbl-td {
         border: 0.1px solid #000;
     }
@@ -115,18 +124,18 @@ try
     <div id='hiha'>
     <table class= 'tbl'>
     <tr>
-    <th class="tbl-td">現場名</th>
-    <th class="tbl-td">搬入日</th>
-    <th class="tbl-td">時間</th>
-    <th class="tbl-td">実車会社</th>
-    <th class="tbl-td">車輛</th>
-    <th class="tbl-td">車番</th>
-    <th class="tbl-td">運転者</th>
-    <th class="tbl-td">TEL</th>
-    <th class="tbl-td">荷受人</th>
-    <th class="tbl-td">TEL</th>
-    <th class="tbl-td">搬入会社</th>
-    <th class="tbl-td">人工</th>
+    <th class="tbl-th">現場名</th>
+    <th class="tbl-th">搬入日</th>
+    <th class="tbl-th-1">時間</th>
+    <th class="tbl-th">実車会社</th>
+    <th class="tbl-th-1">車輛</th>
+    <th class="tbl-th">車番</th>
+    <th class="tbl-th">運転者</th>
+    <th class="tbl-th">TEL</th>
+    <th class="tbl-th">荷受人</th>
+    <th class="tbl-th">TEL</th>
+    <th class="tbl-th">搬入会社</th>
+    <th class="tbl-th-1">人工</th>
     </tr>
 EOF;
 //print "debug1:";
