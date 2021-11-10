@@ -98,7 +98,7 @@ try
     $html =<<< EOF
     <style>
     .tbl-td {
-        border: solid 1px;
+        border: 0.1px solid #000;
     }
     .tbl{
         border-collapse: collapse;
