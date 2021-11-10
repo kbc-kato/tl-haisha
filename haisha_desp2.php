@@ -197,7 +197,7 @@ EOF;
 //var_dump($html);
  
     $tcpdf->writeHTML($html);
-    $tcpdf->SetDisplayMode('real', 'default');
+    $tcpdf->SetDisplayMode('fullwidth', 'default');
     //    ob_end_clean();
     $tcpdf->Output("haisha.pdf","I");
 
