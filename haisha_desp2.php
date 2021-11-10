@@ -97,9 +97,6 @@ try
     ob_start();
     $html =<<< EOF
     <style>
-    .tbl-tr {
-        border: solid 1px;
-    }
     .tbl-td {
         border: solid 1px;
     }
@@ -114,18 +111,18 @@ try
     <div id='hiha'>
     <table class= 'tbl'>
     <tr>
-    <th>現場名</th>
-    <th>搬入日</th>
-    <th>時間</th>
-    <th>実車会社</th>
-    <th>車輛</th>
-    <th>車番</th>
-    <th>運転者</th>
-    <th>TEL</th>
-    <th>荷受人</th>
-    <th>TEL</th>
-    <th>搬入会社</th>
-    <th>人工</th>
+    <th class='tbl-td'>現場名</th>
+    <th class='tbl-td'>搬入日</th>
+    <th class='tbl-td'>時間</th>
+    <th class='tbl-td'>実車会社</th>
+    <th class='tbl-td'>車輛</th>
+    <th class='tbl-td'>車番</th>
+    <th class='tbl-td'>運転者</th>
+    <th class='tbl-td'>TEL</th>
+    <th class='tbl-td'>荷受人</th>
+    <th class='tbl-td'TEL</th>
+    <th class='tbl-td'>搬入会社</th>
+    <th class='tbl-td'>人工</th>
     </tr>
 EOF;
 //print "debug1:";
@@ -164,18 +161,18 @@ EOF;
 
         $html .=<<< EOF
         <tr>
-        <td>$hanmry1</td>
-        <td>$hahiha</td>
-        <td>$hatmha</td>
-        <td>$hacdunjinm</td>
-        <td>$shnmsh</td>
-        <td>$hanosh</td>
-        <td>$hanmdrji</td>
-        <td>$hatldrji</td>
-        <td>$hanmuk</td>
-        <td>$hatluk</td>
-        <td>$haryha</td>
-        <td>$hehanytani</td>
+        <td class='tbl-td'>$hanmry1</td>
+        <td class='tbl-td'>$hahiha</td>
+        <td class='tbl-td'>$hatmha</td>
+        <td class='tbl-td'>$hacdunjinm</td>
+        <td class='tbl-td'>$shnmsh</td>
+        <td class='tbl-td'>$hanosh</td>
+        <td class='tbl-td'>$hanmdrji</td>
+        <td class='tbl-td'>$hatldrji</td>
+        <td class='tbl-td'>$hanmuk</td>
+        <td class='tbl-td'>$hatluk</td>
+        <td class='tbl-td'>$haryha</td>
+        <td class='tbl-td'>$hehanytani</td>
         </tr>
 EOF;
 //print "debug2:";
