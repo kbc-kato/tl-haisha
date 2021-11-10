@@ -124,9 +124,11 @@ try
     print "</table>";
     print "</div>";
     print "<br>";
-    print "<a href='haisha_top.php'>日付選択へ</a><br>";    
+    print "<a href='haisha_pdf.php'>pdf作成</a><br>";
     print "<br>";
-        
+    print "<br>";
+    print "<a href='haisha_top.php'>日付選択へ</a><br>";
+    print "<br>";        
 }
 catch (exception $e)
 {
