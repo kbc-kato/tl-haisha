@@ -110,7 +110,11 @@ try
         text-align: center;
         width: 35px;
     }
-    .tbl-th-3 {
+    .tbl-th-25 {
+        border: 0.1px solid #000;
+        text-align: center;
+        width: 80px;
+    }.tbl-th-3 {
         border: 0.1px solid #000;
         text-align: center;
         width: 100px;
@@ -136,9 +140,9 @@ try
     <th class="tbl-th">車輛</th>
     <th class="tbl-th-1">車番</th>
     <th class="tbl-th">運転者</th>
-    <th class="tbl-th-3">TEL</th>
+    <th class="tbl-th-25">TEL</th>
     <th class="tbl-th">荷受人</th>
-    <th class="tbl-th-3">TEL</th>
+    <th class="tbl-th-25">TEL</th>
     <th class="tbl-th">搬入会社</th>
     <th class="tbl-th-1">人工</th>
     </tr>
