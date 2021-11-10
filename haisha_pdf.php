@@ -108,17 +108,17 @@ try
     .tbl-th-10 {
         border: 0.1px solid #000;
         text-align: center;
-        width: 35px;            
+        width: 35px;
     }
     .tbl-th-25 {
         border: 0.1px solid #000;
         text-align: center;
-        width: 80px;            　
+        width: 80px;　
     }
     .tbl-th-30 {
         border: 0.1px solid #000;
         text-align: center;
-        width: 100px;            
+        width: 100px;
     }
     .tbl-td {
         border: 0.1px solid #000;
@@ -128,10 +128,10 @@ try
         border-spacing: 0px;
     }
     </style>
-    <div id='session'>
+    <div>
     配車　検索結果<br><br>
     </div>
-    <div id='hiha'>
+    <div>
     <table class= 'tbl'>
     <tr>
     <th class="tbl-th-30">現場名</th>
