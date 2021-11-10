@@ -31,18 +31,7 @@ $tcpdf->SetFont("kozgopromedium", "", 10); // デフォルトで用意されて�
 <!--        <link rel="stylesheet" href="table.css">     -->
 <!--        <link rel="stylesheet" media="screen and (max-width:800px)" href="table_sp.css">     -->
         <title>株式会社 高崎リビング</title>
-        <style>
-            .tbl-tr {
-                border: solid 1px;
-            }
-            .tbl-td {
-                border: solid 1px;
-            }
-            .tbl{
-                border-collapse: collapse;
-                border-spacing: 0px;
-            }
-        </style>
+
     </head>
     <body>
 
@@ -107,6 +96,18 @@ try
 
     ob_start();
     $html =<<< EOF
+    <style>
+    .tbl-tr {
+        border: solid 1px;
+    }
+    .tbl-td {
+        border: solid 1px;
+    }
+    .tbl{
+        border-collapse: collapse;
+        border-spacing: 0px;
+    }
+    </style>
     <div id='session'>
     配車　検索結果<br><br>
     </div>
