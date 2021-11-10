@@ -110,6 +110,11 @@ try
         text-align: center;
         width: 35px;
     }
+    .tbl-th-3 {
+        border: 0.1px solid #000;
+        text-align: center;
+        width: 100px;
+    }
     .tbl-td {
         border: 0.1px solid #000;
     }
@@ -124,16 +129,16 @@ try
     <div id='hiha'>
     <table class= 'tbl'>
     <tr>
-    <th class="tbl-th">現場名</th>
+    <th class="tbl-th-3">現場名</th>
     <th class="tbl-th">搬入日</th>
     <th class="tbl-th-1">時間</th>
-    <th class="tbl-th">実車会社</th>
-    <th class="tbl-th-1">車輛</th>
-    <th class="tbl-th">車番</th>
+    <th class="tbl-th-3">実車会社</th>
+    <th class="tbl-th">車輛</th>
+    <th class="tbl-th-1">車番</th>
     <th class="tbl-th">運転者</th>
-    <th class="tbl-th">TEL</th>
+    <th class="tbl-th-3">TEL</th>
     <th class="tbl-th">荷受人</th>
-    <th class="tbl-th">TEL</th>
+    <th class="tbl-th-3">TEL</th>
     <th class="tbl-th">搬入会社</th>
     <th class="tbl-th-1">人工</th>
     </tr>
