@@ -16,7 +16,7 @@ try
 
     $post = sanitize($_POST);               //前画面からのデータを変数にセット
 
-    $cdun = $post["shban"];                 //変数をエスケープする
+    $cdun = $post["cdun"];                 //変数をエスケープする
 print "cdun=".$cdun;
 
     include ("userfile.php");               //$dsn,$user,$password
