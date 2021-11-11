@@ -37,7 +37,7 @@ ini_set( 'error_reporting', E_ALL );
     print "</form>";
     print "<br>";
     print "<label>運転者 :";
-    print pulldown_drvm();
+    print pulldown_drvm(0);
     print "</label>";
     print "<br>";
 
