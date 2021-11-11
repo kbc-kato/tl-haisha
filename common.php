@@ -132,8 +132,7 @@ function sanitize($before)
         $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); //PDOのエラーレポートを表示
         
         $sql = "SELECT * FROM ST_DRVM_MYSQL
-        WHERE st_drvm_mysql.DRCDUN=?
-        ORDER BY ST_DRVM_MYSQL.DRCDDR;"; // SELECT文を変数に格納。
+        ORDER BY ST_DRVM_MYSQL.DRCDUN, ST_DRVM_MYSQL.DRCDDR;"; // SELECT文を変数に格納。
     
         $stmt = $dbh->prepare($sql); //挿入する値は空のまま、SQL実行の準備をする
         $params[] = $cdun;          // 挿入する値を配列に格納する
@@ -142,7 +141,8 @@ function sanitize($before)
         
         $PDO = null;        //データベースから切断
         
-        print "<select name = 'cddr' form = 'main'>";
+        $id = $rec['DRCDUN'];
+        print "<select name = 'cddr' id = ".$id." form = 'main'>";
         while(true)
         {
             $rec = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -152,6 +152,14 @@ function sanitize($before)
                 break;
             }
     
+            if($id != $rec['DRCDUN'])
+            {
+                print "</select>"; 
+                print "<select name = 'cddr' id = ".$id." form = 'main'>";
+
+                $id = $rec['DRCDUN'];
+            }
+
             print "<option value='".$rec['DRCDDR']."'>".$rec['DRNMDR']."</option>";
         }
         print "</select>"; 
