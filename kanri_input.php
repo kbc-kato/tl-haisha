@@ -29,7 +29,7 @@ ini_set( 'error_reporting', E_ALL );
     print pulldown_shban();
     print "</label>";
     print "<br>";
-    print "<form method='POST' name='form2' action='kanri_unsm.php'>";
+    print "<form method='get' name='form2' action='kanri_unsm.php'>";
     print "<label>運送会社 :";
     print pulldown_unsm();
     print "</label>";
