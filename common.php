@@ -124,7 +124,7 @@ function sanitize($before)
         print "</select>"; 
     }
 
-    function pulldown_drvm($cdun)
+    function pulldown_drvm()
     {
         include ("userfile.php");               //$dsn,$user,$password
 

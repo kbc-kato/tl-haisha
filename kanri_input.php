@@ -41,14 +41,7 @@ ini_set( 'error_reporting', E_ALL );
     print "</form>";
     print "<br>";
     print "<label>運転者 :";
-    if(empty($cdun) == true)
-    {
-        print pulldown_drvm(0);
-    }
-    else
-    {
-        print pulldown_drvm($cdun);
-    }
+            print pulldown_drvm();
     print "</label>";
     print "<br>";
 
