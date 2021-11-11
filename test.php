@@ -39,7 +39,7 @@
 		<form method='GET' name='form2' action='kanri_unsm.php'>
 			<input type='hidden' name='kakushi' value='secret'>
 			<label>運送会社 :
-				<select name = 'cdun' form = 'main'>
+				<select name = 'cdun' >
 				<option value='1000083'>(株)ロジスタッフ</option><option value='1000012'>【仮配車】</option>
 				<option value='6'>高崎ﾘﾋﾞﾝｸﾞ</option><option value='1000024'>TL cargo</option>
 				<option value='4'>月岡産業</option><option value='3'>路線便</option>
