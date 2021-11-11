@@ -20,17 +20,14 @@
     print "<label>配車日 :";
     print "<input type ='date' name = 'hiha' form = 'main'></label>";
     print "<br><br>";
-    print "<label>車番 :";
-    print pulldown_shban();
+    print "<label>車番 :".pulldown_shban();
     print "<br>";
     print "<form method='POST' name='form2' action='kanri_unsm.php'>";
-    print "<label>運送会社 :";
-    print pulldown_unsm();
+    print "<label>運送会社 :".pulldown_unsm();
     print "<input type='submit' value='検索'>";
     print "</form>";
     print "<br>";
-    print "<label>運転者 :";
-    print pulldown_drvm();
+    print "<label>運転者 :".pulldown_drvm();
     print "<br>";
 
     print "<label>行先1 :";
