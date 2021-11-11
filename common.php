@@ -142,7 +142,7 @@ function sanitize($before)
         
         $PDO = null;        //データベースから切断
         
-        $id = $rec['DRCDUN'];
+        $id = -1;
         print "<select name = 'cddr' id = ".$id." form = 'main'>";
         while(true)
         {
@@ -155,7 +155,10 @@ function sanitize($before)
     
             if($id != $rec['DRCDUN'])
             {
-                print "</select>"; 
+                if($id != -1)
+                {
+                    print "</select>"; 
+                }
                 print "<select name = 'cddr' id = ".$id." form = 'main'>";
 
                 $id = $rec['DRCDUN'];
