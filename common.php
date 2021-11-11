@@ -67,7 +67,7 @@ function sanitize($before)
         
         $sql = "SELECT * FROM ST_SHBAN_MYSQL
         WHERE st_shban_mysql.SHCDSH>?
-        ORDER BY ST_SHBAN_MYSQL.SHKBSH, ST_SHBAN_MYSQL.SHCDAH"; // SELECT文を変数に格納。
+        ORDER BY ST_SHBAN_MYSQL.SHKBSH, ST_SHBAN_MYSQL.SHCDSH"; // SELECT文を変数に格納。
     
         $stmt = $dbh->prepare($sql); //挿入する値は空のまま、SQL実行の準備をする
         $params[] = 0;          // 挿入する値を配列に格納する
