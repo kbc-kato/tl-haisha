@@ -15,6 +15,10 @@
             </div>
             <br><br>
 <?php
+ini_set( 'display_errors', 1 );
+ini_set( 'error_reporting', E_ALL );
+
+
     print "<div id='login'>";
 
     print "<label>配車日 :";
