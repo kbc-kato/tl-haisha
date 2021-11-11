@@ -20,8 +20,6 @@ ini_set( 'error_reporting', E_ALL );
 
     require_once ("common.php");
 
-    session_start();
-
     print "<div id='login'>";
 
     print "<label>配車日 :";
@@ -31,9 +29,8 @@ ini_set( 'error_reporting', E_ALL );
     print pulldown_shban();
     print "</label>";
     print "<br>";
-    print "<form method='POST' name='form2' action='kanri_input.php'>";
+    print "<form method='POST' name='form2' action='kanri_unsm.php'>";
     print "<input type='hidden' name='kakushi' value='secret'>";
-    print "<iframe name='f1' width=0 height=0 style='visibility:hidden'></iframe>";
     print "<label>運送会社 :";
     print pulldown_unsm();
     print "</label>";
@@ -41,14 +38,7 @@ ini_set( 'error_reporting', E_ALL );
     print "</form>";
     print "<br>";
     print "<label>運転者 :";
-    if(empty($cdun) == true)
-    {
-        print pulldown_drvm(0);
-    }
-    else
-    {
-        print pulldown_drvm($cdun);
-    }
+    print pulldown_drvm(0);
     print "</label>";
     print "<br>";
 
