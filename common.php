@@ -79,6 +79,13 @@ function sanitize($before)
 
         while(true)
         {
+            $rec = $stmt->fetch(PDO::FETCH_ASSOC);
+
+            if ($rec==false)
+            {
+                break;
+            }
+    
             print "<option value='".$rec['SHCDSH']."'>".$rec['SHNMSH']."</option>";
         }
         print "</select>"; 
@@ -93,7 +100,7 @@ function sanitize($before)
         
         $sql = "SELECT * FROM ST_UNSM_MYSQL
         WHERE st_unsm_mysql.UNCDUN>?
-        ORDER BY ST_UNSM_MYSQL.UNNOHY, ST_UNSM_MYSQL.UNKNUN;"; // SELECT文を変数に格納。
+        ORDER BY ST_UNSM_MYSQL.UNNOHY, ST_UNSM_MYSQL.UNKNUN"; // SELECT文を変数に格納。
     
         $stmt = $dbh->prepare($sql); //挿入する値は空のまま、SQL実行の準備をする
         $params[] = 0;          // 挿入する値を配列に格納する
@@ -107,6 +114,11 @@ function sanitize($before)
         {
             $rec = $stmt->fetch(PDO::FETCH_ASSOC);
 
+            if ($rec==false)
+            {
+                break;
+            }
+    
             print "<option value='".$rec['UNCDUN']."'>".$rec['UNRYUN']."</option>";
         }
         print "</select>"; 
@@ -135,6 +147,11 @@ function sanitize($before)
         {
             $rec = $stmt->fetch(PDO::FETCH_ASSOC);
 
+            if ($rec==false)
+            {
+                break;
+            }
+    
             print "<option value='".$rec['DRCDDR']."'>".$rec['DRNMDR']."</option>";
         }
         print "</select>"; 
