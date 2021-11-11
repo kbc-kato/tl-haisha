@@ -14,7 +14,7 @@ try
 {
     require_once("common.php");
 
-    $post = sanitize($_POST);               //前画面からのデータを変数にセット
+    $post = sanitize($_GET);               //前画面からのデータを変数にセット
 
     $cdun = $post["cdun"];                 //変数をエスケープする
 print "cdun=".$cdun;
