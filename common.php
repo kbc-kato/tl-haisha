@@ -23,9 +23,6 @@ function sanitize($before)
                 print "<option value ='".$i."'>".$i."</option>";
             }
         }
-        
-//        print "<option value ='2021'>2021</option>";
-//        print "<option value ='2022'>2022</option>";
         print "</select>";
     } 
     
@@ -42,18 +39,6 @@ function sanitize($before)
                 print "<option value ='".$i."'>".$i."</option>";
             }
         }
-//        print "<option value ='01'>01</option>";
-//        print "<option value ='02'>02</option>";
-//        print "<option value ='03'>03</option>";
-//        print "<option value ='04'>04</option>";
-//        print "<option value ='05'>05</option>";
-//        print "<option value ='06'>06</option>";
-//        print "<option value ='07'>07</option>";
-//        print "<option value ='08'>08</option>";
-//        print "<option value ='09'>09</option>";
-//        print "<option value ='10'>10</option>";
-//        print "<option value ='11'>11</option>";
-//        print "<option value ='12'>12</option>";
         print "</select>";
     }
 
@@ -70,37 +55,88 @@ function sanitize($before)
                 print "<option value ='".$i."'>".$i."</option>";
             }
         }
-//        print "<option value ='01'>01</option>";
-//        print "<option value ='02'>02</option>";
-//        print "<option value ='03'>03</option>";
-//        print "<option value ='04'>04</option>";
-//        print "<option value ='05'>05</option>";
-//        print "<option value ='06'>06</option>";
-//        print "<option value ='07'>07</option>";
-//        print "<option value ='08'>08</option>";
-//        print "<option value ='09'>09</option>";
-//        print "<option value ='10'>10</option>";
-//        print "<option value ='11'>11</option>";
-//        print "<option value ='12'>12</option>";
-//        print "<option value ='13'>13</option>";
-//        print "<option value ='14'>14</option>";
-//        print "<option value ='15'>15</option>";
-//        print "<option value ='16'>16</option>";
-//        print "<option value ='17'>17</option>";
-//        print "<option value ='18'>18</option>";
-//        print "<option value ='19'>19</option>";
-//        print "<option value ='20'>20</option>";
-//        print "<option value ='21'>21</option>";
-//        print "<option value ='22'>22</option>";
-//        print "<option value ='23'>23</option>";
-//        print "<option value ='24'>24</option>";
-//        print "<option value ='25'>25</option>";
-//        print "<option value ='26'>26</option>";
-//        print "<option value ='27'>27</option>";
-//        print "<option value ='28'>28</option>";
-//        print "<option value ='29'>29</option>";
-//        print "<option value ='30'>30</option>";
-//        print "<option value ='31'>31</option>";
         print "</select>";    
+    }
+
+    function pulldown_shban()
+    {
+        include ("userfile.php");               //$dsn,$user,$password
+
+        $dbh = new PDO($dsn, $user, $password); //SqlServerのデータベースに接続
+        $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); //PDOのエラーレポートを表示
+        
+        $sql = "SELECT * FROM ST_SHBAN_MYSQL
+        WHERE st_shban_mysql.SHCDSH>?
+        ORDER BY ST_SHBAN_MYSQL.SHKBSH, ST_SHBAN_MYSQL.SHCDAH"; // SELECT文を変数に格納。
+    
+        $stmt = $dbh->prepare($sql); //挿入する値は空のまま、SQL実行の準備をする
+        $params[] = 0;          // 挿入する値を配列に格納する
+        
+        $stmt->execute($params); //挿入する値が入った変数をexecuteにセットしてSQLを実行
+        
+        $PDO = null;        //データベースから切断
+        print "<select name = 'shban' form = 'main'>";
+
+        while(true)
+        {
+            print "<option value='".$rec['SHCDSH']."'>".$rec['SHNMSH']."</option>";
+        }
+        print "</select>"; 
+    }
+
+    function pulldown_unsm()
+    {
+        include ("userfile.php");               //$dsn,$user,$password
+
+        $dbh = new PDO($dsn, $user, $password); //SqlServerのデータベースに接続
+        $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); //PDOのエラーレポートを表示
+        
+        $sql = "SELECT * FROM ST_UNSM_MYSQL
+        WHERE st_unsm_mysql.UNCDUN>?
+        ORDER BY ST_UNSM_MYSQL.UNNOHY, ST_UNSM_MYSQL.UNKNUN;"; // SELECT文を変数に格納。
+    
+        $stmt = $dbh->prepare($sql); //挿入する値は空のまま、SQL実行の準備をする
+        $params[] = 0;          // 挿入する値を配列に格納する
+        
+        $stmt->execute($params); //挿入する値が入った変数をexecuteにセットしてSQLを実行
+        
+        $PDO = null;        //データベースから切断
+        
+        print "<select name = 'cdun' form = 'main'>";
+        while(true)
+        {
+            $rec = $stmt->fetch(PDO::FETCH_ASSOC);
+
+            print "<option value='".$rec['UNCDUN']."'>".$rec['UNRYUN']."</option>";
+        }
+        print "</select>"; 
+    }
+
+    function pulldown_drvm()
+    {
+        include ("userfile.php");               //$dsn,$user,$password
+
+        $dbh = new PDO($dsn, $user, $password); //SqlServerのデータベースに接続
+        $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); //PDOのエラーレポートを表示
+        
+        $sql = "SELECT * FROM ST_DRVM_MYSQL
+        WHERE st_drvm_mysql.DRCDUN=?
+        ORDER BY ST_DRVM_MYSQL.DRCDDR;"; // SELECT文を変数に格納。
+    
+        $stmt = $dbh->prepare($sql); //挿入する値は空のまま、SQL実行の準備をする
+        $params[] = $cdun;          // 挿入する値を配列に格納する
+        
+        $stmt->execute($params); //挿入する値が入った変数をexecuteにセットしてSQLを実行
+        
+        $PDO = null;        //データベースから切断
+        
+        print "<select name = 'cddr' form = 'main'>";
+        while(true)
+        {
+            $rec = $stmt->fetch(PDO::FETCH_ASSOC);
+
+            print "<option value='".$rec['DRCDDR']."'>".$rec['DRNMDR']."</option>";
+        }
+        print "</select>"; 
     }
 ?>
