@@ -69,7 +69,7 @@ ini_set( 'error_reporting', E_ALL );
     print "行先1"."<br>";
     print "<input type ='text' name = 'nmry1' size='40' maxlength='40' value = ".$nmry1.">";
     print "着時間 ";
-    print "<input type ='time' name = 'tmha1' value = ".$tmha1.">";
+    print "<input type ='text' name = 'tmha1' size='10' value = ".$tmha1.">";
     print "<br>";
 
     print "備考"."<br>";
@@ -79,7 +79,7 @@ ini_set( 'error_reporting', E_ALL );
     print "行先2"."<br>";
     print "<input type ='text' name = 'nmry2' size='40' maxlength='40' value = ".$nmry2.">";
     print "着時間 ";
-    print "<input type ='time' name = 'tmha2' value = ".$tmha2.">";
+    print "<input type ='text' name = 'tmha2' size='10' value = ".$tmha2.">";
     print "<br>";
 
     print "備考"."<br>";
