@@ -29,7 +29,7 @@ try
     $biko2= $post["biko2"];
 
     session_start();
-    $_SESSION["in_hiha"]=$hiha;
+    $_SESSION["hiha"]=$hiha;
     $_SESSION["shban"]=$shban;
     $_SESSION["cdun"]=$cdun;
     $_SESSION["cddr"]=$cddr;
