@@ -171,7 +171,7 @@ function sanitize($before)
                     print "</select>"; 
                 }
                 $cnt++;
-                print "<select name = 'cddr'".$cnt." id = ".$rec['DRCDUN']." class='subbox'>";
+                print "<select name = 'cddr".$cnt."' id = ".$rec['DRCDUN']." class='subbox'>";
 
                 $id = $rec['DRCDUN'];
             }
