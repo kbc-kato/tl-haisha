@@ -28,3 +28,30 @@ table.haisha_tbl td{
         border-bottom: 1px solid #666666;   /*セルのボーダー(下)*/
         padding: 5px;                           /*パディング(内側余白)を全て5px*/
         }
+
+table.kanri_tbl{
+        width:100%;
+        border-collapse: collapse;          /*セル同士の間に隙間を空けない*/
+        }
+
+table.kanri_tbl th{
+        text-align: center;                 /*センター揃えにする*/
+        color:white;                            /*文字色*/
+        background-color: #e442fa;          /*セルの背景色*/
+        border-top: 1px solid #666666;      /*セルのボーダー(上)*/
+        border-left: 1px solid #666666;     /*セルのボーダー(左)*/
+        border-right: 1px solid #666666;    /*セルのボーダー(右)*/
+        border-bottom: 1px solid #666666;   /*セルのボーダー(下)*/
+        padding: 5px;                           /*パディング(内側余白)を全て5px*/
+        }
+            
+table.kanri_tbl td{
+        text-align: center;
+        background-color: #fcb2fc;              /*セルの背景色*/
+        border-top: 1px solid #666666;      /*セルのボーダー(上)*/
+        border-left: 1px solid #666666;     /*セルのボーダー(左)*/
+        border-right: 1px solid #666666;    /*セルのボーダー(右)*/
+        border-bottom: 1px solid #666666;   /*セルのボーダー(下)*/
+        padding: 5px;                           /*パディング(内側余白)を全て5px*/
+        }
+                

@@ -21,6 +21,17 @@ input:focus {
         box-shadow: 0px 0px 5px 2px #ccccee;        /*影をつける*/
         outline-style: none;                          /*アウトライン無しにする*/
 }
+textarea {
+        border: 1px solid #999999;        /*ボーダーをつける*/
+        font-size: 20px;                    /*フォントサイズ*/
+        padding: 2px;                       /*パディング(内側余白)を設定(全て2px)*/
+        border-radius: 3px;                 /*角丸にする*/
+        box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.1) inset;      /*内側に影をつける*/
+}
+textarea:focus {
+        box-shadow: 0px 0px 5px 2px #ccccee;        /*影をつける*/
+        outline-style: none;                          /*アウトライン無しにする*/
+}
 /*#form1 p input {
         width: 300px; height: 40px;                 /*幅と高さ*/
 /*        border: 0;                                  /*アウトライン無しにする*/

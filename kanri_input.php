@@ -24,45 +24,71 @@ ini_set( 'error_reporting', E_ALL );
 
     print "<div id='kanri'>";
 
-    print "<label>配車日 :";
-    print "<input type ='date' name = 'hiha' form = 'main'></label>";
-    print "<br><br>";
-    print "<label>車番 :";
-    print pulldown_shban();
-    print "</label>";
-    print "<br>";
-    print "<form method='POST' name='form2' action='kanri_input.php'>";
+    print "<form method='POST' name='form2' action='kanri_check.php'>";
     print "<input type='hidden' name='kakushi' value='secret'>";
-    print "<label>運送会社 :";
+    
+    print "<table class='kanri_tbl'>";
+    print "<tr>";
+    print "<th>配車日 :</th>";
+    print "<td>;";
+    print "<input type ='date' name = 'hiha' form = 'main'></label>";
+    print "</td>";
+    print "</tr>";
+
+    print "<tr>";
+    print "<th>車番 :</th>";
+    print "<td>;";
+    print pulldown_shban();
+    print "</td>";
+    print "</tr>";
+
+    print "<tr>";
+    print "<th>運送会社 :</th>";
+    print "<td>;";
     print pulldown_unsm();
-    print "</label>";
-    print "<input type='submit' value='検索'>";
-    print "</form>";
-    print "<br>";
-    print "<label>運転者 :";
-            print pulldown_drvm();
-    print "</label>";
-    print "<br>";
+    print "</td>";
+    print "</tr>";
 
-    print "<label>行先1 :";
-    print "<input type ='text' name = 'nmry1' size='40' maxlength='40' form = 'main'></label>";
-    print "<label>着時間 :";
-    print "<input type ='time' name = 'tmha1' form = 'main'></label>";
-    print "<br>";    
-    print "<label>備考 :";
-    print "<textarea name = 'biko1' cols='40' rows='5' form = 'main'></textarea></label>";
-    print "<br><br>";
+    print "<tr>";
+    print "<th>運転者 :</th>";
+    print pulldown_drvm();
+    print "</td>";
+    print "</tr>";
 
-    print "<label>行先2 :";
-    print "<input type ='text' name = 'nmry2' size='40' maxlength='40' form = 'main'></label>";
-    print "<label>着時間 :";
-    print "<input type ='time' name = 'tmha2' form = 'main'></label>";
-    print "<br>";    
-    print "<label>備考 :";
-    print "<textarea name = 'biko2' cols='40' rows='5' form = 'main'></textarea></label>";
-    print "<br><br>";
+    print "<tr>";
+    print "<th>行先1 :</th>";
+    print "<td>;";
+    print "<input type ='text' name = 'nmry1' size='40' maxlength='40' form = 'main'>";
+    print " 着時間 :";
+    print "<input type ='time' name = 'tmha1' form = 'main'>";
+    print "</td>";
+    print "</tr>";
 
-    print "<form  action='kanri_check.php' id='main' method = 'POST'>";
+    print "<tr>";
+    print "<th>備考 :</th>";
+    print "<td>;";
+    print "<textarea name = 'biko1' cols='40' rows='5' form = 'main'></textarea>";
+    print "</td>";
+    print "</tr>";
+
+    print "<tr>";
+    print "<th>行先2 :</th>";
+    print "<input type ='text' name = 'nmry2' size='40' maxlength='40' form = 'main'>";
+    print " 着時間 :";
+    print "<input type ='time' name = 'tmha2' form = 'main'>";
+    print "</td>";
+    print "</tr>";
+
+    print "<tr>";
+    print "<th>備考 :</th>";
+    print "<td>;";
+    print "<textarea name = 'biko2' cols='40' rows='5' form = 'main'></textarea>";
+    print "</td>";
+    print "</tr>";
+    print "</table>";
+
+
+//    print "<form  action='kanri_check.php' id='main' method = 'POST'>";
     print "<input type ='submit' value = '更新'>";
     print "</form>";
 //    print "<hr>";
