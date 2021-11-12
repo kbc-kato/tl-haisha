@@ -29,7 +29,7 @@ try
     $biko2= $post["biko2"];
 
     session_start();
-    $_SESSION["hiha"]=$hiha;
+    $_SESSION["in_hiha"]=$hiha;
     $_SESSION["shban"]=$shban;
     $_SESSION["cdun"]=$cdun;
     $_SESSION["cddr"]=$cddr;
@@ -43,7 +43,8 @@ try
     {
         print "<br><br>";
         print "日付が未入力です。1"."<br>";
-        print "<a href = '". $_SERVER['HTTP_REFERER']."'>戻る</a>";
+        print "<a href = 'kanri_input.php'>戻る</a>";
+        print "<a href = '". $_SERVER['HTTP_REFERER']."'>戻る2</a>";
         exit();
     }
     else
