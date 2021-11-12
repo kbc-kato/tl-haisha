@@ -15,6 +15,7 @@ try
 
     require_once("common.php");
 
+print "cddr[]=".$_POST("cddr[]");
     $post = sanitize($_POST);               //前画面からのデータを変数にセット
     
     $hiha= $post["hiha"];
@@ -32,7 +33,7 @@ try
     $biko2= $post["biko2"];
 
 print "cddr=".$cddr;
-    
+
     session_start();
 
     $_SESSION["hiha"]=$hiha;
