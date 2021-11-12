@@ -25,15 +25,24 @@ ini_set( 'error_reporting', E_ALL );
     $shban = 0;
     $cdun = 0;
     $cddr = 0;
+    $nmry1 = "";
+    $tmha1 = "";
+    $biko1 = "";
+    $nmry2 = "";
+    $tmha2 = "";
+    $biko2 = "";
 
     if(isset($_SESSION["hiha"])) $hiha = $_SESSION["hiha"];
     if(isset($_SESSION["shban"])) $shban = $_SESSION["shban"];
     if(isset($_SESSION["cdun"])) $cdun = $_SESSION["cdun"];
     if(isset($_SESSION["cddr"])) $cdun = $_SESSION["cddr"];
-//       print "in_hiha".$_SESSION['in_hiha'];
-//print "shban".$_SESSION["shban"];
-//print "cdun".$_SESSION["cdun"];
-//print "cddr".$_SESSION["cddr"];
+    if(isset($_SESSION["nmry1"])) $nmry1 = $_SESSION["nmry1"];
+    if(isset($_SESSION["tmha1"])) $tmha1 = $_SESSION["tmha1"];
+    if(isset($_SESSION["biko1"])) $biko1 = $_SESSION["biko1"];
+    if(isset($_SESSION["nmry2"])) $nmry2 = $_SESSION["nmry2"];
+    if(isset($_SESSION["tmha2"])) $tmha2 = $_SESSION["tmha2"];
+    if(isset($_SESSION["biko2"])) $biko2 = $_SESSION["biko2"];
+
 
     print "<div id='kanri'>";
 
@@ -58,23 +67,23 @@ ini_set( 'error_reporting', E_ALL );
     print "<br>";
 
     print "行先1"."<br>";
-    print "<input type ='text' name = 'nmry1' size='40' maxlength='40'>";
+    print "<input type ='text' name = 'nmry1' size='40' maxlength='40' value = ".$nmry1.">";
     print "着時間 ";
-    print "<input type ='time' name = 'tmha1'>";
+    print "<input type ='time' name = 'tmha1' value = ".$tmha1.">";
     print "<br>";
 
     print "備考"."<br>";
-    print "<textarea name = 'biko1' cols='40' rows='5'></textarea>";
+    print "<textarea name = 'biko1' cols='40' rows='5' value = ".$biko1."></textarea>";
     print "<br>";
 
     print "行先2"."<br>";
-    print "<input type ='text' name = 'nmry2' size='40' maxlength='40'>";
+    print "<input type ='text' name = 'nmry2' size='40' maxlength='40' value = ".$nmry2.">";
     print "着時間 ";
-    print "<input type ='time' name = 'tmha2'>";
+    print "<input type ='time' name = 'tmha2' value = ".$tmha2.">";
     print "<br>";
 
     print "備考"."<br>";
-    print "<textarea name = 'biko2' cols='40' rows='5'></textarea>";
+    print "<textarea name = 'biko2' cols='40' rows='5' value = ".$biko2."></textarea>";
     print "<br><br>";
 
     print "<input type ='submit' value = '更新'>";
