@@ -20,7 +20,10 @@ try
     $hiha= $post["hiha"];
     $shban= $post["shban"];
     $cdun= $post["cdun"];
-    $cddr= $post["cddr"];
+    if($post["cddr"] !=1)
+    {
+        $cddr= $post["cddr"];
+    }
     $nmry1= $post["nmry1"];
     $tmha1= $post["tmha1"];
     $biko1= $post["biko1"];
@@ -28,6 +31,8 @@ try
     $tmha2= $post["tmha2"];
     $biko2= $post["biko2"];
 
+print "cddr=".$cddr;
+    
     session_start();
 
     $_SESSION["hiha"]=$hiha;
