@@ -34,7 +34,7 @@ try
     {
         print "<br><br>";
         print "日付が未入力です。1"."<br>";
-        print "<a href = 'history.back()>戻る</a>";
+        print "<a href = 'history.back()'>戻る</a>";
         exit();
     }
     else
@@ -43,7 +43,7 @@ try
         {
             print "<br><br>";
             print "日付が未入力です。2"."<br>";
-            print "<a href = 'history.back()>戻る</a>";
+            print "<a href = 'history.back()'>戻る</a>";
             exit();
         }
     }
@@ -53,7 +53,7 @@ try
     {
         print "<br><br>";
         print "車番が未入力です。"."<br>";
-        print "<a href = 'history.back()>戻る</a>";
+        print "<a href = 'history.back()'>戻る</a>";
         exit();
     }
     else
@@ -62,7 +62,7 @@ try
         {
             print "<br><br>";
             print "車番が未入力です。"."<br>";
-            print "<a href = 'history.back()>戻る</a>";
+            print "<a href = 'history.back()'>戻る</a>";
             exit();
         }
     }
@@ -72,7 +72,7 @@ try
     {
         print "<br><br>";
         print "運送会社が未入力です。"."<br>";
-        print "<a href = 'history.back()>戻る</a>";
+        print "<a href = 'history.back()'>戻る</a>";
         exit();
     }
     else
@@ -81,7 +81,7 @@ try
         {
             print "<br><br>";
             print "車番が未入力です。"."<br>";
-            print "<a href = 'history.back()>戻る</a>";
+            print "<a href = 'history.back()'>戻る</a>";
             exit();
         }
     }
