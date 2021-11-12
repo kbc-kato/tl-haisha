@@ -34,7 +34,7 @@ try
     $_SESSION["cdun"]=$cdun;
     $_SESSION["cddr"]=$cddr;
 
-    header("location:haisha_desp.php");
+//    header("location:haisha_desp.php");
     
 
     //入力チェック
