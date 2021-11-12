@@ -125,9 +125,13 @@ ini_set( 'error_reporting', E_ALL );
 					targetSub.style.display = 'inline';
 				}
 			}
-
 		}
 
+        var select = document.getElementById('subbox');
+
+            select.onchange = function(){
+            alert(this.value);
+        }
 	});
 </script>
 <!-- ========== -->
