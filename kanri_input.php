@@ -35,14 +35,14 @@ ini_set( 'error_reporting', E_ALL );
     print "<br>";
 
     print "<div class='pulldownset'>";
-    print "<label>"."運送会社"."<br>";
+    print "運送会社<br>";
     print pulldown_unsm();
-    print "</label>";
+//    print "</label>";
     print "<br>";
 
-    print "<label>"."運転者"."<br>";
+    print "運転者"."<br>";
     print pulldown_drvm();
-    print "</label>";
+//    print "</label>";
     print "</div>";
     print "<br>";
 
