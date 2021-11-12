@@ -31,20 +31,20 @@ ini_set( 'error_reporting', E_ALL );
     print "<tr>";
     print "<th>"."配車日"."</th>";
     print "<td>;";
-    print "<input type ='date' name = 'hiha' form = 'main'></label>";
+    print "<input type ='date' name = 'hiha' form = 'main'>";
     print "</td>";
     print "</tr>";
 
     print "<tr>";
     print "<th>"."車番"."</th>";
-    print "<td>;";
+    print "<td>";
     print pulldown_shban();
     print "</td>";
     print "</tr>";
 
     print "<tr>";
     print "<th>"."運送会社"."</th>";
-    print "<td>;";
+    print "<td>";
     print pulldown_unsm();
     print "</td>";
     print "</tr>";
@@ -57,7 +57,7 @@ ini_set( 'error_reporting', E_ALL );
 
     print "<tr>";
     print "<th>"."行先1"."</th>";
-    print "<td>;";
+    print "<td>";
     print "<input type ='text' name = 'nmry1' size='40' maxlength='40' form = 'main'>";
     print " 着時間 ";
     print "<input type ='time' name = 'tmha1' form = 'main'>";
@@ -66,13 +66,14 @@ ini_set( 'error_reporting', E_ALL );
 
     print "<tr>";
     print "<th>"."備考"."</th>";
-    print "<td>;";
+    print "<td>";
     print "<textarea name = 'biko1' cols='40' rows='5' form = 'main'></textarea>";
     print "</td>";
     print "</tr>";
 
     print "<tr>";
     print "<th>"."行先2"."</th>";
+    print "<td>";
     print "<input type ='text' name = 'nmry2' size='40' maxlength='40' form = 'main'>";
     print " 着時間 ";
     print "<input type ='time' name = 'tmha2' form = 'main'>";
@@ -81,7 +82,7 @@ ini_set( 'error_reporting', E_ALL );
 
     print "<tr>";
     print "<th>"."備考"."</th>";
-    print "<td>;";
+    print "<td>";
     print "<textarea name = 'biko2' cols='40' rows='5' form = 'main'></textarea>";
     print "</td>";
     print "</tr>";

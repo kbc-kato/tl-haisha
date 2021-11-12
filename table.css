@@ -39,8 +39,8 @@ table.kanri_tbl th{
     text-align: center;                 /*センター揃え*/
     white-space: nowrap;                /*セル内の改行を禁止する*/
     color:white;                        /*文字色*/
-    background-color: #e442fa;          /*セルの背景色*/
-    border-top: 1px solid #f053f0;      /*セルのボーダー(上)*/
+    background-color: #f053f0;          /*セルの背景色*/
+    border-top: 1px solid #666666;      /*セルのボーダー(上)*/
     border-left: 1px solid #666666;     /*セルのボーダー(左)*/
     border-right: 1px solid #666666;    /*セルのボーダー(右)*/
     border-bottom: 1px solid #666666;   /*セルのボーダー(下)*/
@@ -48,9 +48,9 @@ table.kanri_tbl th{
     }
     
 table.kanri_tbl td{
-    text-align: center;                /*センター揃え*/
-    background-color: #fcb2fc;              /*セルの背景色*/
-    border-top: 1px solid #f0b9fd;      /*セルのボーダー(上)*/
+    text-align: left;                   /*左揃え*/
+    background-color: #f0b9fd;              /*セルの背景色*/
+    border-top: 1px solid #666666;      /*セルのボーダー(上)*/
     border-left: 1px solid #666666;     /*セルのボーダー(左)*/
     border-right: 1px solid #666666;    /*セルのボーダー(右)*/
     border-bottom: 1px solid #666666;   /*セルのボーダー(下)*/

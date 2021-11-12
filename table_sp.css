@@ -46,7 +46,7 @@ table.kanri_tbl th{
         }
             
 table.kanri_tbl td{
-        text-align: center;
+        text-align: left;
         background-color: #fcb2fc;              /*セルの背景色*/
         border-top: 1px solid #666666;      /*セルのボーダー(上)*/
         border-left: 1px solid #666666;     /*セルのボーダー(左)*/
