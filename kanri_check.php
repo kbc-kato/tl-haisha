@@ -28,7 +28,16 @@ try
     $tmha2= $post["tmha2"];
     $biko2= $post["biko2"];
 
-//入力チェック
+    session_start();
+    $_SESSION["hiha"]=$hiha;
+    $_SESSION["shban"]=$shban;
+    $_SESSION["cdun"]=$cdun;
+    $_SESSION["cddr"]=$cddr;
+
+    header("location:haisha_desp.php");
+    
+
+    //入力チェック
 //配車日
     if($hiha=='')
     {

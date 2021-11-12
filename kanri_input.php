@@ -20,12 +20,14 @@ ini_set( 'error_reporting', E_ALL );
 
     require_once ("common.php");
 
+    session_start();
+    
     print "<div id='kanri'>";
 
     print "<form method='POST' name='form2' action='kanri_check.php'>";
     
     print "配車日"."<br>";
-    print "<input type ='date' name = 'hiha'>";
+    print "<input type ='date' name = 'hiha' value = ".$_SESSION["hiha"]. ">";
     print "<br>";
 
     print "車番"."<br>";

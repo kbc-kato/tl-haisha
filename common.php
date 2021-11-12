@@ -85,8 +85,14 @@ function sanitize($before)
             {
                 break;
             }
-    
-            print "<option value='".$rec['SHCDSH']."'>".$rec['SHNMSH']."</option>";
+            if($_SESSION["shban"] == $rec['SHCDSH'])
+            {
+                print "<option value='".$rec['SHCDSH']."' selected>".$rec['SHNMSH']."</option>";
+            }
+            else
+            {
+                print "<option value='".$rec['SHCDSH']."'>".$rec['SHNMSH']."</option>";
+            }
         }
         print "</select>"; 
     }
@@ -118,8 +124,14 @@ function sanitize($before)
             {
                 break;
             }
-    
-            print "<option value='".$rec['UNCDUN']."'>".$rec['UNRYUN']."</option>";
+            if($_SESSION["cdun"] == $rec['UNCDUN'])
+            {
+                print "<option value='".$rec['UNCDUN']."' selected>".$rec['UNRYUN']."</option>";
+            }
+            else
+            {
+                print "<option value='".$rec['UNCDUN']."'>".$rec['UNRYUN']."</option>";
+            }
         }
         print "</select>"; 
     }
@@ -163,8 +175,14 @@ function sanitize($before)
 
                 $id = $rec['DRCDUN'];
             }
-
-            print "<option value='".$rec['DRCDDR']."'>".$rec['DRNMDR']."</option>";
+            if($_SESSION["cddr"] == $rec['DRCDDR'])
+            {
+                print "<option value='".$rec['DRCDDR']."' selected>".$rec['DRNMDR']."</option>";
+            }
+            else
+            {
+                print "<option value='".$rec['DRCDDR']."'>".$rec['DRNMDR']."</option>";
+            }
         }
         print "</select>"; 
     }
