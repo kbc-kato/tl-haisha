@@ -20,8 +20,6 @@ ini_set( 'error_reporting', E_ALL );
 
     require_once ("common.php");
 
-//    session_start();
-
     print "<div id='kanri'>";
 
     print "<form method='POST' name='form2' action='kanri_check.php'>";
@@ -96,5 +94,6 @@ ini_set( 'error_reporting', E_ALL );
     print "</div>";
 ?>
         </div>
+        <script src="subbox.js" charset="utf-8"></script>
     </body>
 </html>

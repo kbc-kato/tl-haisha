@@ -159,7 +159,7 @@ function sanitize($before)
                 {
                     print "</select>"; 
                 }
-                print "<select name = 'cddr' id = ".$rec['DRCDUN']." form = 'main'>";
+                print "<select name = 'cddr' id = ".$rec['DRCDUN']." class='subbox' form = 'main'>";
 
                 $id = $rec['DRCDUN'];
             }
