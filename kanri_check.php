@@ -23,7 +23,7 @@ print "post=".$post;
     $hiha= $post["hiha"];
     $shban= $post["shban"];
     $cdun= $post["cdun"];
-    if($post["cddr"] !=1)
+    if(isset($post["cddr"])) 
     {
         $cddr= $post["cddr"];
     }
