@@ -17,8 +17,12 @@ try
 
 
     $post = sanitize($_POST);               //前画面からのデータを変数にセット
-print "post=".$post;
-    
+//print "post=".$post;
+foreach ($_POST as $name => $value) {
+    $$name = $value;
+    print "name".$$name."= ".$value;
+    print "<br>";
+}    
 
     $hiha= $post["hiha"];
     $shban= $post["shban"];
