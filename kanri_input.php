@@ -25,51 +25,42 @@ ini_set( 'error_reporting', E_ALL );
     print "<form method='POST' name='form2' action='kanri_check.php'>";
     print "<input type='hidden' name='kakushi' value='secret'>";
     
-    print "<label>"."配車日"."<br>";
-    print "<input type ='date' name = 'hiha' form = 'main'></label>";
+    print "配車日"."<br>";
+    print "<input type ='date' name = 'hiha'>";
     print "<br>";
 
-    print "<lebel>"."車番"."<br>";
+    print "車番"."<br>";
     print pulldown_shban();
-    print "</label>";
     print "<br>";
 
     print "<div class='pulldownset'>";
-    print "運送会社<br>";
+    print "運送会社"."<br>";
     print pulldown_unsm();
-//    print "</label>";
     print "<br>";
 
     print "運転者"."<br>";
     print pulldown_drvm();
-//    print "</label>";
     print "</div>";
     print "<br>";
 
-    print "<label>"."行先1"."<br>";
-    print "<input type ='text' name = 'nmry1' size='40' maxlength='40' form = 'main'>";
-    print "</label>";
-    print "<label>"."着時間 ";
-    print "<input type ='time' name = 'tmha1' form = 'main'>";
-    print "</label>";
+    print "行先1"."<br>";
+    print "<input type ='text' name = 'nmry1' size='40' maxlength='40'>";
+    print "着時間 ";
+    print "<input type ='time' name = 'tmha1'>";
     print "<br>";
 
-    print "<label>"."備考"."<br>";
-    print "<textarea name = 'biko1' cols='40' rows='5' form = 'main'></textarea>";
-    print "</label>";
+    print "備考"."<br>";
+    print "<textarea name = 'biko1' cols='40' rows='5'></textarea>";
     print "<br>";
 
-    print "<label>"."行先2"."<br>";
-    print "<input type ='text' name = 'nmry2' size='40' maxlength='40' form = 'main'>";
-    print "</label>";
-    print "<label>"."着時間 ";
-    print "<input type ='time' name = 'tmha2' form = 'main'>";
-    print "</label>";
+    print "行先2"."<br>";
+    print "<input type ='text' name = 'nmry2' size='40' maxlength='40'>";
+    print "着時間 ";
+    print "<input type ='time' name = 'tmha2'>";
     print "<br>";
 
-    print "<label>"."備考"."<br>";
-    print "<textarea name = 'biko2' cols='40' rows='5' form = 'main'></textarea>";
-    print "</label>";
+    print "備考"."<br>";
+    print "<textarea name = 'biko2' cols='40' rows='5'></textarea>";
     print "<br><br>";
 
 

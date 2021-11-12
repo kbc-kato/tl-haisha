@@ -75,7 +75,7 @@ function sanitize($before)
         $stmt->execute($params); //挿入する値が入った変数をexecuteにセットしてSQLを実行
         
         $PDO = null;        //データベースから切断
-        print "<select name = 'shban' form = 'main'>";
+        print "<select name = 'shban'>";
 
         while(true)
         {
@@ -159,7 +159,7 @@ function sanitize($before)
                 {
                     print "</select>"; 
                 }
-                print "<select name = 'cddr' id = ".$rec['DRCDUN']." class='subbox' form = 'main'>";
+                print "<select name = 'cddr' id = ".$rec['DRCDUN']." class='subbox'>";
 
                 $id = $rec['DRCDUN'];
             }
