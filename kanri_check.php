@@ -29,13 +29,17 @@ try
     $biko2= $post["biko2"];
 
     session_start();
+
     $_SESSION["hiha"]=$hiha;
     $_SESSION["shban"]=$shban;
     $_SESSION["cdun"]=$cdun;
     $_SESSION["cddr"]=$cddr;
-
-//    header("location:haisha_desp.php");
-    
+    $_SESSION["nmry1"]=$nmry1;
+    $_SESSION["tmha1"]=$tmha1;
+    $_SESSION["biko1"]=$biko1;
+    $_SESSION["nmry2"]=$nmry2;
+    $_SESSION["tmha2"]=$tmha2;
+    $_SESSION["biko2"]=$biko2;
 
     //入力チェック
 //配車日
@@ -44,7 +48,6 @@ try
         print "<br><br>";
         print "日付が未入力です。1"."<br>";
         print "<a href = 'kanri_input.php'>戻る</a>";
-        print "<a href = '". $_SERVER['HTTP_REFERER']."'>戻る2</a>";
         exit();
     }
     else
@@ -53,7 +56,7 @@ try
         {
             print "<br><br>";
             print "日付が未入力です。2"."<br>";
-            print "<a href = 'history.back()'>戻る</a>";
+            print "<a href = 'kanri_input.php'>戻る</a>";
             exit();
         }
     }
@@ -63,7 +66,7 @@ try
     {
         print "<br><br>";
         print "車番が未入力です。"."<br>";
-        print "<a href = 'history.back()'>戻る</a>";
+        print "<a href = 'kanri_input.php'>戻る</a>";
         exit();
     }
     else
@@ -72,7 +75,7 @@ try
         {
             print "<br><br>";
             print "車番が未入力です。"."<br>";
-            print "<a href = 'history.back()'>戻る</a>";
+            print "<a href = 'kanri_input.php'>戻る</a>";
             exit();
         }
     }
@@ -82,7 +85,7 @@ try
     {
         print "<br><br>";
         print "運送会社が未入力です。"."<br>";
-        print "<a href = 'history.back()'>戻る</a>";
+        print "<a href = 'kanri_input.php'>戻る</a>";
         exit();
     }
     else
@@ -91,7 +94,7 @@ try
         {
             print "<br><br>";
             print "車番が未入力です。"."<br>";
-            print "<a href = 'history.back()'>戻る</a>";
+            print "<a href = 'kanri_input.php'>戻る</a>";
             exit();
         }
     }
@@ -109,7 +112,7 @@ try
     $dbh = new PDO($dsn, $user, $password); //SqlServerのデータベースに接続
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); //PDOのエラーレポートを表示
 
-    $sql = "INSERT INTO ST_KANRI_MYSQL( KAHIKA, KASHBAN, KACDUN, KACDDR, KANMRY1, KATMHA1, KABIKO1, KANMRY2, KATMHA2, KABIKO2 ) VALURS (?,?,?,?,?,?,?,?,?,?)";
+    $sql = "INSERT INTO ST_KANRI_MYSQL( KAHIKA, KASHBAN, KACDUN, KACDDR, KANMRY1, KATMHA1, KABIKO1, KANMRY2, KATMHA2, KABIKO2 ) VALUES (?,?,?,?,?,?,?,?,?,?)";
 
     $stmt = $dbh->prepare($sql); //挿入する値は空のまま、SQL実行の準備をする
     $params[] = $hiha;          // 挿入する値を配列に格納する
