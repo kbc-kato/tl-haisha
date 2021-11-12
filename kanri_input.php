@@ -127,11 +127,9 @@ ini_set( 'error_reporting', E_ALL );
 			}
 		}
 
-        var select = document.getElementById('subbox');
+        var subbox = document.getElementById("subbox");
+        console.log(subbox.value); // 2
 
-            select.onchange = function(){
-            alert(this.value);
-        }
 	});
 </script>
 <!-- ========== -->
