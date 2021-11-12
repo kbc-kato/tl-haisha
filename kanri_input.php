@@ -30,7 +30,7 @@ ini_set( 'error_reporting', E_ALL );
     print "<table class='kanri_tbl'>";
     print "<tr>";
     print "<th>"."配車日"."</th>";
-    print "<td>;";
+    print "<td>";
     print "<input type ='date' name = 'hiha' form = 'main'>";
     print "</td>";
     print "</tr>";
