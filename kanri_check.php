@@ -15,7 +15,7 @@ try
 
     require_once("common.php");
 
-print "cddr=".$_GET("cddr");
+print "cddr=".$_POST("cddr");
     $post = sanitize($_POST);               //前画面からのデータを変数にセット
     
     $hiha= $post["hiha"];
