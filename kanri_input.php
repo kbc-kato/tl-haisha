@@ -46,7 +46,7 @@ ini_set( 'error_reporting', E_ALL );
 
     print "<div id='kanri'>";
 
-    print "<form method='POST' name='form2' action='kanri_check.php'>";
+    print "<form method='get' name='form2' action='kanri_check.php'>";
     
     print "配車日"."<br>";
     print "<input type ='date' name = 'hiha' value = ".$hiha.">";
