@@ -23,18 +23,23 @@ print "post=".$post;
     $hiha= $post["hiha"];
     $shban= $post["shban"];
     $cdun= $post["cdun"];
-    if(isset($post["cddr"])) 
-    {
-        $cddr= $post["cddr"];
-    }
     $nmry1= $post["nmry1"];
     $tmha1= $post["tmha1"];
     $biko1= $post["biko1"];
     $nmry2= $post["nmry2"];
     $tmha2= $post["tmha2"];
     $biko2= $post["biko2"];
+    
+    if(isset($post["cddr"])==true) 
+    {
+        $tblcddr[]= $post["cddr"];
+    }
 
-print "cddr=".$cddr;
+foreach($tblcddr as $key => $val)
+{
+    print "tblcddr".$key."= ".$val;
+    print "<br>";   
+}
 
     session_start();
 
