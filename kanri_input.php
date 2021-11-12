@@ -20,9 +20,9 @@ ini_set( 'error_reporting', E_ALL );
 
     require_once ("common.php");
 
-    session_start();
+//    session_start();
 
-    print "<div id='login'>";
+    print "<div id='kanri'>";
 
     print "<label>配車日 :";
     print "<input type ='date' name = 'hiha' form = 'main'></label>";
@@ -33,7 +33,6 @@ ini_set( 'error_reporting', E_ALL );
     print "<br>";
     print "<form method='POST' name='form2' action='kanri_input.php'>";
     print "<input type='hidden' name='kakushi' value='secret'>";
-//    print "<iframe name='f1' width=0 height=0 style='visibility:hidden'></iframe>";
     print "<label>運送会社 :";
     print pulldown_unsm();
     print "</label>";

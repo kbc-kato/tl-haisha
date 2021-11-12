@@ -64,6 +64,12 @@ div#keppin {
     font-size: 14px;                /*文字サイズ*/
     font-family:Arial, Helvetica, sans-serif;       /*フォントの種類*/
 }
+div#kanri {
+    padding:10px 0px 5px 20px;      /*位置調整(上 右 下 左)*/
+    text-align: left;               /*テキストを左揃えにする*/
+    font-size: 14px;                /*文字サイズ*/
+    font-family:Arial, Helvetica, sans-serif;       /*フォントの種類*/
+}
 hr {
     clear: both;                    /*フロート配置をクリアする*/
     width: 1000px;                   /*幅の指定*/
