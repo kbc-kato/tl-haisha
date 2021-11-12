@@ -15,9 +15,11 @@ try
 
     require_once("common.php");
 
-print "cddr=".$_POST("cddr");
+
     $post = sanitize($_POST);               //前画面からのデータを変数にセット
+print "post=".$post;
     
+
     $hiha= $post["hiha"];
     $shban= $post["shban"];
     $cdun= $post["cdun"];
