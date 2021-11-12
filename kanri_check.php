@@ -34,7 +34,7 @@ try
     {
         print "<br><br>";
         print "日付が未入力です。1"."<br>";
-        print "<a href = 'history.back()'>戻る</a>";
+        print "<a href = '". $_SERVER['HTTP_REFERER']."'>戻る</a>";
         exit();
     }
     else
