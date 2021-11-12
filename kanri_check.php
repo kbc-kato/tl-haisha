@@ -49,13 +49,13 @@ try
     $_SESSION["tmha2"]=$tmha2;
     $_SESSION["biko2"]=$biko2;
 
-    //入力チェック
+//入力チェック
 //配車日
     if($hiha=='')
     {
         print "<br><br>";
         print "日付が未入力です。1"."<br>";
-        print "<a href = 'kanri_input.php'>戻る</a>";
+        print "<a href = 'history.back()'>戻る</a>";
         exit();
     }
     else
@@ -63,7 +63,7 @@ try
         if(isset($hiha)==false)
         {
             print "<br><br>";
-            print "日付が未入力です。2"."<br>";
+            print "日付が未入力です。"."<br>";
             print "<a href = 'kanri_input.php'>戻る</a>";
             exit();
         }
