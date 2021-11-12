@@ -27,7 +27,7 @@ ini_set( 'error_reporting', E_ALL );
     print "<form method='POST' name='form2' action='kanri_check.php'>";
     print "<input type='hidden' name='kakushi' value='secret'>";
     
-    print "<table class='kanri_tbl'>";
+    print "<table class='haisha_tbl'>";
     print "<tr>";
     print "<th>"."配車日"."</th>";
     print "<td>";
