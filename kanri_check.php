@@ -55,7 +55,7 @@ try
     {
         print "<br><br>";
         print "日付が未入力です。1"."<br>";
-        print "<a href = 'history.back()'>戻る</a>";
+        print "<a href = 'kanri_input.php'>戻る</a>";
         exit();
     }
     else
@@ -138,7 +138,7 @@ try
     
     $PDO = null;        //データベースから切断
 
-    session_destroy();
+//    session_destroy();
 
         header("location:kanri_input.php");
         exit;
