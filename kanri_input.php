@@ -94,6 +94,19 @@ ini_set( 'error_reporting', E_ALL );
     print "</div>";
 ?>
         </div>
-        <script src="subbox.js" charset="utf-8"></script>
+
+<script type="text/javascript">
+// ▼HTMLの読み込み直後に実行：
+document.addEventListener('DOMContentLoaded', function() {
+
+   // ▼2階層目の要素を全て非表示にする
+   var allSubBoxes = document.getElementsByClassName("subbox");
+   for( var i=0 ; i<allSubBoxes.length ; i++) {
+      allSubBoxes[i].style.display = 'none';
+   }
+
+});
+</script>
+<!--        <script src="subbox.js" charset="utf-8"></script>   -->
     </body>
 </html>
