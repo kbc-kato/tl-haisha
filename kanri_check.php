@@ -12,34 +12,108 @@
 <?php
 try
 {
- 
+
     require_once("common.php");
 
     $post = sanitize($_POST);               //前画面からのデータを変数にセット
     
-    $year= $post["year"];
-    $month= $post["month"];
-    $day= $post["day"];
+    $hiha= $post["hiha"];
+    $shban= $post["shban"];
+    $cdun= $post["cdun"];
+    $cddr= $post["cddr"];
+    $nmry1= $post["nmry1"];
+    $tmha1= $post["tmha1"];
+    $biko1= $post["biko1"];
+    $nmry2= $post["nmry2"];
+    $tmha2= $post["tmha2"];
+    $biko2= $post["biko2"];
 
-
-    if(checkdate($month,$day,$year)==false)
+//入力チェック
+//配車日
+    if($hiha=='')
     {
         print "<br><br>";
-        print "日付が間違っています。<br>";
-        print "<a href = 'kanri_input.php'>戻る</a>";
+        print "日付が未入力です。<br>";
+        print "<a href = 'history.back()>戻る</a>";
     }
     else
     {
-
-        session_start();
-        $_SESSION["haisha_year"]=$year;
-        $_SESSION["haisha_month"]=$month;
-        $_SESSION["haisha_day"]=$day;
-
-        header("location:haisha_desp.php");
-        exit;
+        if(isset($hiha)==false)
+        {
+            print "<br><br>";
+            print "日付が未入力です。<br>";
+            print "<a href = 'history.back()>戻る</a>";
+        }
     }
+
+//車番
+    if($shban=='')
+    {
+        print "<br><br>";
+        print "車番が未入力です。<br>";
+        print "<a href = 'history.back()>戻る</a>";
+    }
+    else
+    {
+        if(isset($shban)==false)
+        {
+            print "<br><br>";
+            print "車番が未入力です。<br>";
+            print "<a href = 'history.back()>戻る</a>";
+        }
+    }
+
+//運送会社
+    if($cdun=='')
+    {
+        print "<br><br>";
+        print "運送会社が未入力です。<br>";
+        print "<a href = 'history.back()>戻る</a>";
+    }
+    else
+    {
+        if(isset($shban)==false)
+        {
+            print "<br><br>";
+            print "車番が未入力です。<br>";
+            print "<a href = 'history.back()>戻る</a>";
+        }
+    }
+//運転者
+//行先1
+//着時間1
+//備考1
+//行先2
+//着時間2
+//備考2
+
+//データinsert
+    include ('userfile.php');
+
+    $dbh = new PDO($dsn, $user, $password); //SqlServerのデータベースに接続
+    $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); //PDOのエラーレポートを表示
+
+    $sql = "INSERT INTO ST_KANRI_MYSQL( KAHIKA, KASHBAN, KACDUN, KACDDR, KANMRY1, KATMHA1, KABIKO1, KANMRY2, KATMHA2, KABIKO2 ) VALURS (?,?,?,?,?,?,?,?,?,?)";
+
+    $stmt = $dbh->prepare($sql); //挿入する値は空のまま、SQL実行の準備をする
+    $params[] = $hiha;          // 挿入する値を配列に格納する
+    $params[] = $shban;
+    $params[] = $cdun;
+    $params[] = $cddr;
+    $params[] = $nmry1;
+    $params[] = $tmha1;
+    $params[] = $biko1;
+    $params[] = $nmry2;
+    $params[] = $tmha2;
+    $params[] = $biko2;
+
+    $stmt->execute($params); //挿入する値が入った変数をexecuteにセットしてSQLを実行
     
+    $PDO = null;        //データベースから切断
+
+        header("location:kanri_input.php");
+        exit;
+
 }
 catch (exception $e)
 {
