@@ -33,7 +33,7 @@ try
     if($hiha=='')
     {
         print "<br><br>";
-        print "日付が未入力です。1<br>";
+        print "日付が未入力です。1"."<br>";
         print "<a href = 'history.back()>戻る</a>";
         exit();
     }
@@ -42,7 +42,7 @@ try
         if(isset($hiha)==false)
         {
             print "<br><br>";
-            print "日付が未入力です。2<br>";
+            print "日付が未入力です。2"."<br>";
             print "<a href = 'history.back()>戻る</a>";
             exit();
         }
@@ -52,7 +52,7 @@ try
     if($shban=='')
     {
         print "<br><br>";
-        print "車番が未入力です。<br>";
+        print "車番が未入力です。"."<br>";
         print "<a href = 'history.back()>戻る</a>";
         exit();
     }
@@ -61,7 +61,7 @@ try
         if(isset($shban)==false)
         {
             print "<br><br>";
-            print "車番が未入力です。<br>";
+            print "車番が未入力です。"."<br>";
             print "<a href = 'history.back()>戻る</a>";
             exit();
         }
@@ -71,7 +71,7 @@ try
     if($cdun=='')
     {
         print "<br><br>";
-        print "運送会社が未入力です。<br>";
+        print "運送会社が未入力です。"."<br>";
         print "<a href = 'history.back()>戻る</a>";
         exit();
     }
@@ -80,7 +80,7 @@ try
         if(isset($shban)==false)
         {
             print "<br><br>";
-            print "車番が未入力です。<br>";
+            print "車番が未入力です。"."<br>";
             print "<a href = 'history.back()>戻る</a>";
             exit();
         }
