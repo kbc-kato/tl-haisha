@@ -109,7 +109,7 @@ function sanitize($before)
         
         $PDO = null;        //データベースから切断
         
-        print "<select name = 'cdun'>";
+        print "<select name = 'cdun' class='mainselect'>";
         while(true)
         {
             $rec = $stmt->fetch(PDO::FETCH_ASSOC);

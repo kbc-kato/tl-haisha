@@ -40,6 +40,7 @@ ini_set( 'error_reporting', E_ALL );
     print "</td>";
     print "</tr>";
 
+    print "<div class='pulldownset'>";
     print "<tr>";
     print "<th>"."運送会社"."</th>";
     print "<td>";
@@ -52,6 +53,7 @@ ini_set( 'error_reporting', E_ALL );
     print pulldown_drvm();
     print "</td>";
     print "</tr>";
+    print "</div>";
 
     print "<tr>";
     print "<th>"."行先1"."</th>";
