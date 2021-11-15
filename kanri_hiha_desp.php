@@ -123,9 +123,9 @@ print "wk_kanri_hiha　update<br>";
     
     $sql = "SELECT wk_kanri_hiha.*, ST_UNSM_MYSQL.UNRYUN, ST_DRVM_MYSQL.DRNMDR
             FROM (wk_kanri_hiha 
-            INNER JOIN ST_UNSM_MYSQL
+            LEFT JOIN ST_UNSM_MYSQL
              ON wk_kanri_hiha.kacdun = ST_UNSM_MYSQL.UNCDUN)
-            INNER JOIN ST_DRVM_MYSQL
+            LEFT JOIN ST_DRVM_MYSQL
              ON (wk_kanri_hiha.kacddr = ST_DRVM_MYSQL.DRCDDR) AND (wk_kanri_hiha.kacdun = ST_DRVM_MYSQL.DRCDUN)
             where shcdsh > ?";
 
