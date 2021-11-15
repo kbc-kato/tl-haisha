@@ -12,6 +12,8 @@
 <?php
 try
 {
+    session_start();
+
 
     require_once("common.php");
 
@@ -33,9 +35,7 @@ try
     $nmry2= $post["nmry2"];
     $tmha2= $post["tmha2"];
     $biko2= $post["biko2"];
-    
 
-    session_start();
 
     $_SESSION["hiha"]=$hiha;
     $_SESSION["shban"]=$shban;
@@ -137,7 +137,7 @@ try
     
     $PDO = null;        //データベースから切断
 
-//    session_destroy();
+    session_destroy();
 
         header("location:kanri_input.php");
         exit;
