@@ -101,7 +101,7 @@ print "st_kanri_mysql　select";
         $params[] = $rec['katmha2'];
         $params[] = $rec['kabiko2'];
         $params[] = $rec['kashban'];
-
+var_dump($params);
         $stmt->execute($params); //挿入する値が入った変数をexecuteにセットしてSQLを実行        
 print "wk_kanri_hiha　update";
     }
