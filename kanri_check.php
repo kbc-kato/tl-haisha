@@ -137,6 +137,7 @@ try
     
     $PDO = null;        //データベースから切断
 
+    $_SESSION = array();
     session_destroy();
 
     header("location:kanri_input.php");
