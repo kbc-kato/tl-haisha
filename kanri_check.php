@@ -15,7 +15,6 @@ try
 
     require_once("common.php");
 
-
     $post = sanitize($_POST);               //前画面からのデータを変数にセット
 
 //foreach ($_POST as $name => $value) {

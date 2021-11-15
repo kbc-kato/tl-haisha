@@ -127,8 +127,8 @@ ini_set( 'error_reporting', E_ALL );
 			}
 		}
 
-        var subbox = document.getElementById("subbox");
-        console.log(subbox.value); // 2
+//        var subbox = document.getElementById("subbox");
+//        console.log(subbox.value); // 2
 
 	});
 </script>
