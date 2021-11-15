@@ -35,7 +35,7 @@ ini_set( 'error_reporting', E_ALL );
     if(isset($_SESSION["hiha"])) $hiha = $_SESSION["hiha"];
     if(isset($_SESSION["shban"])) $shban = $_SESSION["shban"];
     if(isset($_SESSION["cdun"])) $cdun = $_SESSION["cdun"];
-    if(isset($_SESSION["cddr"])) $cdun = $_SESSION["cddr"];
+    if(isset($_SESSION["cddr"])) $cddr = $_SESSION["cddr"];
     if(isset($_SESSION["nmry1"])) $nmry1 = $_SESSION["nmry1"];
     if(isset($_SESSION["tmha1"])) $tmha1 = $_SESSION["tmha1"];
     if(isset($_SESSION["biko1"])) $biko1 = $_SESSION["biko1"];
@@ -97,6 +97,10 @@ ini_set( 'error_reporting', E_ALL );
 <!-- ▼2段階の連動プルダウンメニューを実現するJavaScriptソース -->
 <!-- ========================================================= -->
 <script type="text/javascript">
+
+var cdun = '<?php echo $cdun; ?>';
+var cddr = '<?php echo $cddr; ?>';
+
 
 	// HTMLの読み込み直後に実行：
 	document.addEventListener('DOMContentLoaded', function() {
