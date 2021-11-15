@@ -98,8 +98,8 @@ ini_set( 'error_reporting', E_ALL );
 <!-- ========================================================= -->
 <script type="text/javascript">
 
-var cdun = '<?php echo $cdun; ?>';
-var cddr = '<?php echo $cddr; ?>';
+//var cdun = '<?php echo $cdun; ?>';
+//var cddr = '<?php echo $cddr; ?>';
 
 
 	// HTMLの読み込み直後に実行：
