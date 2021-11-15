@@ -72,14 +72,14 @@ print "ymd=".$year."/".$month."/".$day."<br>";
 
     while(true)
     {
-print "wk_kanri_hiha　LOOP<br>";
+
         $rec = $stmt->fetch(PDO::FETCH_ASSOC);
 
         if ($rec==false)
         {
             break;
         }
-    
+print "wk_kanri_hiha　LOOP<br>";    
         $sql = "UPDATE wk_kanri_hiha
                 SET seq = ?
                   , kahika = ?
