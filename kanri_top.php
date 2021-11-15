@@ -11,27 +11,19 @@
         <div id="pagebody">
             <br><br><br>
 <?php
-    session_start();
-    session_regenerate_id(true);            //セッションIDを変える
-
     print "<div id='menu'>";
     print "<p>";
-    print "<a href = 'haisha_top.php'>配車情報　検索</a>";
+    print "<a href = 'haisha_top.php'>配車状況</a>";
 
-    if($_SESSION["login_kbjg"]==1)
-    {
-        print "<br><br>";
-        print "<a href = 'keppin_desp.php'>欠品遅れ情報</a>";
-        print "<br><br>";
-        print "<a href = 'ke100_top.php'>搬入計画一覧</a>";
-        print "<br><br>";
-        print "<a href = 'kanri_top.php'>配車状況確認</a>";
-    }
+    print "<br><br>";
+    print "<a href = 'kanri_hiha.php'>日付検索</a>";
+    print "<br><br>";
+    print "<a href = 'kanri_shban.php'>車番検索</a>";
 
     print "</p>";
     print "</div>";
     print "<br><br>";
-    print "<a href= 'haisha_logout.php'>ログアウト</a><br>";
+    print "<a href= 'menu.php'>メニューへ戻る</a><br>";
 ?>
         </div>
     </body>
