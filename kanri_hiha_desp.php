@@ -70,6 +70,11 @@ print "ymd=".$year."/".$month."/".$day."<br>";
 //パラメータ配列を削除
     unset($params);
 
+    $rec = $stmt->fetchall(PDO::FETCH_ASSOC);
+    var_dump($rec)."<br>";
+
+
+
 
     while(true)
     {
