@@ -33,7 +33,7 @@ ini_set( 'error_reporting', E_ALL );
     $year= $_SESSION["haisha_year"];            //$post["year"];
     $month= $_SESSION["haisha_month"];          //$post["month"];
     $day= $_SESSION["haisha_day"];              //$post["day"];
-print "ymd=".$year."/".$month."/".$day;
+print "ymd=".$year."/".$month."/".$day."<br>";
 
     include ('userfile.php');
 
@@ -43,14 +43,14 @@ print "ymd=".$year."/".$month."/".$day;
 //ワークテーブルクリア
     $sql = "DELETE FROM WK_KANRI_HIHA;";
     $dbh->exec($sql);
-print "WK_KANRI_HIHA　delete";
+print "WK_KANRI_HIHA　delete<br>";
 
 //ワークテーブルに元データをinsert 
     $sql = "INSERT INTO wk_kanri_hiha ( SHCDSH, SHNMSH )
             SELECT ST_SHBAN_MYSQL.SHCDSH, ST_SHBAN_MYSQL.SHNMSH
             FROM ST_SHBAN_MYSQL";
     $dbh->exec($sql);
-print "WK_KANRI_HIHA　insert";
+print "WK_KANRI_HIHA　insert<br>";
 
 //st_kanri_mysqlからデータを取得,更新する
     $sql = " SELECT *
@@ -65,7 +65,7 @@ print "WK_KANRI_HIHA　insert";
     $params[] = $day;          
 
     $stmt->execute($params); //挿入する値が入った変数をexecuteにセットしてSQLを実行    
-print "st_kanri_mysql　select";
+print "st_kanri_mysql　select<br>";
 //パラメータ配列を削除
     unset($params);
 
@@ -103,9 +103,12 @@ print "st_kanri_mysql　select";
         $params[] = $rec['katmha2'];
         $params[] = $rec['kabiko2'];
         $params[] = $rec['kashban'];
-var_dump($params);
+var_dump($params)."<br>";
         $stmt->execute($params); //挿入する値が入った変数をexecuteにセットしてSQLを実行        
-print "wk_kanri_hiha　update";
+print "wk_kanri_hiha　update<br>";
+
+//パラメータ配列を削除
+unset($params);
     }
 
     
