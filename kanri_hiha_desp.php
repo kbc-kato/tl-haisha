@@ -66,7 +66,9 @@ print "WK_KANRI_HIHA　insert";
 
     $stmt->execute($params); //挿入する値が入った変数をexecuteにセットしてSQLを実行    
 print "st_kanri_mysql　select";
-    
+//パラメータ配列を削除
+    unset($params);
+
     while(true)
     {
         $rec = $stmt->fetch(PDO::FETCH_ASSOC);
