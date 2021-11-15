@@ -87,6 +87,7 @@ ini_set( 'error_reporting', E_ALL );
     print "<br><br>";
 
     print "<input type ='submit' value = '更新'>";
+    print "<input type ='botton' value = '終了'　onclock='menu.php'>";
     print "</form>";
 //    print "<hr>";
     print "</div>";
@@ -97,9 +98,6 @@ ini_set( 'error_reporting', E_ALL );
 <!-- ▼2段階の連動プルダウンメニューを実現するJavaScriptソース -->
 <!-- ========================================================= -->
 <script type="text/javascript">
-
-//var cdun = '<?php echo $cdun; ?>';
-//var cddr = '<?php echo $cddr; ?>';
 
 
 	// HTMLの読み込み直後に実行：
