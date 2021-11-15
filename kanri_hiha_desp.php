@@ -33,7 +33,7 @@ ini_set( 'error_reporting', E_ALL );
     $year= $_SESSION["haisha_year"];            //$post["year"];
     $month= $_SESSION["haisha_month"];          //$post["month"];
     $day= $_SESSION["haisha_day"];              //$post["day"];
-//print "ymd=".$year."/".$month."/".$day;
+print "ymd=".$year."/".$month."/".$day;
 
     include ('userfile.php');
 
@@ -43,12 +43,14 @@ ini_set( 'error_reporting', E_ALL );
 //ワークテーブルクリア
     $sql = "DELETE FROM WK_KANRI_HIHA;";
     $dbh->exec($sql);
+print "WK_KANRI_HIHA　delete";
 
 //ワークテーブルに元データをinsert 
     $sql = "INSERT INTO wk_kanri_hiha ( SHCDSH, SHNMSH )
             SELECT ST_SHBAN_MYSQL.SHCDSH, ST_SHBAN_MYSQL.SHNMSH
             FROM ST_SHBAN_MYSQL";
     $dbh->exec($sql);
+print "WK_KANRI_HIHA　insert";
 
 //st_kanri_mysqlからデータを取得,更新する
     $sql = " SELECT *
@@ -63,7 +65,7 @@ ini_set( 'error_reporting', E_ALL );
     $params[] = $day;          
 
     $stmt->execute($params); //挿入する値が入った変数をexecuteにセットしてSQLを実行    
-    
+print "st_kanri_mysql　select";
     
     while(true)
     {
@@ -101,6 +103,7 @@ ini_set( 'error_reporting', E_ALL );
         $params[] = $rec['kashban'];
 
         $stmt->execute($params); //挿入する値が入った変数をexecuteにセットしてSQLを実行        
+print "wk_kanri_hiha　update";
     }
 
     
