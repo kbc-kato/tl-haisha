@@ -90,7 +90,6 @@ ini_set( 'error_reporting', E_ALL );
     print "</form>";
     print "<br><br>";
     print "<a href='menu.php'>メニューへ</a>";
-//    print "<input type ='button' value = '終了' onclick='location.href=menu.php'>";
 
 //    print "<hr>";
     print "</div>";

@@ -28,7 +28,7 @@ try
     $hiha= $post["hiha"];
     $shban= $post["shban"];
     $cdun= $post["cdun"];
-    $cddr= $post["cddr1"];
+    $cddr= $post["cddr_".$post["cdun"].""];
     $nmry1= $post["nmry1"];
     $tmha1= $post["tmha1"];
     $biko1= $post["biko1"];

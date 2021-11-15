@@ -154,7 +154,7 @@ function sanitize($before)
         $PDO = null;        //データベースから切断
         
         $id = -1;
-        $cnt = 0;
+//        $cnt = 0;
         while(true)
         {
             $rec = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -170,8 +170,8 @@ function sanitize($before)
                 {
                     print "</select>"; 
                 }
-                $cnt++;
-                print "<select name = 'cddr".$cnt."' id = ".$rec['DRCDUN']." class='subbox'>";
+//                $cnt++;
+                print "<select name = 'cddr_".$rec['DRCDUN']."' id = ".$rec['DRCDUN']." class='subbox'>";
 
                 $id = $rec['DRCDUN'];
             }
