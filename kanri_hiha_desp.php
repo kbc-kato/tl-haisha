@@ -109,7 +109,7 @@ var_dump($params)."<br>";
 print "wk_kanri_hiha　update<br>";
 
 //パラメータ配列を削除
-unset($params);
+//unset($params);
 //reset($params);
     }
 
