@@ -139,8 +139,8 @@ try
 
     session_destroy();
 
-        header("location:kanri_input.php");
-        exit;
+    header("location:kanri_input.php");
+    exit;
 
 }
 catch (exception $e)
