@@ -83,7 +83,7 @@ ini_set( 'error_reporting', E_ALL );
 //        {
 //            break;
 //        }
-print "wk_kanri_hiha　LOOP<br>";    
+//print "wk_kanri_hiha　LOOP<br>";    
         $sql = "UPDATE wk_kanri_hiha
                 SET seq = ?
                   , kahika = ?
@@ -139,8 +139,10 @@ print "wk_kanri_hiha　LOOP<br>";
     print "配車　配車状況<br><br>";
     print "</div>";
     print "<div id='hiha'>";
+    print "form method = 'POST' action='kanri_hiha_edit.php'>";
     print "<table class= 'haisha_tbl'>";
     print "<tr>";
+    print "<th>"." "."</th>";
     print "<th>"."№"."</th>";
     print "<th>"."車番"."</th>";
     print "<th>"."搬入日"."</th>";
@@ -164,6 +166,7 @@ print "wk_kanri_hiha　LOOP<br>";
         }
 
         print "<tr>";
+        print "<td><input type='radio' name='seq' value='".$rec['seq']."'</td>";
         print "<td>".$rec['seq']."</td>";
         print "<td>".$rec['shnmsh']."</td>";
         if ($rec['kahika']==null)
@@ -185,6 +188,7 @@ print "wk_kanri_hiha　LOOP<br>";
         print "</tr>";
     }
     print "</table>";
+    print "</form>";
     print "</div>";
     print "<br>";
     print "<a href='kanri_input.php'>新規登録</a><br>";
