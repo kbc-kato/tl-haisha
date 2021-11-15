@@ -75,7 +75,7 @@ print "ymd=".$year."/".$month."/".$day."<br>";
     {
 
         $rec = $stmt->fetch(PDO::FETCH_ASSOC);
-print "rec".$rec."<br>";  
+
         if ($rec==false)
         {
             break;
