@@ -188,6 +188,7 @@ ini_set( 'error_reporting', E_ALL );
         print "</tr>";
     }
     print "</table>";
+    print "<input type ='submit' value='修正'>";
     print "</form>";
     print "</div>";
     print "<br>";
