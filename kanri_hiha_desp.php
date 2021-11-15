@@ -33,7 +33,7 @@ ini_set( 'error_reporting', E_ALL );
     $year= $_SESSION["haisha_year"];            //$post["year"];
     $month= $_SESSION["haisha_month"];          //$post["month"];
     $day= $_SESSION["haisha_day"];              //$post["day"];
-print "ymd=".$year."/".$month."/".$day."<br>";
+//print "ymd=".$year."/".$month."/".$day."<br>";
 
     include ('userfile.php');
 
@@ -43,14 +43,12 @@ print "ymd=".$year."/".$month."/".$day."<br>";
 //ワークテーブルクリア
     $sql = "DELETE FROM WK_KANRI_HIHA;";
     $dbh->exec($sql);
-//print "WK_KANRI_HIHA　delete<br>";
 
 //ワークテーブルに元データをinsert 
     $sql = "INSERT INTO wk_kanri_hiha ( SHCDSH, SHNMSH )
             SELECT ST_SHBAN_MYSQL.SHCDSH, ST_SHBAN_MYSQL.SHNMSH
             FROM ST_SHBAN_MYSQL";
     $dbh->exec($sql);
-//print "WK_KANRI_HIHA　insert<br>";
 
 //st_kanri_mysqlからデータを取得,更新する
     $sql = " SELECT *
@@ -66,12 +64,12 @@ print "ymd=".$year."/".$month."/".$day."<br>";
     $params[] = $day;          
 
     $stmt->execute($params); //挿入する値が入った変数をexecuteにセットしてSQLを実行    
-//print "st_kanri_mysql　select<br>";
+
 //パラメータ配列を削除
     unset($params);
 
     $rec = $stmt->fetchall(PDO::FETCH_ASSOC);
-    var_dump($rec)."<br>";
+//var_dump($rec)."<br>";
 
 
 
@@ -111,9 +109,9 @@ print "wk_kanri_hiha　LOOP<br>";
         $params[] = $loop['katmha2'];
         $params[] = $loop['kabiko2'];
         $params[] = $loop['kashban'];
-var_dump($params)."<br>";
+//var_dump($params)."<br>";
         $stmt->execute($params); //挿入する値が入った変数をexecuteにセットしてSQLを実行        
-print "wk_kanri_hiha　update<br>";
+//print "wk_kanri_hiha　update<br>";
 
 //パラメータ配列を削除
         unset($params);
@@ -168,8 +166,14 @@ print "wk_kanri_hiha　update<br>";
         print "<tr>";
         print "<td>".$rec['seq']."</td>";
         print "<td>".$rec['shnmsh']."</td>";
-        print "<td>".date('Y/m/d',strtotime($rec['kahika']))."</td>";
-        
+        if ($rec['kahika']==null)
+        {
+            print "<td> </td>";
+        }
+        else
+        {
+            print "<td>".date('Y/m/d',strtotime($rec['kahika']))."</td>";
+        }
         print "<td>".$rec['UNRYUN']."</td>";
         print "<td>".$rec['DRNMDR']."</td>";
         print "<td>".$rec['kanmry1']."</td>";
