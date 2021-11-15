@@ -75,7 +75,7 @@ print "ymd=".$year."/".$month."/".$day."<br>";
     {
 
         $rec = $stmt->fetch(PDO::FETCH_ASSOC);
-
+var_dump($rec)."<br>";
         if ($rec==false)
         {
             break;
@@ -95,23 +95,23 @@ print "wk_kanri_hiha　LOOP<br>";
                 where shcdsh = ?";
 
         $stmt = $dbh->prepare($sql); //挿入する値は空のまま、SQL実行の準備をする
-        $params2[] = $rec['seq'];          // 挿入する値を配列に格納する
-        $params2[] = $rec['kahika'];          
-        $params2[] = $rec['kacdun'];          
-        $params2[] = $rec['kacddr'];
-        $params2[] = $rec['kanmry1'];
-        $params2[] = $rec['katmha1'];
-        $params2[] = $rec['kabiko1'];
-        $params2[] = $rec['kanmry2'];
-        $params2[] = $rec['katmha2'];
-        $params2[] = $rec['kabiko2'];
-        $params2[] = $rec['kashban'];
-var_dump($params2)."<br>";
-        $stmt->execute($params2); //挿入する値が入った変数をexecuteにセットしてSQLを実行        
+        $params[] = $rec['seq'];          // 挿入する値を配列に格納する
+        $params[] = $rec['kahika'];          
+        $params[] = $rec['kacdun'];          
+        $params[] = $rec['kacddr'];
+        $params[] = $rec['kanmry1'];
+        $params[] = $rec['katmha1'];
+        $params[] = $rec['kabiko1'];
+        $params[] = $rec['kanmry2'];
+        $params[] = $rec['katmha2'];
+        $params[] = $rec['kabiko2'];
+        $params[] = $rec['kashban'];
+var_dump($params)."<br>";
+        $stmt->execute($params); //挿入する値が入った変数をexecuteにセットしてSQLを実行        
 print "wk_kanri_hiha　update<br>";
 
 //パラメータ配列を削除
-        unset($params2);
+        unset($params);
 //reset($params);
     }
 
