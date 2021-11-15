@@ -89,7 +89,7 @@ ini_set( 'error_reporting', E_ALL );
     print "<input type ='submit' value = '登録'>";
     print "</form>";
     print "<br><br>";
-    print "<a href='menu.php'>メニューへ</a>";
+    print "<a href='kanri_top.php'>配車状況メニューへ</a>";
 
 //    print "<hr>";
     print "</div>";
