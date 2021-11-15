@@ -13,9 +13,7 @@
 <?php
     print "<div id='menu'>";
     print "<p>";
-    print "<a href = 'haisha_top.php'>配車状況</a>";
 
-    print "<br><br>";
     print "<a href = 'kanri_hiha.php'>日付検索</a>";
     print "<br><br>";
     print "<a href = 'kanri_shban.php'>車番検索</a>";

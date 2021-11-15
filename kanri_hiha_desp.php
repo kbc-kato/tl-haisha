@@ -17,7 +17,12 @@ try
 {
     session_start();
     session_regenerate_id(true);            //セッションIDを変える
-    
+
+ini_set( 'display_errors', 1 );
+ini_set( 'error_reporting', E_ALL );
+        
+
+
     require_once('common.php');
 
 //    $post = sanitize($_POST);                 //前画面からのデータを変数にセット
