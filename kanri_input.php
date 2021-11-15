@@ -89,7 +89,8 @@ ini_set( 'error_reporting', E_ALL );
     print "<input type ='submit' value = '更新'>";
     print "</form>";
     print "<br><br>";
-    print "<input type ='button' value = '終了' onclick='location.href=menu.php'>";
+    print "<a href='menu.php'>メニューへ</a>";
+//    print "<input type ='button' value = '終了' onclick='location.href=menu.php'>";
 
 //    print "<hr>";
     print "</div>";
