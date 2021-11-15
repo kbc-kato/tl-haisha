@@ -57,7 +57,8 @@ print "ymd=".$year."/".$month."/".$day."<br>";
             FROM st_kanri_mysql
             WHERE substring(kahika,1,4)=?
               AND substring(kahika,6,2)=?
-              AND substring(kahika,9,2)=?";
+              AND substring(kahika,9,2)=?
+            ORDER BY st_kanri_mysql.seq";
     
     $stmt = $dbh->prepare($sql); //挿入する値は空のまま、SQL実行の準備をする
     $params[] = $year;          // 挿入する値を配列に格納する
