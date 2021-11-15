@@ -43,14 +43,14 @@ print "ymd=".$year."/".$month."/".$day."<br>";
 //ワークテーブルクリア
     $sql = "DELETE FROM WK_KANRI_HIHA;";
     $dbh->exec($sql);
-print "WK_KANRI_HIHA　delete<br>";
+//print "WK_KANRI_HIHA　delete<br>";
 
 //ワークテーブルに元データをinsert 
     $sql = "INSERT INTO wk_kanri_hiha ( SHCDSH, SHNMSH )
             SELECT ST_SHBAN_MYSQL.SHCDSH, ST_SHBAN_MYSQL.SHNMSH
             FROM ST_SHBAN_MYSQL";
     $dbh->exec($sql);
-print "WK_KANRI_HIHA　insert<br>";
+//print "WK_KANRI_HIHA　insert<br>";
 
 //st_kanri_mysqlからデータを取得,更新する
     $sql = " SELECT *
@@ -65,10 +65,11 @@ print "WK_KANRI_HIHA　insert<br>";
     $params[] = $day;          
 
     $stmt->execute($params); //挿入する値が入った変数をexecuteにセットしてSQLを実行    
-print "st_kanri_mysql　select<br>";
+//print "st_kanri_mysql　select<br>";
 //パラメータ配列を削除
     unset($params);
-
+    reset($params);
+    
     while(true)
     {
         $rec = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -108,7 +109,8 @@ var_dump($params)."<br>";
 print "wk_kanri_hiha　update<br>";
 
 //パラメータ配列を削除
-//unset($params);
+unset($params);
+reset($params);
     }
 
     
