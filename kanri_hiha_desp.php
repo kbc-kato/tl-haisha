@@ -68,8 +68,8 @@ print "ymd=".$year."/".$month."/".$day."<br>";
 //print "st_kanri_mysql　select<br>";
 //パラメータ配列を削除
     unset($params);
-    reset($params);
-    
+//    reset($params);
+
     while(true)
     {
         $rec = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -110,7 +110,7 @@ print "wk_kanri_hiha　update<br>";
 
 //パラメータ配列を削除
 unset($params);
-reset($params);
+//reset($params);
     }
 
     
