@@ -177,6 +177,7 @@ print "wk_kanri_hiha　update";
 }
 catch (exception $e)
 {
+print $e->getMessage();
     print "ただいま障害により大変ご迷惑をおかけしております。";
     exit();
 }
