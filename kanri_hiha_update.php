@@ -51,12 +51,12 @@ ini_set( 'error_reporting', E_ALL );
     if(isset($rec['kacdun'])==true) $_SESSION["cdun"] = $rec["kacdun"];
     if(isset($rec['kacddr'])==true) $_SESSION["cddr"] = $rec["kacddr"];
 
-//    if(isset($rec['kahika'])==true) 
-//    {
-//        $y=date('Y', strtotime($rec['kahika']));
-//        $m=date('n', strtotime($rec['kahika']));
-//        $d=date('d', strtotime($rec['kahika']));
-//    }
+    if(isset($rec['kahika'])==true) 
+    {
+        $y=date('Y', strtotime($rec['kahika']));
+        $m=date('n', strtotime($rec['kahika']));
+        $d=date('d', strtotime($rec['kahika']));
+    }
     
     //var_dump($_SESSION);
 
