@@ -39,7 +39,7 @@ ini_set( 'error_reporting', E_ALL );
         $month= $_GET["month"];          //$post["month"];
         $day= $_GET["day"];              //$post["day"];
     }
-print "ymd=".$year."/".$month."/".$day."<br>";
+//print "ymd=".$year."/".$month."/".$day."<br>";
 
     include ('userfile.php');
 

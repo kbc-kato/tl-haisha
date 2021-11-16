@@ -15,7 +15,7 @@
         $m=$_GET['month'];
         $d=$_GET['day'];
     }
-print "ymd=".$year."/".$month."/".$day."<br>";
+//print "ymd=".$year."/".$month."/".$day."<br>";
 
         print "№が選択されていません。<BR>";
         print "<a href='kanri_hiha_desp.php?year=".$y."&month=".$m."&day=".$d."'>戻る</a>";
