@@ -51,19 +51,12 @@ ini_set( 'error_reporting', E_ALL );
     if(isset($rec['kacdun'])==true) $_SESSION["cdun"] = $rec["kacdun"];
     if(isset($rec['kacddr'])==true) $_SESSION["cddr"] = $rec["kacddr"];
 
-var_dump($_SESSION);
+//var_dump($_SESSION);
     $year=$_SESSION["haisha_year"];
     $month=$_SESSION["haisha_month"];
     $day=$_SESSION["haisha_day"];
-print "ymd=".$y."/".$m."/".$d."<br>";
-//    if(isset($rec['kahika'])==true) 
-//    {
-//        $y=date('Y', strtotime($rec['kahika']));
-//        $m=date('n', strtotime($rec['kahika']));
-//        $d=date('d', strtotime($rec['kahika']));
-//    }
-    
-//var_dump($_SESSION);
+//print "ymd=".$year."/".$month."/".$day."<br>";
+
 
     print "<div id='kanri'>";
 
@@ -114,7 +107,8 @@ print "ymd=".$y."/".$m."/".$d."<br>";
     print "<input type ='submit' value = '更新'>";
     print "</form>";
     print "<br><br>";
-    print "<a href='kanri_hiha_desp.php?year=".$year."&month=".$month."&day=".$day."'>配車状況一覧(配車日)へ</a>";
+    print "<a href='kanri_hiha_desp.php'>配車状況一覧(配車日)へ</a>";
+//    print "<a href='kanri_hiha_desp.php?year=".$year."&month=".$month."&day=".$day."'>配車状況一覧(配車日)へ</a>";
 //    print "<hr>";
     print "</div>";
 ?>
