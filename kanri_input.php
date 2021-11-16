@@ -43,9 +43,9 @@ ini_set( 'error_reporting', E_ALL );
     if(isset($_SESSION["tmha2"])) $tmha2 = $_SESSION["tmha2"];
     if(isset($_SESSION["biko2"])) $biko2 = $_SESSION["biko2"];
 var_dump($_SESSION);
-    $y=$_SESSION["haisha_year"];
-    $m=$_SESSION["haisha_month"];
-    $d=$_SESSION["haisha_day"];
+    $year=$_SESSION["haisha_year"];
+    $month=$_SESSION["haisha_month"];
+    $day=$_SESSION["haisha_day"];
 print "ymd=".$y."/".$m."/".$d."<br>";
 
     print "<div id='kanri'>";
@@ -94,7 +94,7 @@ print "ymd=".$y."/".$m."/".$d."<br>";
     print "</form>";
     print "<br><br>";
 
-    print "<a href='kanri_hiha_desp.php?year='.$y.'&month='.$m.'&day='.$d.'>配車状況一覧(配車日)へ</a>";
+    print "<a href='kanri_hiha_desp.php?year='.$year.'&month='.$month.'&day='.$day.'>配車状況一覧(配車日)へ</a>";
 
 //    print "<hr>";
     print "</div>";
