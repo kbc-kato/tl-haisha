@@ -59,7 +59,9 @@ function sanitize($before)
 
     function pulldown_shban()
     {
+        session_start();
 print "session=".$_SESSION["shban"];
+
         include ("userfile.php");               //$dsn,$user,$password
 
         $dbh = new PDO($dsn, $user, $password); //SqlServerのデータベースに接続
