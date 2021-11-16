@@ -38,7 +38,7 @@ ini_set( 'error_reporting', E_ALL );
     
     $PDO = null;        //データベースから切断
     $rec = $stmt->fetch(PDO::FETCH_ASSOC);
-var_dump($rec);
+//var_dump($rec);
     if ($rec==false)
     {
         exit();
@@ -47,13 +47,10 @@ var_dump($rec);
     session_start();
     session_regenerate_id(true);            //セッションIDを変える
 
-print "kashban=".$rec['kashban'];
-print "kacdun=".$rec['kacdun']; 
-print "kacddr=".$rec['kacddr'];      
     if(isset($rec['kashban'])==true) $_SESSION["shban"] = $rec['kashban'];
     if(isset($rec['kacdun'])==true) $_SESSION["cdun"] = $rec["kacdun"];
     if(isset($rec['kacddr'])==true) $_SESSION["cddr"] = $rec["kacddr"];
-var_dump($_SESSION);
+//var_dump($_SESSION);
 
     print "<div id='kanri'>";
 
@@ -88,7 +85,7 @@ var_dump($_SESSION);
     print "<br>";
 
     print "備考"."<br>";
-    print "<textarea name = 'biko1' cols='40' rows='5' value = ".$rec['kabiko1']."></textarea>";
+    print "<textarea name = 'biko1' cols='40' rows='5'>".$rec['kabiko1']."</textarea>";
     print "<br>";
 
     print "行先2"."<br>";
@@ -98,7 +95,7 @@ var_dump($_SESSION);
     print "<br>";
 
     print "備考"."<br>";
-    print "<textarea name = 'biko2' cols='40' rows='5' value = ".$rec['kabiko2']."></textarea>";
+    print "<textarea name = 'biko2' cols='40' rows='5'>".$rec['kabiko2']."</textarea>";
     print "<br><br>";
 
     print "<input type ='submit' value = '更新'>";
