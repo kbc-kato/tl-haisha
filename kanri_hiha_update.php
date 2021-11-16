@@ -38,7 +38,7 @@ ini_set( 'error_reporting', E_ALL );
     
     $PDO = null;        //データベースから切断
     $rec = $stmt->fetch(PDO::FETCH_ASSOC);
-//var_dump($rec);
+var_dump($rec);
     if ($rec==false)
     {
         exit();
