@@ -59,7 +59,7 @@ function sanitize($before)
 
     function pulldown_shban()
     {
-        session_start();
+var_dump($_SESSION);
 print "session=".$_SESSION["shban"];
 
         include ("userfile.php");               //$dsn,$user,$password
@@ -87,7 +87,7 @@ print "session=".$_SESSION["shban"];
             {
                 break;
             }
-            if(($_SESSION["shban"] == $rec['SHCDSH']) || ($rec["shban"] == $rec['SHCDSH']))
+            if($_SESSION["shban"] == $rec['SHCDSH']) 
             {
                 print "<option value='".$rec['SHCDSH']."' selected>".$rec['SHNMSH']."</option>";
             }
