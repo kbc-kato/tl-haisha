@@ -20,7 +20,7 @@ ini_set( 'error_reporting', E_ALL );
 
     require_once ("common.php");
 
-    $seq = $post['seq'];
+    $seq = $_POST['seq'];
     
     include ('userfile.php');
 
