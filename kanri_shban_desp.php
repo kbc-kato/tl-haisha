@@ -47,7 +47,7 @@ ini_set( 'error_reporting', E_ALL );
     FOR($i=0; $i<10; $i++)
     {
         $date = date("Y-n-d", strtotime($i." day"));
-print "date=".$date."<br>";
+print "i=".$i."　date=".$date."　shban=".$shban."<br>";
         $sql = "INSERT INTO wk_kanri_shban ( kahika, shcdsh )
                 VALUES ( ?, ? )";
         $stmt = $dbh->prepare($sql); //挿入する値は空のまま、SQL実行の準備をする
