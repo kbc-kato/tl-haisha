@@ -22,7 +22,7 @@ ini_set( 'display_errors', 1 );
 ini_set( 'error_reporting', E_ALL );
         
 
-print "前画面=".$_SERVER['HTTP_REFERER'];
+//print "前画面=".$_SERVER['HTTP_REFERER'];
     require_once('common.php');
 
 //    $post = sanitize($_POST);                 //前画面からのデータを変数にセット
@@ -30,10 +30,19 @@ print "前画面=".$_SERVER['HTTP_REFERER'];
 //    $code= $_SESSION["login_code"];
 //    $kbjg= $_SESSION["login_kbjg"];
 var_dump($_SESSION);
-    $year= $_SESSION["haisha_year"];            //$post["year"];
-    $month= $_SESSION["haisha_month"];          //$post["month"];
-    $day= $_SESSION["haisha_day"];              //$post["day"];
-//print "ymd=".$year."/".$month."/".$day."<br>";
+    if(isset($_SESSION))
+    {
+        $year= $_SESSION["haisha_year"];            //$post["year"];
+        $month= $_SESSION["haisha_month"];          //$post["month"];
+        $day= $_SESSION["haisha_day"];              //$post["day"];
+    }
+    else
+    {
+        $year= $_GET["year"];            //$post["year"];
+        $month= $_GET["month"];          //$post["month"];
+        $day= $_GET["day"];              //$post["day"];
+    }
+        //print "ymd=".$year."/".$month."/".$day."<br>";
 
     include ('userfile.php');
 

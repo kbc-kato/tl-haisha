@@ -154,7 +154,10 @@ try
     $_SESSION = array();
     session_destroy();
 
-    header("location:kanri_hiha_desp.php");
+    $y=date('Y', strtotime($hiha));
+    $m=date('n', strtotime($hiha));
+    $d=date('d', strtotime($hiha));
+    header("location:kanri_hiha_desp.php?year=".$y."&month=".$m."&day=".$d);
     exit;
 
 }
