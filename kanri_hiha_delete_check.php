@@ -52,61 +52,8 @@ try
 
 //入力チェック
 //配車日
-    if($hiha=='')
-    {
-        print "<br><br>";
-        print "日付が未入力です。"."<br>";
-        print "<a href = 'kanri_hiha_update.php'>戻る</a>";
-        exit();
-    }
-    else
-    {
-        if(isset($hiha)==false)
-        {
-            print "<br><br>";
-            print "日付が未入力です。"."<br>";
-            print "<a href = 'kanri_hiha_update.php'>戻る</a>";
-            exit();
-        }
-    }
-
 //車番
-    if($shban=='')
-    {
-        print "<br><br>";
-        print "車番が未入力です。"."<br>";
-        print "<a href = 'kanri_hiha_update.php'>戻る</a>";
-        exit();
-    }
-    else
-    {
-        if(isset($shban)==false)
-        {
-            print "<br><br>";
-            print "車番が未入力です。"."<br>";
-            print "<a href = 'kanri_hiha_update.php'>戻る</a>";
-            exit();
-        }
-    }
-
 //運送会社
-    if($cdun=='')
-    {
-        print "<br><br>";
-        print "運送会社が未入力です。"."<br>";
-        print "<a href = 'kanri_hiha_update.php'>戻る</a>";
-        exit();
-    }
-    else
-    {
-        if(isset($shban)==false)
-        {
-            print "<br><br>";
-            print "車番が未入力です。"."<br>";
-            print "<a href = 'kanri_hiha_update.php'>戻る</a>";
-            exit();
-        }
-    }
 //運転者
 //行先1
 //着時間1
