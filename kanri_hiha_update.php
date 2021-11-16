@@ -19,8 +19,8 @@ ini_set( 'display_errors', 1 );
 ini_set( 'error_reporting', E_ALL );
 
     require_once ("common.php");
-print "post=".$_POST['code'];
-    $seq = $_POST['code'];
+print "GET=".$_GET['code'];
+    $seq = $_GET['code'];
 print "seq=".$seq;
     
     include ('userfile.php');
