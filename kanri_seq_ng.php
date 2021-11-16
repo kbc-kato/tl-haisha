@@ -9,11 +9,11 @@
     </head>
     <body>
 <?php
-    if(isset($_GET['hika'])==true) 
+    if(isset($_GET['year'])==true) 
     {
-        $y=date('Y', strtotime($_GET['hika']));
-        $m=date('n', strtotime($_GET['hika']));
-        $d=date('d', strtotime($_GET['hika']));
+        $y=$_GET['year'];
+        $m=$_GET['month'];
+        $d=$_GET['day'];
     }
 print "ymd=".$year."/".$month."/".$day."<br>";
 
