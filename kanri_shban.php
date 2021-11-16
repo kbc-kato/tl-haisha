@@ -38,8 +38,8 @@
             <div id='hiha'>
                 表示したい車番を入力してください。<br>
                 <form method="POST" name="form1" action="kanri_shban_check.php">
-                    <?php print "車番"."<br>" ?>;
-                    <?php print pulldown_shban() ?>;
+                    <?php print "車番" ?>
+                    <?php print pulldown_shban() ?>
                     <br>
                     <input type='submit' value=' 検索 '>
                 </form>

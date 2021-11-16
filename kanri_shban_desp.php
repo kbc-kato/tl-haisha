@@ -47,7 +47,7 @@ ini_set( 'error_reporting', E_ALL );
     FOR($i=0; $i<10; $i++)
     {
         $date = date("Y-n-d", strtotime($i." day"));
-
+print "date=".$date."<br>";
         $sql = "INSERT INTO wk_kanri_shban ( kahika, shcdsh )
                 VALUES ( ?, ? )";
         $stmt = $dbh->prepare($sql); //挿入する値は空のまま、SQL実行の準備をする
@@ -56,7 +56,7 @@ ini_set( 'error_reporting', E_ALL );
         
         $stmt->execute($params); //挿入する値が入った変数をexecuteにセットしてSQLを実行
     } 
-print "date=".$date."<br>";
+
 
 //st_kanri_mysqlからデータを取得,更新する
     $sql = "SELECT st_kanri_mysql.*, ST_SHBAN_MYSQL.SHNMSH
