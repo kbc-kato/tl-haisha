@@ -38,18 +38,24 @@ ini_set( 'error_reporting', E_ALL );
     
     $PDO = null;        //データベースから切断
     $rec = $stmt->fetch(PDO::FETCH_ASSOC);
-var_dump($rec);
+//var_dump($rec);
     if ($rec==false)
     {
         exit();
-    }     
+    }
+
+    session_start();
+    if(isset($rec['shban'])) $_SESSION["shban"] = $rec['shban'];
+    if(isset($rec['cdun'])) $_SESSION["cdun"] = $rec["cdun"];
+    if(isset($rec['cddr'])) $_SESSION["cddr"] = $rec["cddr"];
+
 
     print "<div id='kanri'>";
 
     print "<form method='POST' name='form2' action='kanri_hiha_update_check.php'>";
     
     print "№"."<br>";
-    print "<input type ='date' name = 'seq' value = ".$rec['seq'].">";
+    print "<input type ='text' name = 'seq' size='5' value = ".$rec['seq'].">";
     print "<br>";
 
     print "配車日"."<br>";
