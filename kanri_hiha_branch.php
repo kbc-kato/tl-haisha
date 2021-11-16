@@ -7,6 +7,7 @@
             exit();
         } 
         $seq = $_POST['seq'];
+print "seq=".$seq;        
         header('location:kanri_hiha_update.php');
         exit();
     }
