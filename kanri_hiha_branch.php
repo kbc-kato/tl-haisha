@@ -10,12 +10,12 @@ print "ymd=".$year."/".$month."/".$day."<br>";
     {
         if($_POST['code']=='')
         {
-            header('location:kanri_seq_ng.php?year='.$y.'&month='.$m.'&day='.$d.'');
+            header('location:kanri_seq_ng.php?year='.$y.'&month='.$m.'&day='.$d);
             exit();
         }
         if(isset($_POST['code'])==false)
         {
-            header('location:kanri_seq_ng.php?year=".$y."&month=".$m."&day=".$d."');
+            header('location:kanri_seq_ng.php?year='.$y.'&month='.$m.'&day='.$d);
             exit();
         }  
         $code = $_POST['code'];
@@ -27,12 +27,12 @@ print "ymd=".$year."/".$month."/".$day."<br>";
     {
         if($_POST['code']=='')
         {
-            header('location:kanri_seq_ng.php?year=".$y."&month=".$m."&day=".$d."');
+            header('location:kanri_seq_ng.php?year='.$y.'&month='.$m.'&day='.$d);
             exit();
         }
         if(isset($_POST['code'])==false)
         {
-            header('location:kanri_seq_ng.php?year=".$y."&month=".$m."&day=".$d."');
+            header('location:kanri_seq_ng.php?year='.$y.'&month='.$m.'&day='.$d);
             exit();
         } 
         $code = $_POST['code'];
