@@ -11,7 +11,7 @@
         <div id="pagebody">
         <!-- ヘッダー -->
             <div id = "header">
-                <h1>配車状況修正</h1>
+                <h1>配車状況削除</h1>
             </div>
             <br><br>
 <?php
@@ -19,9 +19,8 @@ ini_set( 'display_errors', 1 );
 ini_set( 'error_reporting', E_ALL );
 
     require_once ("common.php");
-//print "GET=".$_GET['code'];
+
     $seq = $_GET['code'];
-//print "seq=".$seq;
     
     include ('userfile.php');
 
@@ -62,7 +61,7 @@ ini_set( 'error_reporting', E_ALL );
 
     print "<div id='kanri'>";
 
-    print "<form method='POST' name='form2' action='kanri_hiha_update_check.php'>";
+    print "<form method='POST' name='form2' action='kanri_hiha_delete_check.php'>";
     
     print "№"."<br>";
     print "<input type ='text' name = 'seq' size='5' value = ".$rec['seq']." readonly>";
@@ -106,7 +105,7 @@ ini_set( 'error_reporting', E_ALL );
     print "<textarea name = 'biko2' cols='40' rows='5'>".$rec['kabiko2']."</textarea>";
     print "<br><br>";
 
-    print "<input type ='submit' value = '更新'>";
+    print "<input type ='submit' value = '削除'>";
     print "</form>";
     print "<br><br>";
     print "<a href='kanri_hiha_desp.php?year=".$y."&month=".$m."&day=".$d."'>配車状況一覧(配車日)へ</a>";
