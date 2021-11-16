@@ -139,7 +139,7 @@ ini_set( 'error_reporting', E_ALL );
     print "配車　配車状況<br><br>";
     print "</div>";
     print "<div id='hiha'>";
-    
+
     print "<form method = 'POST' action='kanri_hiha_branch.php'>";
     print "<table class= 'haisha_tbl'>";
     print "<tr>";
@@ -167,7 +167,7 @@ ini_set( 'error_reporting', E_ALL );
         }
 
         print "<tr>";
-        print "<td><input type='radio' name='seq' value='".$rec['seq']."'</td>";
+        print "<td><input type='radio' name='seq' value='".$rec['seq']."'></td>";
         print "<td>".$rec['seq']."</td>";
         print "<td>".$rec['shnmsh']."</td>";
         if ($rec['kahika']==null)
