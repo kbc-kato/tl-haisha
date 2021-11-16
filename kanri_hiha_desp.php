@@ -29,7 +29,7 @@ print "前画面=".$_SERVER['HTTP_REFERER'];
 
 //    $code= $_SESSION["login_code"];
 //    $kbjg= $_SESSION["login_kbjg"];
-
+var_dump($_SESSION);
     $year= $_SESSION["haisha_year"];            //$post["year"];
     $month= $_SESSION["haisha_month"];          //$post["month"];
     $day= $_SESSION["haisha_day"];              //$post["day"];
