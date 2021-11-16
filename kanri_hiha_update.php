@@ -21,6 +21,7 @@ ini_set( 'error_reporting', E_ALL );
     require_once ("common.php");
 
     $post = sanitize($_POST);               //前画面からのデータを変数にセット
+print "post=".$post;
     
     $seq = $post['seq'];
     
@@ -40,10 +41,10 @@ ini_set( 'error_reporting', E_ALL );
     $PDO = null;        //データベースから切断
     $rec = $stmt->fetch(PDO::FETCH_ASSOC);
 
-//    if ($rec==false)
-//    {
-//        break;
-//    }     
+    if ($rec==false)
+    {
+        exit();
+    }     
 
     print "<div id='kanri'>";
 
