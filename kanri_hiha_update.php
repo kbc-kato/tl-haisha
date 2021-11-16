@@ -47,12 +47,12 @@ var_dump($rec);
     session_start();
     session_regenerate_id(true);            //セッションIDを変える
 
-print "shban=".$rec['shban'];
-print "cdun=".$rec['cdun']; 
-print "cddr=".$rec['cddr'];      
-    if(isset($rec['shban'])==true) $_SESSION["shban"] = $rec['shban'];
-    if(isset($rec['cdun'])==true) $_SESSION["cdun"] = $rec["cdun"];
-    if(isset($rec['cddr'])==true) $_SESSION["cddr"] = $rec["cddr"];
+print "kashban=".$rec['kashban'];
+print "kacdun=".$rec['kacdun']; 
+print "kacddr=".$rec['kacddr'];      
+    if(isset($rec['kashban'])==true) $_SESSION["shban"] = $rec['kashban'];
+    if(isset($rec['kacdun'])==true) $_SESSION["cdun"] = $rec["kacdun"];
+    if(isset($rec['kacddr'])==true) $_SESSION["cddr"] = $rec["kacddr"];
 var_dump($_SESSION);
 
     print "<div id='kanri'>";
