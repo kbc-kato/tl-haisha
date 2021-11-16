@@ -85,7 +85,7 @@ print "session=".$_SESSION["shban"];
             {
                 break;
             }
-            if($_SESSION["shban"] == $rec['SHCDSH'])
+            if(($_SESSION["shban"] == $rec['SHCDSH']) || ($rec["shban"] == $rec['SHCDSH']))
             {
                 print "<option value='".$rec['SHCDSH']."' selected>".$rec['SHNMSH']."</option>";
             }
