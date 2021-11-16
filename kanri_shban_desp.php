@@ -28,10 +28,11 @@ ini_set( 'error_reporting', E_ALL );
 
 //print "前画面=".$_SERVER['HTTP_REFERER'];
 
-    $year= $_SESSION["haisha_year"];            //$post["year"];
-    $month= $_SESSION["haisha_month"];          //$post["month"];
-    $day= $_SESSION["haisha_day"];              //$post["day"];
-//print "ymd=".$year."/".$month."/".$day."<br>";
+//    $year= $_SESSION["haisha_year"];            //$post["year"];
+//    $month= $_SESSION["haisha_month"];          //$post["month"];
+//    $day= $_SESSION["haisha_day"];              //$post["day"];
+    $shban= $_SESSION["shban"];              //$post["day"];
+//print "shnan=".$shban."<br>";
 
     include ('userfile.php');
 
@@ -39,27 +40,38 @@ ini_set( 'error_reporting', E_ALL );
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); //PDOのエラーレポートを表示
 
 //ワークテーブルクリア
-    $sql = "DELETE FROM WK_KANRI_HIHA;";
+    $sql = "DELETE FROM WK_KANRI_SHBAN;";
     $dbh->exec($sql);
 
-//ワークテーブルに元データをinsert 
-    $sql = "INSERT INTO wk_kanri_hiha ( SHCDSH, SHNMSH )
-            SELECT ST_SHBAN_MYSQL.SHCDSH, ST_SHBAN_MYSQL.SHNMSH
-            FROM ST_SHBAN_MYSQL";
-    $dbh->exec($sql);
+//ワークテーブルに日付をinsert 
+    FOR($i=0; $i<10; $i++)
+    {
+        $date = date("Y-n-d", strtotime($i." day"));
+
+        $sql = "INSERT INTO wk_kanri_shban ( kahika, shcdsh )
+                VALUES ( ?, ? )";
+        $stmt = $dbh->prepare($sql); //挿入する値は空のまま、SQL実行の準備をする
+        $params[] = $date;          // 挿入する値を配列に格納する        
+        $params[] = $shban;          
+        
+        $stmt->execute($params); //挿入する値が入った変数をexecuteにセットしてSQLを実行
+    } 
+print "date=".$date."<br>";
 
 //st_kanri_mysqlからデータを取得,更新する
-    $sql = " SELECT *
+    $sql = "SELECT st_kanri_mysql.*, ST_SHBAN_MYSQL.SHNMSH
             FROM st_kanri_mysql
-            WHERE substring(kahika,1,4)=?
-              AND substring(kahika,6,2)=?
-              AND substring(kahika,9,2)=?
-            ORDER BY st_kanri_mysql.seq";
-    
+              INNER JOIN ST_SHBAN_MYSQL
+              ON st_kanri_mysql.kashban = ST_SHBAN_MYSQL.SHCDSH
+              substring(kahika,1,4)=?
+            WHERE (((substring(kahika,1,10))>=?
+              And   (substring(kahika,1,10))<=?)
+              AND  ((kashban)=?))";
+     
     $stmt = $dbh->prepare($sql); //挿入する値は空のまま、SQL実行の準備をする
-    $params[] = $year;          // 挿入する値を配列に格納する
-    $params[] = $month;          
-    $params[] = $day;          
+    $params[] = date('Y-n-d');          // 挿入する値を配列に格納する
+    $params[] = $date;          
+    $params[] = $shban;          
 
     $stmt->execute($params); //挿入する値が入った変数をexecuteにセットしてSQLを実行    
 
@@ -70,21 +82,12 @@ ini_set( 'error_reporting', E_ALL );
 //var_dump($rec)."<br>";
 
 
-
-
     foreach($rec as $loop)
     {
 
-//        $rec = $stmt->fetch(PDO::FETCH_ASSOC);
-//var_dump($rec)."<br>";
-//        if ($rec==false)
-//        {
-//            break;
-//        }
-//print "wk_kanri_hiha　LOOP<br>";    
-        $sql = "UPDATE wk_kanri_hiha
+        $sql = "UPDATE wk_kanri_shban
                 SET seq = ?
-                  , kahika = ?
+                  , shnmsh = ?
                   , kacdun = ?
                   , kacddr = ?
                   , kanmry1 = ?
@@ -93,11 +96,11 @@ ini_set( 'error_reporting', E_ALL );
                   , kanmry2 = ?
                   , katmha2 = ?
                   , kabiko2 = ?
-                where shcdsh = ?";
+                where kahika = ?";
 
         $stmt = $dbh->prepare($sql); //挿入する値は空のまま、SQL実行の準備をする
         $params[] = $loop['seq'];          // 挿入する値を配列に格納する
-        $params[] = $loop['kahika'];          
+        $params[] = $loop['SHNMSH'];          
         $params[] = $loop['kacdun'];          
         $params[] = $loop['kacddr'];
         $params[] = $loop['kanmry1'];
@@ -106,7 +109,7 @@ ini_set( 'error_reporting', E_ALL );
         $params[] = $loop['kanmry2'];
         $params[] = $loop['katmha2'];
         $params[] = $loop['kabiko2'];
-        $params[] = $loop['kashban'];
+        $params[] = $loop['kahika'];
 //var_dump($params)."<br>";
         $stmt->execute($params); //挿入する値が入った変数をexecuteにセットしてSQLを実行        
 //print "wk_kanri_hiha　update<br>";
@@ -117,12 +120,12 @@ ini_set( 'error_reporting', E_ALL );
     }
 
     
-    $sql = "SELECT wk_kanri_hiha.*, ST_UNSM_MYSQL.UNRYUN, ST_DRVM_MYSQL.DRNMDR
-            FROM (wk_kanri_hiha 
+    $sql = "SELECT wk_kanri_shban.*, ST_UNSM_MYSQL.UNRYUN, ST_DRVM_MYSQL.DRNMDR
+            FROM (wk_kanri_shban 
             LEFT JOIN ST_UNSM_MYSQL
-             ON wk_kanri_hiha.kacdun = ST_UNSM_MYSQL.UNCDUN)
+             ON wk_kanri_shban.kacdun = ST_UNSM_MYSQL.UNCDUN)
             LEFT JOIN ST_DRVM_MYSQL
-             ON (wk_kanri_hiha.kacddr = ST_DRVM_MYSQL.DRCDDR) AND (wk_kanri_hiha.kacdun = ST_DRVM_MYSQL.DRCDUN)
+             ON (wk_kanri_shban.kacddr = ST_DRVM_MYSQL.DRCDDR) AND (wk_kanri_shban.kacdun = ST_DRVM_MYSQL.DRCDUN)
             where shcdsh > ?";
 
     $stmt = $dbh->prepare($sql); //挿入する値は空のまま、SQL実行の準備をする
@@ -134,11 +137,11 @@ ini_set( 'error_reporting', E_ALL );
     
 
     print "<div id='session'>";
-    print "配車　配車状況(配車日)<br><br>";
+    print "配車　配車状況(車番)<br><br>";
     print "</div>";
     print "<div id='keppin_tbl'>";
 
-    print "<form method = 'POST' action='kanri_hiha_branch.php'>";
+    print "<form method = 'POST' action='kanri_shban_branch.php'>";
     print "<table class= 'haisha_tbl'>";
     print "<tr>";
     print "<th>"." "."</th>";
@@ -187,7 +190,6 @@ ini_set( 'error_reporting', E_ALL );
         print "<td>".$rec['kabiko2']."</td>";
         print "</tr>";
     }
-
     print "</table>";
 //    print "<div hidden><input type='hidden' name='hiha' value='".$year."-".$month."-".$day."'>";
 //    print "</div>";
@@ -201,7 +203,7 @@ ini_set( 'error_reporting', E_ALL );
     print "<a href='kanri_input.php'>新規登録</a><br>";
     print "<br>";
     print "<br>";
-    print "<a href='kanri_hiha.php'>日付選択へ</a><br>";
+    print "<a href='kanri_shban.php'>車番選択へ</a><br>";
     print "<br>";        
 }
 catch (exception $e)
