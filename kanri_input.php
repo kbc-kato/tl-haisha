@@ -42,7 +42,7 @@ ini_set( 'error_reporting', E_ALL );
     if(isset($_SESSION["nmry2"])) $nmry2 = $_SESSION["nmry2"];
     if(isset($_SESSION["tmha2"])) $tmha2 = $_SESSION["tmha2"];
     if(isset($_SESSION["biko2"])) $biko2 = $_SESSION["biko2"];
-//var_dump($_SESSION);
+var_dump($_SESSION);
     $y=$_SESSION["haisha_year"];
     $m=$_SESSION["haisha_month"];
     $d=$_SESSION["haisha_day"];
