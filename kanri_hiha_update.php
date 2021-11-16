@@ -48,8 +48,12 @@ var_dump($rec);
 
     print "<form method='POST' name='form2' action='kanri_hiha_update_check.php'>";
     
+    print "№"."<br>";
+    print "<input type ='date' name = 'seq' value = ".$rec['seq'].">";
+    print "<br>";
+
     print "配車日"."<br>";
-    print "<input type ='date' name = 'hiha' value = ".$rec['KAHIHA'].">";
+    print "<input type ='date' name = 'hiha' value = ".$rec['kahika'].">";
     print "<br>";
 
     print "車番"."<br>";
@@ -67,23 +71,23 @@ var_dump($rec);
     print "<br>";
 
     print "行先1"."<br>";
-    print "<input type ='text' name = 'nmry1' size='40' maxlength='40' value = ".$rec['KANMRY1'].">";
+    print "<input type ='text' name = 'nmry1' size='40' maxlength='40' value = ".$rec['kanmry1'].">";
     print "着時間 ";
-    print "<input type ='text' name = 'tmha1' size='10' value = ".$rec['KATMHA1'].">";
+    print "<input type ='text' name = 'tmha1' size='10' value = ".$rec['katmha1'].">";
     print "<br>";
 
     print "備考"."<br>";
-    print "<textarea name = 'biko1' cols='40' rows='5' value = ".$rec['KABIKO1']."></textarea>";
+    print "<textarea name = 'biko1' cols='40' rows='5' value = ".$rec['kabiko1']."></textarea>";
     print "<br>";
 
     print "行先2"."<br>";
-    print "<input type ='text' name = 'nmry2' size='40' maxlength='40' value = ".$rec['KANMRY2'].">";
+    print "<input type ='text' name = 'nmry2' size='40' maxlength='40' value = ".$rec['kanmry2'].">";
     print "着時間 ";
-    print "<input type ='text' name = 'tmha2' size='10' value = ".$rec['KATMHA2'].">";
+    print "<input type ='text' name = 'tmha2' size='10' value = ".$rec['katmha2'].">";
     print "<br>";
 
     print "備考"."<br>";
-    print "<textarea name = 'biko2' cols='40' rows='5' value = ".$rec['KABIKO2']."></textarea>";
+    print "<textarea name = 'biko2' cols='40' rows='5' value = ".$rec['kabiko2']."></textarea>";
     print "<br><br>";
 
     print "<input type ='submit' value = '更新'>";
