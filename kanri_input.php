@@ -46,7 +46,7 @@ ini_set( 'error_reporting', E_ALL );
     $y=$_SESSION["haisha_year"];
     $m=$_SESSION["haisha_month"];
     $d=$_SESSION["haisha_day"];
-print "ymd=".$year."/".$month."/".$day."<br>";
+print "ymd=".$y."/".$m."/".$d."<br>";
 
     print "<div id='kanri'>";
 
