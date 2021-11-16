@@ -109,8 +109,8 @@ ini_set( 'error_reporting', E_ALL );
     print "<input type ='submit' value = '更新'>";
     print "</form>";
     print "<br><br>";
-    print "<a href='kanri_hiha_desp.php?'>配車状況一覧(配車日)へ</a>";
-//  print "<a href='kanri_hiha_desp.php?year=".$y."&month=".$m."&day=".$d.">配車状況一覧(配車日)へ</a>";
+//    print "<a href='kanri_hiha_desp.php?'>配車状況一覧(配車日)へ</a>";
+    print "<a href='kanri_hiha_desp.php?year=".$y."&month=".$m."&day=".$d."'>配車状況一覧(配車日)へ</a>";
 //    print "<hr>";
     print "</div>";
 ?>
