@@ -6,7 +6,7 @@ function sanitize($before)
         {
             $after[$key] = htmlspecialchars($value,ENT_QUOTES,"UTF-8");
         }
-        return $after;    
+        return $after;
     }
     
     function pulldown_year()

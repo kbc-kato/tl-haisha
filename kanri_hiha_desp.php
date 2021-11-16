@@ -139,6 +139,7 @@ ini_set( 'error_reporting', E_ALL );
     print "配車　配車状況<br><br>";
     print "</div>";
     print "<div id='hiha'>";
+    
     print "<form method = 'POST' action='kanri_hiha_branch.php'>";
     print "<table class= 'haisha_tbl'>";
     print "<tr>";
@@ -190,7 +191,7 @@ ini_set( 'error_reporting', E_ALL );
     print "</table>";
     print "<br>";
     print "<input type ='submit' name='edit' value='修正'>";
-    print "<input type ='submit' name='delete' value='修正'>";
+    print "<input type ='submit' name='delete' value='削除'>";
     print "</form>";
     print "</div>";
     print "<br>";

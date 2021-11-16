@@ -22,7 +22,7 @@ ini_set( 'error_reporting', E_ALL );
 
     $post = sanitize($_POST);               //前画面からのデータを変数にセット
     
-    $seq = $post["seq"];
+    $seq = $post['seq'];
     
     include ('userfile.php');
 
