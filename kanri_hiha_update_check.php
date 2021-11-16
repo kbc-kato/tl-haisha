@@ -151,8 +151,19 @@ try
     
     $PDO = null;        //データベースから切断
 
-    $_SESSION = array();
-    session_destroy();
+    unset($_SESSION["seq"]);        //セッションを削除
+    unset($_SESSION["hiha"]);
+    unset($_SESSION["shban"]);
+    unset($_SESSION["cdun"]);
+    unset($_SESSION["cddr"]);
+    unset($_SESSION["nmry1"]);
+    unset($_SESSION["tmha1"]);
+    unset($_SESSION["biko1"]);
+    unset($_SESSION["nmry2"]);
+    unset($_SESSION["tmha2"]);
+    unset($_SESSION["biko2"]);
+//    $_SESSION = array();
+//    session_destroy();
 
     $y=date('Y', strtotime($hiha));
     $m=date('n', strtotime($hiha));

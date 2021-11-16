@@ -78,8 +78,11 @@ try
     
     $PDO = null;        //データベースから切断
 
-    $_SESSION = array();
-    session_destroy();
+    unset($_SESSION["seq"]);        //セッションを削除
+    unset($_SESSION["hiha"]);
+
+//    $_SESSION = array();
+//    session_destroy();
 
     $y=date('Y', strtotime($hiha));
     $m=date('n', strtotime($hiha));
