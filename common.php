@@ -59,6 +59,7 @@ function sanitize($before)
 
     function pulldown_shban()
     {
+print "session=".$_SESSION["shban"];
         include ("userfile.php");               //$dsn,$user,$password
 
         $dbh = new PDO($dsn, $user, $password); //SqlServerのデータベースに接続
@@ -98,6 +99,7 @@ function sanitize($before)
 
     function pulldown_unsm()
     {
+print "session=".$_SESSION["cdun"];
         include ("userfile.php");               //$dsn,$user,$password
 
         $dbh = new PDO($dsn, $user, $password); //SqlServerのデータベースに接続
@@ -137,6 +139,7 @@ function sanitize($before)
 
     function pulldown_drvm()
     {
+print "session=".$_SESSION["cddr"];
         include ("userfile.php");               //$dsn,$user,$password
 
         $dbh = new PDO($dsn, $user, $password); //SqlServerのデータベースに接続
