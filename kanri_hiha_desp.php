@@ -167,7 +167,7 @@ ini_set( 'error_reporting', E_ALL );
         }
 
         print "<tr>";
-        print "<td><input type='radio' name='seq' value='".$rec['seq']."'></td>";
+        print "<td><input type='radio' name='code' value='".$rec['seq']."'></td>";
         print "<td>".$rec['seq']."</td>";
         print "<td>".$rec['shnmsh']."</td>";
         if ($rec['kahika']==null)
