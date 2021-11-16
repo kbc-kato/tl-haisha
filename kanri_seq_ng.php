@@ -8,7 +8,17 @@
         <title>株式会社 高崎リビング</title>
     </head>
     <body>
-        seqが選択されていません。<BR>
+<?php
+    if(isset($_GET['hika'])==true) 
+    {
+        $y=date('Y', strtotime($_GET['hika']));
+        $m=date('n', strtotime($_GET['hika']));
+        $d=date('d', strtotime($_GET['hika']));
+    }
+
+
+?>
+        №が選択されていません。<BR>
         <a href='kanri_hiha_desp.php'>戻る</a>
 
     </body>
