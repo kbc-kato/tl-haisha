@@ -57,7 +57,7 @@ ini_set( 'error_reporting', E_ALL );
     print "<form method='POST' name='form2' action='kanri_hiha_update_check.php'>";
     
     print "№"."<br>";
-    print "<input type ='text' name = 'seq' size='5' value = ".$rec['seq'].">";
+    print "<input type ='text' name = 'seq' size='5' value = ".$rec['seq']." readonly>";
     print "<br>";
 
     print "配車日"."<br>";

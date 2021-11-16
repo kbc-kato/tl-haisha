@@ -20,16 +20,13 @@ try
 
 ini_set( 'display_errors', 1 );
 ini_set( 'error_reporting', E_ALL );
-        
 
-//print "前画面=".$_SERVER['HTTP_REFERER'];
+
     require_once('common.php');
 
 //    $post = sanitize($_POST);                 //前画面からのデータを変数にセット
 
-//    $code= $_SESSION["login_code"];
-//    $kbjg= $_SESSION["login_kbjg"];
-//var_dump($_SESSION);
+//print "前画面=".$_SERVER['HTTP_REFERER'];
     if($_SERVER['HTTP_REFERER']=="https://tl-haisha.herokuapp.com/kanri_hiha.php")
     {
         $year= $_SESSION["haisha_year"];            //$post["year"];
