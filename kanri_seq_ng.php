@@ -17,9 +17,9 @@
     }
 
 
-?>
-        №が選択されていません。<BR>
-        <a href='kanri_hiha_desp.php'>戻る</a>
+        print "№が選択されていません。<BR>";
+        print "<a href='kanri_hiha_desp.php?year=".$y."&month=".$m."&day=".$d."'>戻る</a>";
 
+?>
     </body>
 </html>
