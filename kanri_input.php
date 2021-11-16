@@ -46,7 +46,7 @@ var_dump($_SESSION);
     $year=$_SESSION["haisha_year"];
     $month=$_SESSION["haisha_month"];
     $day=$_SESSION["haisha_day"];
-print "ymd=".$y."/".$m."/".$d."<br>";
+print "ymd=".$year."/".$month."/".$day."<br>";
 
     print "<div id='kanri'>";
 
