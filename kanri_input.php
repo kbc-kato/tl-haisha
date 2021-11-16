@@ -45,10 +45,11 @@ ini_set( 'error_reporting', E_ALL );
     $y=date('Y', strtotime($hiha));
     $m=date('n', strtotime($hiha));
     $d=date('d', strtotime($hiha));
+print "ymd=".$year."/".$month."/".$day."<br>";
 
-    print "<div id='kanri'>";
+print "<div id='kanri'>";
 
-    print "<form method='POST' name='form2' action='kanri_check.php'>";
+    print "<form method='POST' name='form2' action='kanri_input_check.php'>";
     
     print "配車日"."<br>";
     print "<input type ='date' name = 'hiha' value = ".$hiha.">";
