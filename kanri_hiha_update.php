@@ -19,9 +19,9 @@ ini_set( 'display_errors', 1 );
 ini_set( 'error_reporting', E_ALL );
 
     require_once ("common.php");
-print "GET=".$_GET['code'];
+//print "GET=".$_GET['code'];
     $seq = $_GET['code'];
-print "seq=".$seq;
+//print "seq=".$seq;
     
     include ('userfile.php');
 
@@ -38,7 +38,7 @@ print "seq=".$seq;
     
     $PDO = null;        //データベースから切断
     $rec = $stmt->fetch(PDO::FETCH_ASSOC);
-
+var_dump($rec);
     if ($rec==false)
     {
         exit();
