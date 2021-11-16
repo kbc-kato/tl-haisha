@@ -76,7 +76,7 @@ ini_set( 'error_reporting', E_ALL );
     $params[] = date('Y-n-d');          // 挿入する値を配列に格納する
     $params[] = $date;          
     $params[] = $shban;          
-
+var_dump($params)."<br>";
     $stmt->execute($params); //挿入する値が入った変数をexecuteにセットしてSQLを実行    
 
 //パラメータ配列を削除
