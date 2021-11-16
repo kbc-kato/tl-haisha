@@ -22,7 +22,7 @@ ini_set( 'display_errors', 1 );
 ini_set( 'error_reporting', E_ALL );
         
 
-
+print "前画面=".$_SERVER['HTTP_REFERER'];
     require_once('common.php');
 
 //    $post = sanitize($_POST);                 //前画面からのデータを変数にセット
