@@ -138,7 +138,7 @@ ini_set( 'error_reporting', E_ALL );
     print "<div id='session'>";
     print "配車　配車状況<br><br>";
     print "</div>";
-    print "<div id='hiha'>";
+    print "<div id='keppin_tbl'>";
 
     print "<form method = 'POST' action='kanri_hiha_branch.php'>";
     print "<table class= 'haisha_tbl'>";

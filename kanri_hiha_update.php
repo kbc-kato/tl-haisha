@@ -45,7 +45,7 @@ ini_set( 'error_reporting', E_ALL );
     }
 
     session_start();
-    session_regenerate_id(true);            //セッションIDを変える
+//    session_regenerate_id(true);            //セッションIDを変える
 
     if(isset($rec['kashban'])==true) $_SESSION["shban"] = $rec['kashban'];
     if(isset($rec['kacdun'])==true) $_SESSION["cdun"] = $rec["kacdun"];
