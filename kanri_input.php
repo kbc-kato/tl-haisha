@@ -42,6 +42,7 @@ ini_set( 'error_reporting', E_ALL );
     if(isset($_SESSION["nmry2"])) $nmry2 = $_SESSION["nmry2"];
     if(isset($_SESSION["tmha2"])) $tmha2 = $_SESSION["tmha2"];
     if(isset($_SESSION["biko2"])) $biko2 = $_SESSION["biko2"];
+var_dump($_SESSION);
     $y=date('Y', strtotime($hiha));
     $m=date('n', strtotime($hiha));
     $d=date('d', strtotime($hiha));
