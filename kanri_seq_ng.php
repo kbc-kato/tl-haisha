@@ -15,7 +15,7 @@
         $m=date('n', strtotime($_GET['hika']));
         $d=date('d', strtotime($_GET['hika']));
     }
-
+print "ymd=".$year."/".$month."/".$day."<br>";
 
         print "№が選択されていません。<BR>";
         print "<a href='kanri_hiha_desp.php?year=".$y."&month=".$m."&day=".$d."'>戻る</a>";
