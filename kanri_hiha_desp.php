@@ -30,7 +30,7 @@ ini_set( 'error_reporting', E_ALL );
 //    $code= $_SESSION["login_code"];
 //    $kbjg= $_SESSION["login_kbjg"];
 var_dump($_SESSION);
-    if(isset($_SESSION))
+    if(isset($_SESSION)==true)
     {
         $year= $_SESSION["haisha_year"];            //$post["year"];
         $month= $_SESSION["haisha_month"];          //$post["month"];
@@ -42,7 +42,7 @@ var_dump($_SESSION);
         $month= $_GET["month"];          //$post["month"];
         $day= $_GET["day"];              //$post["day"];
     }
-        //print "ymd=".$year."/".$month."/".$day."<br>";
+//print "ymd=".$year."/".$month."/".$day."<br>";
 
     include ('userfile.php');
 
