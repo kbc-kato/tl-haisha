@@ -20,9 +20,6 @@ ini_set( 'error_reporting', E_ALL );
 
     require_once ("common.php");
 
-    $post = sanitize($_POST);               //前画面からのデータを変数にセット
-print "post=".$post;
-    
     $seq = $post['seq'];
     
     include ('userfile.php');
