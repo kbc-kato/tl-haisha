@@ -45,10 +45,10 @@ ini_set( 'error_reporting', E_ALL );
     }
 
     session_start();
-    if(isset($rec['shban'])) $_SESSION["shban"] = $rec['shban'];
-    if(isset($rec['cdun'])) $_SESSION["cdun"] = $rec["cdun"];
-    if(isset($rec['cddr'])) $_SESSION["cddr"] = $rec["cddr"];
-
+    if(isset($rec['shban'])==true) $_SESSION["shban"] = $rec['shban'];
+    if(isset($rec['cdun'])==true) $_SESSION["cdun"] = $rec["cdun"];
+    if(isset($rec['cddr'])==true) $_SESSION["cddr"] = $rec["cddr"];
+var_dump($_SESSION);
 
     print "<div id='kanri'>";
 
