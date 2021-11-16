@@ -50,11 +50,15 @@ ini_set( 'error_reporting', E_ALL );
 print "i=".$i."　date=".$date."　shban=".$shban."<br>";
         $sql = "INSERT INTO wk_kanri_shban ( kahika, shcdsh )
                 VALUES ( ?, ? )";
+
         $stmt = $dbh->prepare($sql); //挿入する値は空のまま、SQL実行の準備をする
         $params[] = $date;          // 挿入する値を配列に格納する        
         $params[] = $shban;          
         
         $stmt->execute($params); //挿入する値が入った変数をexecuteにセットしてSQLを実行
+
+//パラメータ配列を削除
+        unset($params);
     } 
 
 
