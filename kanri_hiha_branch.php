@@ -5,6 +5,7 @@
         $m=date('n', strtotime($_POST['hiha']));
         $d=date('d', strtotime($_POST['hiha']));
     }
+print "ymd=".$year."/".$month."/".$day."<br>";    
     if(isset($_POST['edit'])==true)
     {
         if($_POST['code']=='')
