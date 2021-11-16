@@ -46,7 +46,10 @@ ini_set( 'error_reporting', E_ALL );
 
     session_start();
     session_regenerate_id(true);            //セッションIDを変える
-     
+
+print "shban=".$rec['shban'];
+print "cdun=".$rec['cdun']; 
+print "cddr=".$rec['cddr'];      
     if(isset($rec['shban'])==true) $_SESSION["shban"] = $rec['shban'];
     if(isset($rec['cdun'])==true) $_SESSION["cdun"] = $rec["cdun"];
     if(isset($rec['cddr'])==true) $_SESSION["cddr"] = $rec["cddr"];
