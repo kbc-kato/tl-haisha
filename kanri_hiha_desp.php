@@ -174,7 +174,7 @@ ini_set( 'error_reporting', E_ALL );
 
         print "<tr>";
         print "<td><input type='radio' name='code' value='".$rec['seq']."'></td>";
-        print "<td><input type='hidden' name='hiha' value='".$year."-".$month."-".$day."'></td>";
+
         print "<td>".$rec['seq']."</td>";
         print "<td>".$rec['shnmsh']."</td>";
         if ($rec['kahika']==null)
@@ -195,6 +195,9 @@ ini_set( 'error_reporting', E_ALL );
         print "<td>".$rec['kabiko2']."</td>";
         print "</tr>";
     }
+    print "<tr>";
+    print "<td><input type='hidden' name='hiha' value='".$year."-".$month."-".$day."'></td>";
+    print "</tr>";
     print "</table>";
     print "<br>";
     print "<input type ='submit' name='edit' value='修 正'>";
