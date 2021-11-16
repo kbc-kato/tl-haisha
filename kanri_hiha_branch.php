@@ -1,9 +1,9 @@
 <?php
-    if(isset($_POST['hika'])==true) 
+    if(isset($_POST['hiha'])==true) 
     {
-        $y=date('Y', strtotime($_POST['hika']));
-        $m=date('n', strtotime($_POST['hika']));
-        $d=date('d', strtotime($_POST['hika']));
+        $y=date('Y', strtotime($_POST['hiha']));
+        $m=date('n', strtotime($_POST['hiha']));
+        $d=date('d', strtotime($_POST['hiha']));
     }
     if(isset($_POST['edit'])==true)
     {

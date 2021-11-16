@@ -146,7 +146,7 @@ ini_set( 'error_reporting', E_ALL );
     print "</div>";
     print "<div id='keppin_tbl'>";
 
-    print "<form method = 'get' action='kanri_hiha_branch.php'>";
+    print "<form method = 'POST' action='kanri_hiha_branch.php'>";
     print "<table class= 'haisha_tbl'>";
     print "<tr>";
     print "<th>"." "."</th>";
