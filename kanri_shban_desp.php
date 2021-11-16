@@ -67,7 +67,6 @@ ini_set( 'error_reporting', E_ALL );
             FROM st_kanri_mysql
               INNER JOIN ST_SHBAN_MYSQL
               ON st_kanri_mysql.kashban = ST_SHBAN_MYSQL.SHCDSH
-              substring(kahika,1,4)=?
             WHERE (((substring(kahika,1,10))>=?
               And   (substring(kahika,1,10))<=?)
               AND  ((kashban)=?))";
