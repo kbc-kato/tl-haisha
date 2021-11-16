@@ -7,8 +7,7 @@
             exit();
         } 
         $seq = $_POST['seq'];
-print "seq=".$seq;        
-        header('location:kanri_hiha_update.php');
+        header('location:kanri_hiha_update.php?seq='.$seq);
         exit();
     }
 
@@ -20,7 +19,7 @@ print "seq=".$seq;
             exit();
         } 
         $seq = $_POST['seq'];
-        header('location:kanri_hiha_delete.php');
+        header('location:kanri_hiha_delete.php?seq='.$seq);
         exit();
     }
 ?>
