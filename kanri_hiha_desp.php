@@ -29,8 +29,8 @@ ini_set( 'error_reporting', E_ALL );
 
 //    $code= $_SESSION["login_code"];
 //    $kbjg= $_SESSION["login_kbjg"];
-var_dump($_SESSION);
-    if(isset($_SESSION)==true)
+//var_dump($_SESSION);
+    if($_SERVER['HTTP_REFERER']=="https://tl-haisha.herokuapp.com/kanri_hiha.php")
     {
         $year= $_SESSION["haisha_year"];            //$post["year"];
         $month= $_SESSION["haisha_month"];          //$post["month"];
