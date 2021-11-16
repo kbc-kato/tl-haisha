@@ -26,7 +26,7 @@ ini_set( 'error_reporting', E_ALL );
 
 //    $post = sanitize($_POST);                 //前画面からのデータを変数にセット
 
-print "前画面=".$_SERVER['HTTP_REFERER'];
+//print "前画面=".$_SERVER['HTTP_REFERER'];
     if($_SERVER['HTTP_REFERER']=="https://tl-haisha.herokuapp.com/kanri_hiha.php")
     {
         $year= $_SESSION["haisha_year"];            //$post["year"];
@@ -39,7 +39,7 @@ print "前画面=".$_SERVER['HTTP_REFERER'];
         $month= $_GET["month"];          //$post["month"];
         $day= $_GET["day"];              //$post["day"];
     }
-//print "ymd=".$year."/".$month."/".$day."<br>";
+print "ymd=".$year."/".$month."/".$day."<br>";
 
     include ('userfile.php');
 
