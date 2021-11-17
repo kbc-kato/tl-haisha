@@ -165,11 +165,18 @@ try
 //    $_SESSION = array();
 //    session_destroy();
 
-    $y=date('Y', strtotime($hiha));
-    $m=date('n', strtotime($hiha));
-    $d=date('d', strtotime($hiha));
-    header("location:kanri_hiha_desp.php?year=".$y."&month=".$m."&day=".$d);
-    exit;
+//    $y=date('Y', strtotime($hiha));
+//    $m=date('n', strtotime($hiha));
+//    $d=date('d', strtotime($hiha));
+    if($_SESSION["shori_kbn"]=="1")
+    {
+        header("location:kanri_hiha_desp.php");
+    }
+    else
+    {
+        header("location:kanri_shban_desp.php");
+    }
+        exit;
 
 }
 catch (exception $e)

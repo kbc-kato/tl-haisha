@@ -10,16 +10,16 @@
     {
         if($_POST['code']=='')
         {
-            header('location:kanri_seq_ng.php?year='.$y.'&month='.$m.'&day='.$d);
+            header('location:kanri_seq_ng.php');
             exit();
         }
         if(isset($_POST['code'])==false)
         {
-            header('location:kanri_seq_ng.php?year='.$y.'&month='.$m.'&day='.$d);
+            header('location:kanri_seq_ng.php');
             exit();
         }  
         $code = $_POST['code'];
-        header('location:kanri_shban_update.php?code='.$code);
+        header('location:kanri_hiha_update.php?code='.$code);
         exit();
     }
 
@@ -27,16 +27,16 @@
     {
         if($_POST['code']=='')
         {
-            header('location:kanri_seq_ng.php?year='.$y.'&month='.$m.'&day='.$d);
+            header('location:kanri_seq_ng.php');
             exit();
         }
         if(isset($_POST['code'])==false)
         {
-            header('location:kanri_seq_ng.php?year='.$y.'&month='.$m.'&day='.$d);
+            header('location:kanri_seq_ng.php');
             exit();
         } 
         $code = $_POST['code'];
-        header('location:kanri_shban_delete.php?code='.$code);
+        header('location:kanri_hiha_delete.php?code='.$code);
         exit();
     }
 ?>
