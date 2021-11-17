@@ -30,11 +30,11 @@ var_dump(strcmp($_SESSION["shori_kbn"],"1"));
 //        if(strcmp($_SESSION["shori_kbn"],"1")==0)
         if($_SESSION["shori_kbn"]==="1")
         {
-            print "<a href='kanri_hiha_desp.php?>hiduke戻る</a>";           
+            print "<a href='kanri_hiha_desp.php'>hiduke戻る</a>";           
         }
         else
         {
-            print "<a href='kanri_shban_desp.php?>shaban戻る</a>";             
+            print "<a href='kanri_shban_desp.php'>shaban戻る</a>";             
         }
 
 //        print "<a href='kanri_hiha_desp.php?year=".$y."&month=".$m."&day=".$d."'>戻る</a>";
