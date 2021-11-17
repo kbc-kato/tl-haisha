@@ -146,7 +146,7 @@ ini_set( 'error_reporting', E_ALL );
     print "<div id='keppin_tbl'>";
 
     print "<form method = 'POST' action='kanri_shban_branch.php'>";
-    print "<table class= 'haisha_tbl'>";
+    print "<table class= 'kanri_tbl'>";
     print "<tr>";
     print "<th>"." "."</th>";
     print "<th>"."№"."</th>";
@@ -197,8 +197,8 @@ ini_set( 'error_reporting', E_ALL );
     print "</table>";
 
     print "<br>";
-    print "<input type ='submit' name='edit' value='修 正'>";
-    print "<input type ='submit' name='delete' value='削 除'>";
+    print "<input type ='submit' name='edit' value='修 正' class='btn'>";
+    print "<input type ='submit' name='delete' value='削 除' class='btn'>";
     print "</form>";
     print "</div>";
     print "<br>";
