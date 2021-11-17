@@ -9,6 +9,8 @@
     </head>
     <body>
 <?php
+    session_start();
+var_dump($_SESSION);    
     if(isset($_GET['year'])==true) 
     {
         $y=$_GET['year'];
@@ -16,7 +18,7 @@
         $d=$_GET['day'];
     }
 //print "ymd=".$year."/".$month."/".$day."<br>";
-        session_start();
+
         print "№が選択されていません。<BR>";
         if(isset($_SESSION["shban"])==true)
         {
