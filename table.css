@@ -29,9 +29,3 @@ table.haisha_tbl td{
     border-bottom: 1px solid #666666;   /*セルのボーダー(下)*/
     padding: 10px;                              /*パディング(内側余白)を全て10px*/
     }
-
-table.kanri_tbl{
-    width:800px;                       /*テーブル全体の幅*/
-    border-collapse: collapse;          /*セル同士の間に隙間を空けない*/
-    }
-
