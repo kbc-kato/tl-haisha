@@ -134,7 +134,7 @@ ini_set( 'error_reporting', E_ALL );
     
 
     print "<div id='session'>";
-    print "配車　配車状況(配車日)<br><br>";
+    print "配車状況(".$year."/".$month."/".$day.")<br><br>";
     print "</div>";
     print "<div id='keppin_tbl'>";
 

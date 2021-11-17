@@ -32,6 +32,7 @@ ini_set( 'error_reporting', E_ALL );
 //    $month= $_SESSION["haisha_month"];          //$post["month"];
 //    $day= $_SESSION["haisha_day"];              //$post["day"];
     $shban= $_SESSION["shban"];              //$post["day"];
+    $shnmsh= $_SESSION["shnmsh"];              //$post["day"];
 //print "shnan=".$shban."<br>";
 
     include ('userfile.php');
@@ -140,7 +141,7 @@ ini_set( 'error_reporting', E_ALL );
     
 
     print "<div id='session'>";
-    print "配車　配車状況(車番)<br><br>";
+    print "配車状況(".$shnmsh.")<br><br>";
     print "</div>";
     print "<div id='keppin_tbl'>";
 
