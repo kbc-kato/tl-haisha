@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scele=1">
         <link rel="stylesheet" href="base.css">
         <link rel="stylesheet" media= "screen and (max-width:800px)" href="base_sp.css">
-        <link rel="stylesheet" href="table_kp.css">
+        <link rel="stylesheet" href="table_ka.css">
         <title>株式会社 高崎リビング</title>
     </head>
     <body>
@@ -142,10 +142,10 @@ ini_set( 'error_reporting', E_ALL );
     print "<div id='session'>";
     print "配車状況(".$shnmsh.")<br><br>";
     print "</div>";
-    print "<div id='keppin_tbl'>";
+    print "<div id='kanri'>";
 
     print "<form method = 'POST' action='kanri_shban_branch.php'>";
-    print "<table class= 'keppin_tbl'>";
+    print "<table class= 'kanri_tbl'>";
     print "<tr>";
     print "<th>"." "."</th>";
     print "<th>"."№"."</th>";
