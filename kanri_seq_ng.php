@@ -16,7 +16,7 @@ ini_set( 'error_reporting', E_ALL );
 
     session_start();
 var_dump($_SESSION);    
-print "is_null(SESSION['shban'])=".is_null($_SESSION['shban']);
+print "defined(SESSION['shban'])=".defined($_SESSION['shban']);
 if(isset($_GET['year'])==true) 
     {
         $y=$_GET['year'];
