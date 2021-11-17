@@ -35,7 +35,7 @@ try
         $_SESSION["haisha_year"]=$year;
         $_SESSION["haisha_month"]=$month;
         $_SESSION["haisha_day"]=$day;
-        $_SESSION["shori_kbn"] = 1;       //処理区分=1(日付検索)
+        $_SESSION["shori_kbn"] = "1";       //処理区分=1(日付検索)
 
         var_dump($_SESSION);  
 
