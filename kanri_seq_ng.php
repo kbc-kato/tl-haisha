@@ -24,6 +24,7 @@ var_dump($_SESSION);
         $d=$_GET['day'];
     }
 //print "ymd=".$year."/".$month."/".$day."<br>";
+var_dump($$_SESSION["shori_kbn"],"1"); 
 
         print "№が選択されていません。<BR>";
         if($_SESSION["shori_kbn"]=="1")
