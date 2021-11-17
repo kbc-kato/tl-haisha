@@ -43,9 +43,12 @@ ini_set( 'error_reporting', E_ALL );
     if(isset($_SESSION["tmha2"])) $tmha2 = $_SESSION["tmha2"];
     if(isset($_SESSION["biko2"])) $biko2 = $_SESSION["biko2"];
 //var_dump($_SESSION);
-    $year=$_SESSION["haisha_year"];
-    $month=$_SESSION["haisha_month"];
-    $day=$_SESSION["haisha_day"];
+    if($_SESSION["shori_kbn"]=="1")
+    {
+        $year=$_SESSION["haisha_year"];
+        $month=$_SESSION["haisha_month"];
+        $day=$_SESSION["haisha_day"];
+    }    
 //print "ymd=".$year."/".$month."/".$day."<br>";
 
     print "<div id='kanri'>";
