@@ -56,6 +56,7 @@ try
             session_start();
             $_SESSION["shban"]=$shban;
             $_SESSION["shnmsh"]=$rec["SHNMSH"];
+            $_SESSION["shori_kbn"]=2;       //処理区分=2(車番検索)
 
             header("location:kanri_shban_desp.php");
             exit;

@@ -94,13 +94,13 @@ ini_set( 'error_reporting', E_ALL );
     print "</form>";
     print "<br><br>";
 
-    if(isset($_SESSION["shban"])==true)
+    if($_SESSION["shori_kbn"]==1)
     {
-        print "<a href='kanri_shban_desp.php'>配車状況一覧(車番)へ</a>";
+        print "<a href='kanri_hiha_desp.php'>配車状況一覧(配車日)へ</a>";
     }
     else
     {
-        print "<a href='kanri_hiha_desp.php'>配車状況一覧(配車日)へ</a>";
+        print "<a href='kanri_shban_desp.php'>配車状況一覧(車番)へ</a>";
     }
 //    print "<hr>";
     print "</div>";

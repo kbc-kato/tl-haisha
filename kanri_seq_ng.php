@@ -16,8 +16,8 @@ ini_set( 'error_reporting', E_ALL );
 
     session_start();
 var_dump($_SESSION);    
-print "defined(SESSION['shban'])=".defined($_SESSION['shban']);
-if(isset($_GET['year'])==true) 
+
+    if(isset($_GET['year'])==true) 
     {
         $y=$_GET['year'];
         $m=$_GET['month'];
@@ -26,7 +26,7 @@ if(isset($_GET['year'])==true)
 //print "ymd=".$year."/".$month."/".$day."<br>";
 
         print "№が選択されていません。<BR>";
-        if(isset($_SESSION["shban"])==false)
+        if($_SESSION["shori_kbn"]==1)
         {
             print "<a href='kanri_hiha_desp.php?>hiduke戻る</a>";           
         }
