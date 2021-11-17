@@ -194,8 +194,6 @@ ini_set( 'error_reporting', E_ALL );
         print "</tr>";
     }
     print "</table>";
-//    print "<div hidden><input type='hidden' name='hiha' value='".$year."-".$month."-".$day."'>";
-//    print "</div>";
 
     print "<br>";
     print "<input type ='submit' name='edit' value='修 正'>";

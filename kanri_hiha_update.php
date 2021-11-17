@@ -19,7 +19,7 @@ ini_set( 'display_errors', 1 );
 ini_set( 'error_reporting', E_ALL );
 
     require_once ("common.php");
-//print "GET=".$_GET['code'];
+    
     $seq = $_GET['code'];
 //print "seq=".$seq;
     

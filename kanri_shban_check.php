@@ -19,6 +19,21 @@ try
     
     $shban= $post["shban"];
 
+    include ("userfile.php");               //$dsn,$user,$password
+
+    $dbh = new PDO($dsn, $user, $password); //SqlServerのデータベースに接続
+    $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); //PDOのエラーレポートを表示
+    
+    $sql = "SELECT * FROM ST_SHBAN_MYSQL WHERE st_shban_mysql.SHCDSH=?"; // SELECT文を変数に格納。
+
+    $stmt = $dbh->prepare($sql); //挿入する値は空のまま、SQL実行の準備をする
+    $params[] = $shban;          // 挿入する値を配列に格納する
+    
+    $stmt->execute($params); //挿入する値が入った変数をexecuteにセットしてSQLを実行
+    
+    $PDO = null;        //データベースから切断
+    
+    $rec = $stmt->fetch(PDO::FETCH_ASSOC);
 
     if($shban=='')
     {
@@ -40,7 +55,8 @@ try
         {
             session_start();
             $_SESSION["shban"]=$shban;
-    
+            $_SESSION["shnmsh"]=$rec["SHNMSH"];
+
             header("location:kanri_shban_desp.php");
             exit;
         }

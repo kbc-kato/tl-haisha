@@ -16,10 +16,18 @@
         $d=$_GET['day'];
     }
 //print "ymd=".$year."/".$month."/".$day."<br>";
-
+        session_start();
         print "№が選択されていません。<BR>";
-        print "<a href='kanri_hiha_desp.php?year=".$y."&month=".$m."&day=".$d."'>戻る</a>";
+        if(isset($_SESSION["shban"])==true)
+        {
+            print "<a href='kanri_shban_desp.php?>shaban戻る</a>";            
+        }
+        else
+        {
+            print "<a href='kanri_hiha_desp.php?>hiduke戻る</a>";            
+        }
 
+//        print "<a href='kanri_hiha_desp.php?year=".$y."&month=".$m."&day=".$d."'>戻る</a>";
 ?>
     </body>
 </html>

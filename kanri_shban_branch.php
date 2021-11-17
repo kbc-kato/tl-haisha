@@ -1,10 +1,10 @@
 <?php
-    if(isset($_POST['hiha'])==true) 
-    {
-        $y=date('Y', strtotime($_POST['hiha']));
-        $m=date('n', strtotime($_POST['hiha']));
-        $d=date('d', strtotime($_POST['hiha']));
-    }
+//    if(isset($_POST['hiha'])==true) 
+//    {
+//        $y=date('Y', strtotime($_POST['hiha']));
+//        $m=date('n', strtotime($_POST['hiha']));
+//        $d=date('d', strtotime($_POST['hiha']));
+//    }
 //print "ymd=".$year."/".$month."/".$day."<br>";    
     if(isset($_POST['edit'])==true)
     {
@@ -19,7 +19,7 @@
             exit();
         }  
         $code = $_POST['code'];
-        header('location:kanri_hiha_update.php?code='.$code);
+        header('location:kanri_shban_update.php?code='.$code);
         exit();
     }
 
@@ -36,7 +36,7 @@
             exit();
         } 
         $code = $_POST['code'];
-        header('location:kanri_hiha_delete.php?code='.$code);
+        header('location:kanri_shban_delete.php?code='.$code);
         exit();
     }
 ?>
