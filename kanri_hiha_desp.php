@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scele=1">
         <link rel="stylesheet" href="base.css">
         <link rel="stylesheet" media= "screen and (max-width:800px)" href="base_sp.css">
-        <link rel="stylesheet" href="table_ka.css">
+        <link rel="stylesheet" href="table.css">
         <title>株式会社 高崎リビング</title>
     </head>
     <body>
