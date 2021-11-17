@@ -9,6 +9,11 @@
     </head>
     <body>
 <?php
+
+ini_set( 'display_errors', 1 );
+ini_set( 'error_reporting', E_ALL );
+
+
     session_start();
 var_dump($_SESSION);    
 print "isset(SESSION['shban'])=".isset($_SESSION['shban']);
