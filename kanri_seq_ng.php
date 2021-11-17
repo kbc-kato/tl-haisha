@@ -16,7 +16,7 @@ ini_set( 'error_reporting', E_ALL );
 
     session_start();
 var_dump($_SESSION);    
-print "isset(SESSION['shban'])=".isset($_SESSION['shban']);
+print "is_null(SESSION['shban'])=".is_null($_SESSION['shban']);
 if(isset($_GET['year'])==true) 
     {
         $y=$_GET['year'];
@@ -26,13 +26,13 @@ if(isset($_GET['year'])==true)
 //print "ymd=".$year."/".$month."/".$day."<br>";
 
         print "№が選択されていません。<BR>";
-        if(isset($_SESSION["shban"])==true)
+        if(isset($_SESSION["shban"])==false)
         {
-            print "<a href='kanri_shban_desp.php?>shaban戻る</a>";            
+            print "<a href='kanri_hiha_desp.php?>hiduke戻る</a>";           
         }
         else
         {
-            print "<a href='kanri_hiha_desp.php?>hiduke戻る</a>";            
+            print "<a href='kanri_shban_desp.php?>shaban戻る</a>";             
         }
 
 //        print "<a href='kanri_hiha_desp.php?year=".$y."&month=".$m."&day=".$d."'>戻る</a>";
