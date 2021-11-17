@@ -43,7 +43,7 @@ ini_set( 'error_reporting', E_ALL );
     {
         exit();
     }
-
+    
     session_start();
 //    session_regenerate_id(true);            //セッションIDを変える
 
@@ -63,7 +63,7 @@ ini_set( 'error_reporting', E_ALL );
 
     print "<div id='kanri'>";
 
-    print "<form method='POST' name='form2' action='kanri_hiha_update_check.php'>";
+    print "<form method='POST' name='form2' action='kanri_update_check.php'>";
     
     print "№"."<br>";
     print "<input type ='text' name = 'seq' size='5' value = ".$rec['seq']." readonly>";

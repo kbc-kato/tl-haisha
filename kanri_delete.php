@@ -61,7 +61,7 @@ ini_set( 'error_reporting', E_ALL );
 
     print "<div id='kanri'>";
 
-    print "<form method='POST' name='form2' action='kanri_hiha_delete_check.php'>";
+    print "<form method='POST' name='form2' action='kanri_delete_check.php'>";
     
     print "№"."<br>";
     print "<input type ='text' name = 'seq' size='5' value = ".$rec['seq']." readonly>";
