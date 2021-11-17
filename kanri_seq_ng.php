@@ -11,7 +11,8 @@
 <?php
     session_start();
 var_dump($_SESSION);    
-    if(isset($_GET['year'])==true) 
+print "isset(SESSION['shban'])=".isset($_SESSION['shban']);
+if(isset($_GET['year'])==true) 
     {
         $y=$_GET['year'];
         $m=$_GET['month'];
