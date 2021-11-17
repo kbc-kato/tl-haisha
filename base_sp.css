@@ -24,10 +24,7 @@ div#header {
 div#header h1 {
     padding: 0px;                           /*見出しの位置調整*/ 
 }
-/*div#login {
-    font-size: 14px;                /*文字サイズ*/
-/*    font-family:Arial, Helvetica, sans-serif;       /*フォントの種類*/
-/*} */
+
 hr {
     clear: both;                    /*フロート配置をクリアする*/
     width: 100%;                   /*幅の指定*/
