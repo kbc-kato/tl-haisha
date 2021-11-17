@@ -146,7 +146,7 @@ ini_set( 'error_reporting', E_ALL );
     print "<div id='keppin_tbl'>";
 
     print "<form method = 'POST' action='kanri_shban_branch.php'>";
-    print "<table class= 'kanri_tbl'>";
+    print "<table class= 'keppin_tbl'>";
     print "<tr>";
     print "<th>"." "."</th>";
     print "<th>"."№"."</th>";

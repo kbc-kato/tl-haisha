@@ -43,3 +43,12 @@ table.keppin_tbl td{
     border-bottom: 1px solid #666666;   /*セルのボーダー(下)*/
     padding: 2px;                              /*パディング(内側余白)を全て10px*/
     }
+
+table.keppin_tbl btn{
+        width: 50px;
+        padding: 10px;
+        box-sizing: border-box;
+        border: 1px solid #68779a;
+        background: #cbe8fa;
+        cursor: pointer;
+    }     
