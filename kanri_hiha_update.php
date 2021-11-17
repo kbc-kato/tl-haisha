@@ -52,9 +52,12 @@ ini_set( 'error_reporting', E_ALL );
     if(isset($rec['kacddr'])==true) $_SESSION["cddr"] = $rec["kacddr"];
 
 //var_dump($_SESSION);
-    $year=$_SESSION["haisha_year"];
-    $month=$_SESSION["haisha_month"];
-    $day=$_SESSION["haisha_day"];
+    if($_SESSION["shori_kbn"]=="1")
+    {
+        $year=$_SESSION["haisha_year"];
+        $month=$_SESSION["haisha_month"];
+        $day=$_SESSION["haisha_day"];
+    }
 //print "ymd=".$year."/".$month."/".$day."<br>";
 
 
