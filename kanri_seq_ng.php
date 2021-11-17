@@ -26,7 +26,7 @@ var_dump($_SESSION);
 //print "ymd=".$year."/".$month."/".$day."<br>";
 
         print "№が選択されていません。<BR>";
-        if($_SESSION["shori_kbn"]==1)
+        if($_SESSION["shori_kbn"]=="1")
         {
             print "<a href='kanri_hiha_desp.php?>hiduke戻る</a>";           
         }
