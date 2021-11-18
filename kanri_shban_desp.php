@@ -25,16 +25,11 @@ ini_set( 'error_reporting', E_ALL );
 
     require_once('common.php');
 
-//    $post = sanitize($_POST);                 //前画面からのデータを変数にセット
-
 //print "前画面=".$_SERVER['HTTP_REFERER'];
 
-//    $year= $_SESSION["haisha_year"];            //$post["year"];
-//    $month= $_SESSION["haisha_month"];          //$post["month"];
-//    $day= $_SESSION["haisha_day"];              //$post["day"];
-    $shban= $_SESSION["shban"];              //$post["day"];
-    $shnmsh= $_SESSION["shnmsh"];              //$post["day"];
-//print "shnan=".$shban."<br>";
+
+    $shban= $_SESSION["shban"];              //$post["shban"];
+    $shnmsh= $_SESSION["shnmsh"];              //$post["shnmsh"];
 
     include ('userfile.php');
 
@@ -49,7 +44,7 @@ ini_set( 'error_reporting', E_ALL );
     FOR($i=0; $i<10; $i++)
     {
         $date = date("Y-n-d", strtotime($i." day"));
-//print "i=".$i."　date=".$date."　shban=".$shban."<br>";
+        
         $sql = "INSERT INTO wk_kanri_shban ( kahika, shcdsh )
                 VALUES ( ?, ? )";
 
@@ -117,11 +112,9 @@ ini_set( 'error_reporting', E_ALL );
         $params[] = $loop['kahika'];
 //var_dump($params)."<br>";
         $stmt->execute($params); //挿入する値が入った変数をexecuteにセットしてSQLを実行        
-//print "wk_kanri_hiha　update<br>";
 
 //パラメータ配列を削除
         unset($params);
-//reset($params);
     }
 
     

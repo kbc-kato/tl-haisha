@@ -19,12 +19,6 @@ try
 
     $post = sanitize($_POST);               //前画面からのデータを変数にセット
 
-//foreach ($_POST as $name => $value) {
-//    $$name = $value;
-//    print "name".$$name."= ".$value;
-//    print "<br>";
-//}    
-
     $seq= $post["seq"];
     $hiha= $post["hiha"];
     $shban= $post["shban"];
@@ -162,12 +156,8 @@ try
     unset($_SESSION["nmry2"]);
     unset($_SESSION["tmha2"]);
     unset($_SESSION["biko2"]);
-//    $_SESSION = array();
-//    session_destroy();
 
-//    $y=date('Y', strtotime($hiha));
-//    $m=date('n', strtotime($hiha));
-//    $d=date('d', strtotime($hiha));
+    
     if($_SESSION["shori_kbn"]=="1")
     {
         header("location:kanri_hiha_desp.php");

@@ -21,7 +21,6 @@ ini_set( 'error_reporting', E_ALL );
     require_once ("common.php");
     
     $seq = $_GET['code'];
-//print "seq=".$seq;
     
     include ('userfile.php');
 
@@ -58,8 +57,6 @@ ini_set( 'error_reporting', E_ALL );
         $month=$_SESSION["haisha_month"];
         $day=$_SESSION["haisha_day"];
     }
-//print "ymd=".$year."/".$month."/".$day."<br>";
-
 
     print "<div id='kanri'>";
 
