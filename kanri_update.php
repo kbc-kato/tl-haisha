@@ -169,8 +169,8 @@ var phpSession = <?php echo json_encode($_SESSION['cdun']); ?>;
 				}
 			}
 
-			mainSelect[0].onpageshow = function () {
-document.write("onpageshow");
+			mainSelect[0].onload = function () {
+document.write("onload");
                 // 同じ親要素に含まれている全サブBOXを消す
 				var subBox = this.parentNode.getElementsByClassName("subbox");	// 同じ親要素に含まれる.subbox（※select要素に限らず、どんな要素でも構いません。）
 				for( var j=0 ; j<subBox.length ; j++) {
