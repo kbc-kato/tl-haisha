@@ -172,7 +172,7 @@ var phpSession = <?php echo json_encode($_SESSION['cdun']); ?>;
 
 //20211118 st
 window.onload = function () {
-	document.getElementsByName('cdun')[phpSession].onchange();
+	document.getElementsByName('cdun')[0].onchange();
 };
 
 //var mainBoxes = document.getElementsByClassName('pulldownset');
