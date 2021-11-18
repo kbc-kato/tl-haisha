@@ -49,7 +49,7 @@
                 </form>
             </div>
             <br>
-            <a href= 'menu.php'>メニューへ戻る</a><br>
+            <a href= 'kanri_top.php'>配車管理メニューへ</a><br>
         </div>
     </body>
 </html>
