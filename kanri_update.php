@@ -189,7 +189,7 @@ document.write("onload");
 					var targetSub = document.getElementById( this.value );	// 「メインのプルダウンメニューで選択されている項目のvalue属性値」と同じ文字列をid属性値に持つ要素を得る
 					targetSub.style.display = 'inline';
 				}
-			};
+			}
 //20211118 ed
 
         };
