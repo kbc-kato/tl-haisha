@@ -12,7 +12,7 @@
             exit();
         }  
         $code = $_POST['code'];
-        header('location:kanri_hiha_update.php?code='.$code);
+        header('location:kanri_update.php?code='.$code);
         exit();
     }
 
@@ -29,7 +29,7 @@
             exit();
         } 
         $code = $_POST['code'];
-        header('location:kanri_hiha_delete.php?code='.$code);
+        header('location:kanri_delete.php?code='.$code);
         exit();
     }
 ?>
