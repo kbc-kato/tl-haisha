@@ -108,8 +108,8 @@ ini_set( 'error_reporting', E_ALL );
     print "<textarea name = 'biko2' cols='40' rows='5'>".$rec['kabiko2']."</textarea>";
     print "<br><br>";
 
-    print "<input type='button' onClick='submit();' value = '更新'>";
-//    print "<input type ='submit' value = '更新'>";
+//   print "<input type='button' onClick='submit();' value = '更新'>";
+    print "<input type ='submit' value = '更新'>";
     print "</form>";
     print "<br><br>";
 
