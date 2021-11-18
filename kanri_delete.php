@@ -135,7 +135,6 @@ ini_set( 'error_reporting', E_ALL );
 <!-- ========================================================= -->
 <script type="text/javascript">
 
-
 	// HTMLの読み込み直後に実行：
 	document.addEventListener('DOMContentLoaded', function() {
 
@@ -164,10 +163,6 @@ ini_set( 'error_reporting', E_ALL );
 				}
 			}
 		}
-
-//        var subbox = document.getElementById("subbox");
-//        console.log(subbox.value); // 2
-
 	});
 </script>
 <!-- ========== -->
