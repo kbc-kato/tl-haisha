@@ -114,7 +114,8 @@ ini_set( 'error_reporting', E_ALL );
     print "<textarea name = 'biko2' cols='40' rows='5'>".$rec['kabiko2']."</textarea>";
     print "<br><br>";
 
-    print "<input type ='submit' value = '削除'>";
+    print "<input type='button' onClick='submit();' value = '削除'>";
+//    print "<input type ='submit' value = '削除'>";
     print "</form>";
     print "<br><br>";
     if($_SESSION["shori_kbn"]=="1")
@@ -167,9 +168,19 @@ ini_set( 'error_reporting', E_ALL );
 
 
 //20211118 st
-window.onload = function () {
-	document.getElementsByName('cdun')[0].onchange();
-};
+    window.onload = function () {
+	    document.getElementsByName('cdun')[0].onchange();
+    };
+
+    function keydown(e){
+        if(e.keyCode === 13){
+            var obj = document.activeElement;
+            obj.nextElementSibling.focus();
+        }
+    };
+ 
+    window.onkeydown = keydown;
+
 //20211118 ed
 
 
