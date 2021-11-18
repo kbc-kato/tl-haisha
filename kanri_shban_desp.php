@@ -200,7 +200,7 @@ ini_set( 'error_reporting', E_ALL );
     print "<br>";
     print "<br>";
     print "<a href='kanri_shban.php'>車番選択へ</a><br>";
-    print "<br>";        
+    print "<br>";
 }
 catch (exception $e)
 {
