@@ -138,10 +138,10 @@ ini_set( 'error_reporting', E_ALL );
 			allSubBoxes[i].style.display = 'none';
 		}
 
-
-//var phpSession = <?php echo json_encode($_SESSION['cdun']); ?>;
+//20211118 st
+var phpSession = <?php echo json_encode($_SESSION['cdun']); ?>;
 //document.write(phpSession);
-
+//20211118 ed
 
 
 
@@ -155,21 +155,24 @@ ini_set( 'error_reporting', E_ALL );
 for( var i=0 ; i<mainBoxes.length ; i++) {
 
 var mainSelect = mainBoxes[i].getElementsByClassName("mainselect");	// メインのプルダウンメニュー（※後でvalue属性値を参照するので、select要素である必要があります。）
+document.querySelector("select[name='cdun'] option[value='"+phpSession+"']").selected = true;
+document.querySelector("select[name='cdun']").onchange();
+
 //        mainSelect[0].display = function () {
 //document.write("display");
                 // 同じ親要素に含まれている全サブBOXを消す
-				var subBox = this.parentNode.getElementsByClassName("subbox");	// 同じ親要素に含まれる.subbox（※select要素に限らず、どんな要素でも構いません。）
-document.write(subBox);
-				for( var j=0 ; j<subBox.length ; j++) {
-					subBox[j].style.display = 'none';
-				}
-
-				// 指定されたサブBOXを表示する
-				if( this.value ) {
-					var targetSub = document.getElementById( this.value );	// 「メインのプルダウンメニューで選択されている項目のvalue属性値」と同じ文字列をid属性値に持つ要素を得る
-document.write(targetSub);
-                    targetSub.style.display = 'inline';
-				}
+//				var subBox = this.parentNode.getElementsByClassName("subbox");	// 同じ親要素に含まれる.subbox（※select要素に限らず、どんな要素でも構いません。）
+//document.write(subBox);
+//				for( var j=0 ; j<subBox.length ; j++) {
+//					subBox[j].style.display = 'none';
+//				}
+//
+//				// 指定されたサブBOXを表示する
+//				if( this.value ) {
+//					var targetSub = document.getElementById( this.value );	// 「メインのプルダウンメニューで選択されている項目のvalue属性値」と同じ文字列をid属性値に持つ要素を得る
+//document.write(targetSub);
+//                    targetSub.style.display = 'inline';
+//				}
 			}
 //20211118 ed
 
