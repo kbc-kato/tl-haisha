@@ -172,15 +172,6 @@ ini_set( 'error_reporting', E_ALL );
 	    document.getElementsByName('cdun')[0].onchange();
     };
 
-    function keydown(e){
-        if(e.keyCode === 13){
-            var obj = document.activeElement;
-            obj.nextElementSibling.focus();
-        }
-    };
- 
-    window.onkeydown = keydown;
-
 //20211118 ed
 
 

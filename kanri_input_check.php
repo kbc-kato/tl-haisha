@@ -133,7 +133,10 @@ try
 
     unset($_SESSION["seq"]);        //セッションを削除
     unset($_SESSION["hiha"]);
-//    unset($_SESSION["shban"]);
+    if($_SESSION["shori_kbn"]=="1")
+    {
+        unset($_SESSION["shban"]);
+    }
     unset($_SESSION["cdun"]);
     unset($_SESSION["cddr"]);
     unset($_SESSION["nmry1"]);

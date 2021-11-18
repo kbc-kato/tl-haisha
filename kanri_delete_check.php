@@ -54,8 +54,10 @@ try
     $PDO = null;        //データベースから切断
 
     unset($_SESSION["seq"]);        //セッションを削除
-//    unset($_SESSION["shban"]);
-
+    if($_SESSION["shori_kbn"]=="1")
+    {
+        unset($_SESSION["shban"]);
+    }
     if($_SESSION["shori_kbn"]=="1")
     {
         header("location:kanri_hiha_desp.php");
