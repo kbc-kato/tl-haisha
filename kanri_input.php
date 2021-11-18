@@ -144,11 +144,18 @@ ini_set( 'error_reporting', E_ALL );
 				}
 			}
 		}
-
-//        var subbox = document.getElementById("subbox");
-//        console.log(subbox.value); // 2
-
 	});
+
+    function next_text( idx )
+            {
+                if( window.event.keyCode == 13 ){        // 13は0x0d(CRキー)
+                    // 次のテキストボックスへ飛ばす処理をここにかく
+                    document.mainForm.text1[ idx ].focus() ; 
+                    return false ;
+                }
+                return true ;
+            }
+
 </script>
 <!-- ========== -->
 <!-- ▲ここまで -->
