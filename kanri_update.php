@@ -138,21 +138,21 @@ ini_set( 'error_reporting', E_ALL );
 			allSubBoxes[i].style.display = 'none';
 		}
 
-<!--
-var phpSession = <?php echo json_encode($_SESSION['cdun']); ?>;
--->
-<!--
-<?PHP
-if(isset($_SESSION['cdun'])==true) 
-{
-    print "session=".$_SESSION["cdun"]."<br>";
-}
-else 
-{
-    print "session_cdunがありません"."<br>";
-}   
-?>
--->
+//<!--
+//var phpSession = <?php echo json_encode($_SESSION['cdun']); ?>;
+//-->
+//<!--
+//<?PHP
+//if(isset($_SESSION['cdun'])==true) 
+//{
+//    print "session=".$_SESSION["cdun"]."<br>";
+//}
+//else 
+//{
+//    print "session_cdunがありません"."<br>";
+//}   
+//?>
+//-->
 
 
 
