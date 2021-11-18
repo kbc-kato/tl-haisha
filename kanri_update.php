@@ -194,10 +194,8 @@ window.onload = function () {
 //					targetSub.style.display = 'inline';
 //				}
 //			}
+//        };
 //20211118 ed
-
-        };
-
 
 
 </script>
