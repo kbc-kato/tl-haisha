@@ -40,7 +40,7 @@
                 <form method="POST" name="form1" action="kanri_shban_check.php">
                     <?php print "車番" ?>
                     <?php print pulldown_shban() ?>
-                    <br>
+                    <br><br>
                     <input type='submit' value=' 検索 '>
                 </form>
             </div>
