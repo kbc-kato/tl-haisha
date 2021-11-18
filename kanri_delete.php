@@ -164,6 +164,15 @@ ini_set( 'error_reporting', E_ALL );
 			}
 		}
 	});
+
+
+//20211118 st
+window.onload = function () {
+	document.getElementsByName('cdun')[0].onchange();
+};
+//20211118 ed
+
+
 </script>
 <!-- ========== -->
 <!-- ▲ここまで -->
