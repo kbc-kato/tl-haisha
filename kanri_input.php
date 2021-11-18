@@ -93,7 +93,8 @@ ini_set( 'error_reporting', E_ALL );
     print "<textarea name = 'biko2' cols='40' rows='5' value = ".$biko2."></textarea>";
     print "<br><br>";
 
-    print "<input type='button' onClick='submit();' value = '登録'>";
+//    print "<input type='button' onClick='submit();' value = '登録'>";
+    print "<input type='submit' value = '登録'>";    
     print "</form>";
     print "<br><br>";
 
