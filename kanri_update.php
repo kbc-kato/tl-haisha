@@ -155,7 +155,7 @@ var phpSession = <?php echo json_encode($_SESSION['cdun']); ?>;
 for( var i=0 ; i<mainBoxes.length ; i++) {
 
 var mainSelect = mainBoxes[i].getElementsByClassName("mainselect");	// メインのプルダウンメニュー（※後でvalue属性値を参照するので、select要素である必要があります。）
-document.querySelector("select[name='cdun'] option[value='"+phpSession+"']").selected = true;
+document.querySelector("select[name='cdun'] option[value='" + phpSession + "']").selected = true;
 document.querySelector("select[name='cdun']").onchange();
 
 //        mainSelect[0].display = function () {
