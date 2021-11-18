@@ -130,10 +130,10 @@ ini_set( 'error_reporting', E_ALL );
 	document.addEventListener('DOMContentLoaded', function() {
 
     // ▼とりあえずサブBOXを全て非表示にする（CSSで書けば早いが）
-//		var allSubBoxes = document.getElementsByClassName("subbox");
-//		for( var i=0 ; i<allSubBoxes.length ; i++) {
-//			allSubBoxes[i].style.display = 'none';
-//		}
+		var allSubBoxes = document.getElementsByClassName("subbox");
+		for( var i=0 ; i<allSubBoxes.length ; i++) {
+			allSubBoxes[i].style.display = 'none';
+		}
 
 		// ▼全てのプルダウンボックスごとに処理
 		var mainBoxes = document.getElementsByClassName('pulldownset');
