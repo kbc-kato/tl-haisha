@@ -93,8 +93,8 @@ ini_set( 'error_reporting', E_ALL );
     print "<textarea name = 'biko2' cols='40' rows='5' value = ".$biko2."></textarea>";
     print "<br><br>";
 
-//    print "<input type='button' onClick='submit();' value = '登録'>";
-    print "<input type='submit' value = '登録'>";    
+    print "<input type='button' onClick='submit();' value = '登録'>";
+//    print "<input type='submit' value = '登録'>";    
     print "</form>";
     print "<br><br>";
 
@@ -147,28 +147,14 @@ ini_set( 'error_reporting', E_ALL );
 		}
 	});
 
-    $('form').on('keydown', 'input, button, select', function(e) {
-    if (e.keyCode == 13) {
-        if ($(this).attr("type") == 'submit') return;
-
-        var form = $(this).closest('form');
-        var focusable = form.find('input, button[type="submit"], select, textarea')
-            .not('[readonly]').filter(':visible');
-
-        if (e.shiftKey) {
-            focusable.eq(focusable.index(this) - 1).focus();
-        } else {
-            var next = focusable.eq(focusable.index(this) + 1);
-            if (next.length) {
-                next.focus();
-            } else {
-                focusable.eq(0).focus();
-            }
-        }
-
-        e.preventDefault();
-    }
-});
+    function keydown(e){
+  if(e.keyCode === 13){
+    var obj = document.activeElement;
+    obj.nextElementSibling.focus();
+  }
+}
+ 
+window.onkeydown = keydown;
 
 </script>
 <!-- ========== -->
