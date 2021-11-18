@@ -19,12 +19,6 @@ try
 
     $post = sanitize($_POST);               //前画面からのデータを変数にセット
 
-//foreach ($_POST as $name => $value) {
-//    $$name = $value;
-//    print "name".$$name."= ".$value;
-//    print "<br>";
-//}    
-
     $hiha= $post["hiha"];
     $shban= $post["shban"];
     $cdun= $post["cdun"];
@@ -139,7 +133,7 @@ try
 
     unset($_SESSION["seq"]);        //セッションを削除
     unset($_SESSION["hiha"]);
-    unset($_SESSION["shban"]);
+//    unset($_SESSION["shban"]);
     unset($_SESSION["cdun"]);
     unset($_SESSION["cddr"]);
     unset($_SESSION["nmry1"]);
@@ -148,8 +142,6 @@ try
     unset($_SESSION["nmry2"]);
     unset($_SESSION["tmha2"]);
     unset($_SESSION["biko2"]);
-//    $_SESSION = array();
-//    session_destroy();
 
     header("location:kanri_input.php");
     exit;
