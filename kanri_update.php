@@ -156,7 +156,7 @@ for( var i=0 ; i<mainBoxes.length ; i++) {
 
 var mainSelect = mainBoxes[i].getElementsByClassName("mainselect");	// メインのプルダウンメニュー（※後でvalue属性値を参照するので、select要素である必要があります。）
 //        mainSelect[0].display = function () {
-//document.write("display");
+document.write("display");
                 // 同じ親要素に含まれている全サブBOXを消す
 				var subBox = this.parentNode.getElementsByClassName("subbox");	// 同じ親要素に含まれる.subbox（※select要素に限らず、どんな要素でも構いません。）
 				for( var j=0 ; j<subBox.length ; j++) {
@@ -179,7 +179,7 @@ var mainSelect = mainBoxes[i].getElementsByClassName("mainselect");	// メイン
 
 			var mainSelect = mainBoxes[i].getElementsByClassName("mainselect");	// メインのプルダウンメニュー（※後でvalue属性値を参照するので、select要素である必要があります。）
 			mainSelect[0].onchange = function () {
-document.write("onchange");
+//document.write("onchange");
                 // 同じ親要素に含まれている全サブBOXを消す
 				var subBox = this.parentNode.getElementsByClassName("subbox");	// 同じ親要素に含まれる.subbox（※select要素に限らず、どんな要素でも構いません。）
 				for( var j=0 ; j<subBox.length ; j++) {
