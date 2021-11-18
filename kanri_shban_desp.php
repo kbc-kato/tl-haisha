@@ -27,7 +27,7 @@ ini_set( 'error_reporting', E_ALL );
 
 //print "前画面=".$_SERVER['HTTP_REFERER'];
 
-
+var_dump($_SESSION);
     $shban= $_SESSION["shban"];              //$post["shban"];
     $shnmsh= $_SESSION["shnmsh"];              //$post["shnmsh"];
 

@@ -57,6 +57,10 @@ ini_set( 'error_reporting', E_ALL );
         $month=$_SESSION["haisha_month"];
         $day=$_SESSION["haisha_day"];
     }
+    else
+    {
+        $shban=$_SESSION["shban"];
+    }
 
     print "<div id='kanri'>";
 
