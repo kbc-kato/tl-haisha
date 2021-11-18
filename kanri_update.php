@@ -151,9 +151,9 @@ ini_set( 'error_reporting', E_ALL );
 		// ▼全てのプルダウンボックスごとに処理
 		var mainBoxes = document.getElementsByClassName('pulldownset');
 
-
-        mainSelect[0].display = function () {
-document.write("display");
+//20211118 st
+//        mainSelect[0].display = function () {
+//document.write("display");
                 // 同じ親要素に含まれている全サブBOXを消す
 				var subBox = this.parentNode.getElementsByClassName("subbox");	// 同じ親要素に含まれる.subbox（※select要素に限らず、どんな要素でも構いません。）
 				for( var j=0 ; j<subBox.length ; j++) {
@@ -165,8 +165,8 @@ document.write("display");
 					var targetSub = document.getElementById( this.value );	// 「メインのプルダウンメニューで選択されている項目のvalue属性値」と同じ文字列をid属性値に持つ要素を得る
 					targetSub.style.display = 'inline';
 				}
-			}
-
+//			}
+//20211118 ed
 
 
 
