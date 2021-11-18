@@ -5,8 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scele=1">
         <link rel="stylesheet" href="base.css">
         <link rel="stylesheet" media= "screen and (max-width:800px)" href="base_sp.css">
-        <link rel="stylesheet" href="table.css">
-        <link rel="stylesheet" media= "screen and (max-width:800px)" href="table_sp.css">
+        <link rel="stylesheet" href="table_ka.css">
+        <link rel="stylesheet" media= "screen and (max-width:800px)" href="table_ka_sp.css">
         <link rel="stylesheet" href="form.css">
         <title>株式会社 高崎リビング</title>
     </head>
@@ -140,7 +140,7 @@ ini_set( 'error_reporting', E_ALL );
     print "<div id='kanri'>";
 
     print "<form method = 'POST' action='kanri_shban_branch.php'>";
-    print "<table class= 'haisha_tbl'>";
+    print "<table class= 'kanri_tbl'>";
     print "<tr>";
     print "<th>"." "."</th>";
     print "<th>"."№"."</th>";
