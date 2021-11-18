@@ -138,9 +138,10 @@ ini_set( 'error_reporting', E_ALL );
 			allSubBoxes[i].style.display = 'none';
 		}
 
-//<!--
-//var phpSession = <?php echo json_encode($_SESSION['cdun']); ?>;
-//-->
+
+var phpSession = <?php echo json_encode($_SESSION['cdun']); ?>;
+document.write(phpSession);
+
 //<!--
 //<?PHP
 //if(isset($_SESSION['cdun'])==true) 
