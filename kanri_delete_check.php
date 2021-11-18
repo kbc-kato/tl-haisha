@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scele=1">
@@ -26,7 +26,7 @@ try
 //}    
 
     $seq= $post["seq"];
-    $hiha= $post["hiha"];
+    $shban= $post["shban"];
 //    $shban= $post["shban"];
 //    $cdun= $post["cdun"];
 //    $cddr= $post["cddr_".$post["cdun"].""];
@@ -39,7 +39,7 @@ try
 
 
     $_SESSION["seq"]=$seq;
-    $_SESSION["hiha"]=$hiha;
+    $_SESSION["shban"]=$shban;
 //    $_SESSION["shban"]=$shban;
 //    $_SESSION["cdun"]=$cdun;
 //    $_SESSION["cddr"]=$cddr;
@@ -79,7 +79,8 @@ try
     $PDO = null;        //データベースから切断
 
     unset($_SESSION["seq"]);        //セッションを削除
-    unset($_SESSION["hiha"]);
+    unset($_SESSION["shban"]);
+
 
 //    $_SESSION = array();
 //    session_destroy();
