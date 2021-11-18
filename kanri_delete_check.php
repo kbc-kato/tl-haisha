@@ -19,36 +19,11 @@ try
 
     $post = sanitize($_POST);               //前画面からのデータを変数にセット
 
-//foreach ($_POST as $name => $value) {
-//    $$name = $value;
-//    print "name".$$name."= ".$value;
-//    print "<br>";
-//}    
-
     $seq= $post["seq"];
     $shban= $post["shban"];
-//    $shban= $post["shban"];
-//    $cdun= $post["cdun"];
-//    $cddr= $post["cddr_".$post["cdun"].""];
-//    $nmry1= $post["nmry1"];
-//    $tmha1= $post["tmha1"];
-//    $biko1= $post["biko1"];
-//    $nmry2= $post["nmry2"];
-//    $tmha2= $post["tmha2"];
-//    $biko2= $post["biko2"];
-
 
     $_SESSION["seq"]=$seq;
     $_SESSION["shban"]=$shban;
-//    $_SESSION["shban"]=$shban;
-//    $_SESSION["cdun"]=$cdun;
-//    $_SESSION["cddr"]=$cddr;
-//    $_SESSION["nmry1"]=$nmry1;
-//    $_SESSION["tmha1"]=$tmha1;
-//    $_SESSION["biko1"]=$biko1;
-//    $_SESSION["nmry2"]=$nmry2;
-//    $_SESSION["tmha2"]=$tmha2;
-//    $_SESSION["biko2"]=$biko2;
 
 //入力チェック
 //配車日
@@ -62,7 +37,7 @@ try
 //着時間2
 //備考2
 
-//データinsert
+//データdelete
     include ('userfile.php');
 
     $dbh = new PDO($dsn, $user, $password); //SqlServerのデータベースに接続
@@ -81,13 +56,6 @@ try
     unset($_SESSION["seq"]);        //セッションを削除
     unset($_SESSION["shban"]);
 
-
-//    $_SESSION = array();
-//    session_destroy();
-
-//    $y=date('Y', strtotime($hiha));
-//    $m=date('n', strtotime($hiha));
-//    $d=date('d', strtotime($hiha));
     if($_SESSION["shori_kbn"]=="1")
     {
         header("location:kanri_hiha_desp.php");

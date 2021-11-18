@@ -21,11 +21,6 @@ try
 
 //    $post = sanitize($_POST);                 //前画面からのデータを変数にセット
 
-//    $year= $_SESSION["haisha_year"];            //$post["year"];
-//    $month= $_SESSION["haisha_month"];          //$post["month"];
-//    $day= $_SESSION["haisha_day"];              //$post["day"];
-//print "ymd=".$year."/".$month."/".$day;
-
     include ('userfile.php');
 
     $dbh = new PDO($dsn, $user, $password); //SqlServerのデータベースに接続
