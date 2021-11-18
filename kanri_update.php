@@ -150,12 +150,10 @@ var phpSession = <?php echo json_encode($_SESSION['cdun']); ?>;
 
 		// ▼全てのプルダウンボックスごとに処理
 		var mainBoxes = document.getElementsByClassName('pulldownset');
-
         for( var i=0 ; i<mainBoxes.length ; i++) {
 
 			var mainSelect = mainBoxes[i].getElementsByClassName("mainselect");	// メインのプルダウンメニュー（※後でvalue属性値を参照するので、select要素である必要があります。）
 			mainSelect[0].onchange = function () {
-
                 // 同じ親要素に含まれている全サブBOXを消す
 				var subBox = this.parentNode.getElementsByClassName("subbox");	// 同じ親要素に含まれる.subbox（※select要素に限らず、どんな要素でも構いません。）
 				for( var j=0 ; j<subBox.length ; j++) {
@@ -173,7 +171,12 @@ var phpSession = <?php echo json_encode($_SESSION['cdun']); ?>;
 
 
 //20211118 st
-			mainSelect[0].onload = function () {
+        var mainBoxes = document.getElementsByClassName('pulldownset');
+        for( var i=0 ; i<mainBoxes.length ; i++) {
+
+			var mainSelect = mainBoxes[i].getElementsByClassName("mainselect");	// メインのプルダウンメニュー（※後でvalue属性値を参照するので、select要素である必要があります。）
+
+            mainSelect[0].onload = function () {
 document.write("onload");
                 // 同じ親要素に含まれている全サブBOXを消す
 				var subBox = this.parentNode.getElementsByClassName("subbox");	// 同じ親要素に含まれる.subbox（※select要素に限らず、どんな要素でも構いません。）
@@ -189,6 +192,7 @@ document.write("onload");
 			};
 //20211118 ed
 
+        };
 
 
 
