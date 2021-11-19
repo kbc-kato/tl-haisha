@@ -104,7 +104,9 @@ try
     }
     print "</table>";
     print "<br>";
-    print "<input type='button' style='width:200px;height:50px' value='メニューへ戻る' onclick='menu.php'>";
+?>
+    <input type='button' style='width:200px;height:50px' value='メニューへ戻る' onclick='location.href="menu.php"'>
+<?php
 //    print "<a href='menu.php'>メニューへ戻る</a><br>";    
     print "</div>";
     print "<br>";
