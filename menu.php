@@ -32,7 +32,7 @@
         <br><br>
         <input type='button' style='width:200px;height:50px' value='搬入計画一覧' onclick='location.href="ke100_top.php"'>
         <br><br>
-        <input type='button' style='width:200px;height:50px' value='配車状況確認' onclick='location.href="ke100_top.php"'>
+        <input type='button' style='width:200px;height:50px' value='配車状況確認' onclick='location.href="kanri_top.php"'>
 <?php
     }
 ?>

@@ -7,6 +7,7 @@
         <link rel="stylesheet" media= "screen and (max-width:800px)" href="base_sp.css">
         <link rel="stylesheet" href="table.css">
         <link rel="stylesheet" media="screen and (max-width:800px)" href="table_sp.css">
+        <link rel="stylesheet" href="form.css">
         <title>株式会社 高崎リビング</title>
     </head>
     <body>
