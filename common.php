@@ -113,7 +113,7 @@ function sanitize($before)
         $stmt->execute($params); //挿入する値が入った変数をexecuteにセットしてSQLを実行
         
         $PDO = null;        //データベースから切断
-        
+var_dump($_SESSION);
         print "<select name = 'cdun' class='mainselect' onkeypress='if(window.event.keyCode==13) { form2.cddr_".$_SESSION["cdun"].".focus(); }' style='ime-mode: disabled;'>";
         while(true)
         {
