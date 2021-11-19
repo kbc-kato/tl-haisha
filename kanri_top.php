@@ -9,6 +9,10 @@
     </head>
     <body>
         <div id="pagebody">
+        <!-- ヘッダー -->
+            <div id = "header">
+                <h1>配車状況メニュー</h1>
+            </div>
             <br><br><br>
 <?php
     print "<div id='menu'>";
