@@ -50,7 +50,9 @@ try
     {
         print "<br><br>";
         print "日付が未入力です。"."<br>";
-        print "<input type='button' style='width:100px;height:50px' value='戻る' onclick='kanri_hiha_update.php'>";
+?>
+        <input type='button' style='width:100px;height:50px' value='戻る' onclick='location.href="kanri_hiha_update.php"'>
+<?php
 //        print "<a href = 'kanri_hiha_update.php'>戻る</a>";
         exit();
     }
@@ -60,7 +62,9 @@ try
         {
             print "<br><br>";
             print "日付が未入力です。"."<br>";
-            print "<input type='button' style='width:100px;height:50px' value='戻る' onclick='kanri_hiha_update.php'>";
+?>
+            <input type='button' style='width:100px;height:50px' value='戻る' onclick='location.href="kanri_hiha_update.php"'>
+<?php
 //            print "<a href = 'kanri_hiha_update.php'>戻る</a>";
             exit();
         }
@@ -71,7 +75,9 @@ try
     {
         print "<br><br>";
         print "車番が未入力です。"."<br>";
-        print "<input type='button' style='width:100px;height:50px' value='戻る' onclick='kanri_hiha_update.php'>";
+?>
+        <input type='button' style='width:100px;height:50px' value='戻る' onclick='location.href="kanri_hiha_update.php"'>
+<?php
 //        print "<a href = 'kanri_hiha_update.php'>戻る</a>";
         exit();
     }
@@ -81,7 +87,9 @@ try
         {
             print "<br><br>";
             print "車番が未入力です。"."<br>";
-            print "<input type='button' style='width:100px;height:50px' value='戻る' onclick='kanri_hiha_update.php'>";
+?>
+            <input type='button' style='width:100px;height:50px' value='戻る' onclick='location.href="kanri_hiha_update.php"'>
+<?php
 //            print "<a href = 'kanri_hiha_update.php'>戻る</a>";
             exit();
         }
@@ -92,7 +100,9 @@ try
     {
         print "<br><br>";
         print "運送会社が未入力です。"."<br>";
-        print "<input type='button' style='width:100px;height:50px' value='戻る' onclick='kanri_hiha_update.php'>";
+?>
+        <input type='button' style='width:100px;height:50px' value='戻る' onclick='location.href="kanri_hiha_update.php"'>
+<?php
 //        print "<a href = 'kanri_hiha_update.php'>戻る</a>";
         exit();
     }
@@ -102,7 +112,9 @@ try
         {
             print "<br><br>";
             print "車番が未入力です。"."<br>";
-            print "<input type='button' style='width:100px;height:50px' value='戻る' onclick='kanri_hiha_update.php'>";
+?>
+            <input type='button' style='width:100px;height:50px' value='戻る' onclick='location.href="kanri_hiha_update.php"'>
+<?php
 //            print "<a href = 'kanri_hiha_update.php'>戻る</a>";
             exit();
         }
