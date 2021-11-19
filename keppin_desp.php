@@ -37,7 +37,6 @@ try
     $stmt->execute($params); //挿入する値が入った変数をexecuteにセットしてSQLを実行
     
     $PDO = null;        //データベースから切断
-    
 
     print "<div id='session'>";
     print "欠品遅れ情報<br><br>";
