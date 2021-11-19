@@ -6,6 +6,11 @@
         <link rel="stylesheet" media= "screen and (max-width:800px)" href="base_sp.css">
         <link rel="stylesheet" href="form.css">
         <title>株式会社 高崎リビング</title>
+        <script type="text/javascript">
+        <!--
+            var submitflag=0;
+        //-->
+        </script>
     </head>
     <body>
         <div id="pagebody">
@@ -18,12 +23,14 @@
     print "<div id='login'>";
     print "<form method='POST' name='form2' action='login_check.php'>";
     print "<label>社員コード :";
-    print "<input type ='text' size='10' name = 'code' autocomplete='off'></label>";
+//    print "<input type ='text' size='10' name = 'code' autocomplete='off'>";
+    print "<input type ='text' name = 'code' size='10' autocomplete='off' onkeypress='if(window.event.keyCode==13) { form2.pass.focus(); }' style='ime-mode: disabled;'></label>";
     print "<br><br>";
     print "<label>パスワード :";
-    print "<input type ='password' size='10' name = 'pass' autocomplete='off'></label>";
+    print "<input type ='password' size='10' name = 'pass' autocomplete='off' onkeypress='if(window.event.keyCode==13) { submitflag = 1; form2.btn.focus(); }'></label>";
     print "<br><br>";
-    print "<input type ='submit' value = 'ログイン'>";
+    print "<input type='button' name='btn' onClick='submit();' value = 'ログイン'>";
+//    print "<input type ='submit' value = 'ログイン'>";
     print "</form>";
 //    print "<hr>";
     print "</div>";
