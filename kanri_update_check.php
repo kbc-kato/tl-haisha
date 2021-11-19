@@ -34,7 +34,7 @@ try
 
     $_SESSION["seq"]=$seq;
     $_SESSION["hiha"]=$hiha;
-    $_SESSION["shban"]=$shban;
+//    $_SESSION["shban"]=$shban;
     $_SESSION["cdun"]=$cdun;
     $_SESSION["cddr"]=$cddr;
     $_SESSION["nmry1"]=$nmry1;
