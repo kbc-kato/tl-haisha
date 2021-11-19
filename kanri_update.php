@@ -67,11 +67,11 @@ ini_set( 'error_reporting', E_ALL );
     print "<form method='POST' name='form2' action='kanri_update_check.php'>";
     
     print "№"."<br>";
-    print "<input type ='text' name = 'seq' size='5' value = ".$rec['seq']." readonly onkeypress='if(window.event.keyCode==13) { form2.hiha.focus(); }' style='ime-mode: disabled;'>";
+    print "<input type ='text' name = 'seq' size='5' readonly onkeypress='if(window.event.keyCode==13) { form2.hiha.focus(); }' style='ime-mode: disabled;' value = ".$rec['seq'].">";
     print "<br>";
 
     print "配車日"."<br>";
-    print "<input type ='date' name = 'hiha' value = ".$rec['kahika']." onkeypress='if(window.event.keyCode==13) { form2.shban.focus(); }' style='ime-mode: disabled;'>";
+    print "<input type ='date' name = 'hiha' onkeypress='if(window.event.keyCode==13) { form2.shban.focus(); }' style='ime-mode: disabled;' value = ".$rec['kahika'].">";
     print "<br>";
 
     print "車番"."<br>";

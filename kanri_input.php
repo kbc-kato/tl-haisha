@@ -56,7 +56,7 @@ ini_set( 'error_reporting', E_ALL );
     print "<form method='POST' name='form2' action='kanri_input_check.php'>";
     
     print "配車日"."<br>";
-    print "<input type ='date' name = 'hiha' value = ".$hiha.">";
+    print "<input type ='date' name = 'hiha' onkeypress='if(window.event.keyCode==13) { form2.shban.focus(); }' style='ime-mode: disabled;' value = ".$hiha.">";
     print "<br>";
 
     print "車番"."<br>";
@@ -74,27 +74,27 @@ ini_set( 'error_reporting', E_ALL );
     print "<br>";
 
     print "行先1"."<br>";
-    print "<input type ='text' name = 'nmry1' size='40' maxlength='40' value = ".$nmry1.">";
+    print "<input type ='text' name = 'nmry1' size='40' maxlength='40' onkeypress='if(window.event.keyCode==13) { form2.tmha1.focus(); }' style='ime-mode: active;' value = ".$nmry1.">";
     print "着時間 ";
-    print "<input type ='text' name = 'tmha1' size='10' value = ".$tmha1.">";
+    print "<input type ='text' name = 'tmha1' size='10' onkeypress='if(window.event.keyCode==13) { form2.biko1.focus(); }' style='ime-mode: disabled;' value = ".$tmha1.">";
     print "<br>";
 
     print "備考"."<br>";
-    print "<textarea name = 'biko1' cols='40' rows='5' value = ".$biko1."></textarea>";
+    print "<textarea name = 'biko1' cols='40' rows='5' onkeypress='if(window.event.keyCode==13) { form2.nmry2.focus(); }' style='ime-mode: active;'>".$biko1."</textarea>";
     print "<br>";
 
     print "行先2"."<br>";
-    print "<input type ='text' name = 'nmry2' size='40' maxlength='40' value = ".$nmry2.">";
+    print "<input type ='text' name = 'nmry2' size='40' maxlength='40' onkeypress='if(window.event.keyCode==13) { form2.tmha2.focus(); }' style='ime-mode: active;' value = ".$nmry2.">";
     print "着時間 ";
-    print "<input type ='text' name = 'tmha2' size='10' value = ".$tmha2.">";
+    print "<input type ='text' name = 'tmha2' size='10' onkeypress='if(window.event.keyCode==13) { form2.biko2.focus(); }' style='ime-mode: disabled;' value = ".$tmha2.">";
     print "<br>";
 
     print "備考"."<br>";
-    print "<textarea name = 'biko2' cols='40' rows='5' value = ".$biko2."></textarea>";
+    print "<textarea name = 'biko2' cols='40' rows='5' onkeypress='if(window.event.keyCode==13) { submitflag = 1; form2.btn.focus(); }'>".$biko2."</textarea>";
     print "<br><br>";
 
-//    print "<input type='button' onClick='submit();' value = '登録'>";
-    print "<input type='submit' value = '登録'>";    
+    print "<input type='button' name='btn' onClick='submit();' value = '登録'>";
+//    print "<input type='submit' value = '登録'>";    
     print "</form>";
     print "<br><br>";
 
