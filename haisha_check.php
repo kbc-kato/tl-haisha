@@ -26,8 +26,10 @@ try
     {
         print "<br><br>";
         print "日付が間違っています。<br>";
-        print "<input type='button' style='width:200px;height:50px' value='日付選択へ' onclick='haisha_top.php'>";
-//        print "<a href = 'haisha_top.php'>日付選択へ</a>";
+?>
+        <input type='button' style='width:200px;height:50px' value='日付選択へ' onclick='location.href="haisha_top.php"'>
+<?php
+        //        print "<a href = 'haisha_top.php'>日付選択へ</a>";
     }
     else
     {

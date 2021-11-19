@@ -123,12 +123,16 @@ try
     }
     print "</table>";
     print "<br>";
-    print "<input type='button' style='width:200px;height:50px' value='pdf作成' onclick='haisha_pdf.php'>";
-//    print "<a href='haisha_pdf.php'>pdf作成</a><br>";
+?>
+    <input type='button' style='width:200px;height:50px' value='pdf作成' onclick='location.href="haisha_pdf.php"'>
+<?php
+    //    print "<a href='haisha_pdf.php'>pdf作成</a><br>";
     print "<br>";
     print "<br>";
-    print "<input type='button' style='width:200px;height:50px' value='日付選択へ' onclick='haisha_top.php'>";
-//    print "<a href='haisha_top.php'>日付選択へ</a><br>";
+?>
+    print "<input type='button' style='width:200px;height:50px' value='日付選択へ' onclick='location.href="haisha_top.php"'>
+<?php
+    //    print "<a href='haisha_top.php'>日付選択へ</a><br>";
     print "<br>";        
     print "</div>";
 }
