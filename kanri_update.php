@@ -166,10 +166,10 @@ ini_set( 'error_reporting', E_ALL );
     window.onload = function () {
 	    document.getElementsByName('cdun')[0].onchange();
     };
-
 //20211118 ed
-
-
+//20211119 st
+    var submitflag=0;
+//20211119 ed
 </script>
 <!-- ========== -->
 <!-- ▲ここまで -->

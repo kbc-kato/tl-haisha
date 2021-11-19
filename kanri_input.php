@@ -147,10 +147,12 @@ ini_set( 'error_reporting', E_ALL );
 		}
 	});
 
+//20211119 st
+    var submitflag=0;
+//20211119 ed
 </script>
 <!-- ========== -->
 <!-- ▲ここまで -->
 <!-- ========== -->
-
-    </body>
+</body>
 </html>

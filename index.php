@@ -6,11 +6,6 @@
         <link rel="stylesheet" media= "screen and (max-width:800px)" href="base_sp.css">
         <link rel="stylesheet" href="form.css">
         <title>株式会社 高崎リビング</title>
-        <script type="text/javascript">
-        <!--
-            var submitflag=0;
-        //-->
-        </script>
     </head>
     <body>
         <div id="pagebody">
@@ -23,7 +18,6 @@
     print "<div id='login'>";
     print "<form method='POST' name='form2' action='login_check.php'>";
     print "<label>社員コード :";
-//    print "<input type ='text' size='10' name = 'code' autocomplete='off'>";
     print "<input type ='text' name = 'code' size='10' autocomplete='off' onkeypress='if(window.event.keyCode==13) { form2.pass.focus(); }' style='ime-mode: disabled;'></label>";
     print "<br><br>";
     print "<label>パスワード :";
@@ -36,5 +30,9 @@
     print "</div>";
 ?>
         </div>
+
+<script type="text/javascript">
+        var submitflag=0;
+</script>
     </body>
 </html>
