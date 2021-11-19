@@ -187,12 +187,16 @@ ini_set( 'error_reporting', E_ALL );
     print "<input type ='submit' name='delete' value='削除'>";
     print "</form>";
     print "<br>";
-    print "<input type='button' style='width:200px;height:50px' value='新規登録' onclick='kanri_input.php'>";
+?>
+    <input type='button' style='width:200px;height:50px' value='新規登録' onclick='location.href="kanri_input.php"'>
+<?php
 //    print "<a href='kanri_input.php'>新規登録</a><br>";
     print "<br>";
     print "<br>";
-    print "<input type='button' style='width:200px;height:50px' value='日付選択へ' onclick='kanri_hiha.php'>";
-//    print "<a href='kanri_hiha.php'>日付選択へ</a><br>";
+?>
+    print "<input type='button' style='width:200px;height:50px' value='日付選択へ' onclick='location.href="kanri_hiha.php"'>
+<?php
+    //    print "<a href='kanri_hiha.php'>日付選択へ</a><br>";
     print "</div>";
     print "<br>";
 }

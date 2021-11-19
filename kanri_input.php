@@ -100,12 +100,16 @@ ini_set( 'error_reporting', E_ALL );
 
     if($_SESSION["shori_kbn"]=="1")
     {
-        print "<input type='button' style='width:200px;height:50px' value='配車状況一覧(配車日)へ' onclick='kanri_hiha_desp.php'>";
+?>
+        <input type='button' style='width:200px;height:50px' value='配車状況一覧(配車日)へ' onclick='location.href="kanri_hiha_desp.php"'>
+<?php
 //        print "<a href='kanri_hiha_desp.php'>配車状況一覧(配車日)へ</a>";
     }
     else
     {
-        print "<input type='button' style='width:200px;height:50px' value='配車状況一覧(車番)へ' onclick='kanri_shban_desp.php'>";
+?>
+        <input type='button' style='width:200px;height:50px' value='配車状況一覧(車番)へ' onclick='location.href="kanri_shban_desp.php"'>
+<?php
 //        print "<a href='kanri_shban_desp.php'>配車状況一覧(車番)へ</a>";
     }
 //    print "<hr>";

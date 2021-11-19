@@ -25,17 +25,20 @@ ini_set( 'error_reporting', E_ALL );
 //print "ymd=".$year."/".$month."/".$day."<br>";
 
         print "№が選択されていません。<BR>";
-//        if(strcmp($_SESSION["shori_kbn"],"1")==0)
         if($_SESSION["shori_kbn"]=="1")
         {
-            print "<a href='kanri_hiha_desp.php'>戻る</a>";           
+?>
+            <input type='button' style='width:100px;height:50px' value='戻る' onclick='location.href="kanri_hiha_desp.php"'>
+<?php
+//            print "<a href='kanri_hiha_desp.php'>戻る</a>";           
         }
         else
         {
-            print "<a href='kanri_shban_desp.php'>戻る</a>";             
+?>
+            <input type='button' style='width:100px;height:50px' value='戻る' onclick='location.href="kanri_shban_desp.php"'>
+<?php
+//            print "<a href='kanri_shban_desp.php'>戻る</a>";             
         }
-
-//        print "<a href='kanri_hiha_desp.php?year=".$y."&month=".$m."&day=".$d."'>戻る</a>";
 ?>
     </body>
 </html>
