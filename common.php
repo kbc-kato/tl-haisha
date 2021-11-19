@@ -114,7 +114,16 @@ function sanitize($before)
         
         $PDO = null;        //データベースから切断
 var_dump($_SESSION);
-        print "<select name = 'cdun' class='mainselect' onkeypress='if(window.event.keyCode==13) { form2.cddr_".$_SESSION["cdun"].".focus(); }' style='ime-mode: disabled;'>";
+
+        if(isset($_SESSION["cdun"]))
+        {
+            print "<select name = 'cdun' class='mainselect' onkeypress='if(window.event.keyCode==13) { form2.cddr_".$_SESSION["cdun"].".focus(); }' style='ime-mode: disabled;'>";            
+        }
+        else
+        {
+            print "<select name = 'cdun' class='mainselect' >";
+        }
+        
         while(true)
         {
             $rec = $stmt->fetch(PDO::FETCH_ASSOC);
