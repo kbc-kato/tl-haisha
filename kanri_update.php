@@ -77,7 +77,7 @@ ini_set( 'error_reporting', E_ALL );
     print "車番"."<br>";
     print pulldown_shban();
     print "<br>";
-
+    
     print "<div class='pulldownset'>";
     print "運送会社"."<br>";
     print pulldown_unsm();
