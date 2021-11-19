@@ -150,7 +150,10 @@ try
     if($_SESSION["shori_kbn"]=="1")
     {
         unset($_SESSION["shban"]);
+        unset($_SESSION["shnmsh"]);
     }
+
+    
     unset($_SESSION["cdun"]);
     unset($_SESSION["cddr"]);
     unset($_SESSION["nmry1"]);
