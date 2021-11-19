@@ -39,7 +39,7 @@ try
     {
         print "<br><br>";
         print "社員コードが未入力です。<br>";
-        print "<input type='button' style='width:100px;height:50px' value='戻る' onclick='location.href=''index.php'''>";
+        print "<input type='button' style='width:100px;height:50px' value='戻る' onclick='location.href='index.php''>";
 //        <input type='button' style='width:200px;height:50px' value='配車情報　検索' onclick='location.href="haisha_top.php"'>
         //        print "<a href = 'index.php'>戻る</a>";
     }
