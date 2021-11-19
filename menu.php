@@ -27,7 +27,7 @@
     {
         print "<br><br>";
         $url='keppin_desp.php';
-        print "<button type='button' style='width:200px;height:50px' onclick='location.href=".$url.">欠品遅れ情報</button>";
+        print "<button type='button' style='width:200px;height:50px' onclick='location.href=".$url."'>欠品遅れ情報</button>";
 //        print "<input type='button' style='width:200px;height:50px' value='欠品遅れ情報' onclick='keppin_desp.php;'>";
 //        print "<a href = 'keppin_desp.php'>欠品遅れ情報</a>";
         print "<br><br>";
