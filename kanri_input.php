@@ -93,7 +93,7 @@ ini_set( 'error_reporting', E_ALL );
     print "<textarea name = 'biko2' cols='40' rows='5' onkeypress='if(window.event.keyCode==13) { submitflag = 1; form2.btn.focus(); }'>".$biko2."</textarea>";
     print "<br><br>";
 
-    print "<input type='button' name='btn' onClick='submit()' value = '登録'>";
+    print "<input type='button' name='btn' style='width:200px;height:50px' onClick='submit()' value = '登録'>";
 //    print "<input type='submit' value = '登録'>";    
     print "</form>";
     print "<br><br>";
@@ -101,14 +101,14 @@ ini_set( 'error_reporting', E_ALL );
     if($_SESSION["shori_kbn"]=="1")
     {
 ?>
-        <input type='button' style='width:200px;height:50px' value='配車状況一覧(配車日)へ' onclick='location.href="kanri_hiha_desp.php"'>
+        <input type='button' style='width:200px;height:50px' value='配車状況(配車日)へ' onclick='location.href="kanri_hiha_desp.php"'>
 <?php
 //        print "<a href='kanri_hiha_desp.php'>配車状況一覧(配車日)へ</a>";
     }
     else
     {
 ?>
-        <input type='button' style='width:200px;height:50px' value='配車状況一覧(車番)へ' onclick='location.href="kanri_shban_desp.php"'>
+        <input type='button' style='width:200px;height:50px' value='配車状況(車番)へ' onclick='location.href="kanri_shban_desp.php"'>
 <?php
 //        print "<a href='kanri_shban_desp.php'>配車状況一覧(車番)へ</a>";
     }
