@@ -100,16 +100,15 @@ ini_set( 'error_reporting', E_ALL );
 
     print "行先2"."<br>";
     print "<input type ='text' name = 'nmry2' size='40' maxlength='40' onkeypress='if(window.event.keyCode==13) { form2.tmha2.focus(); }' style='ime-mode: active;' value = ".$rec['kanmry2'].">";
-    print "<br>";
     print "着時間 ";
     print "<input type ='text' name = 'tmha2' size='10' onkeypress='if(window.event.keyCode==13) { form2.biko2.focus(); }' style='ime-mode: disabled;' value = ".$rec['katmha2'].">";
     print "<br>";
 
     print "備考"."<br>";
-    print "<textarea name = 'biko2' cols='40' rows='5' onkeypress='if(window.event.keyCode==13) { submitflag = 1; form2.submit.focus(); }'>".$rec['kabiko2']."</textarea>";
+    print "<textarea name = 'biko2' cols='40' rows='5' onkeypress='if(window.event.keyCode==13) { submitflag = 1; form2.btn.focus(); }'>".$rec['kabiko2']."</textarea>";
     print "<br><br>";
 
-   print "<input type='button' name='submit' onClick='submit();' value = '更新'>";
+   print "<input type='button' name='btn' onClick='submit();' value = '更新'>";
 //    print "<input type ='submit' value = '更新'>";
     print "</form>";
     print "<br><br>";
