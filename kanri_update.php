@@ -89,9 +89,9 @@ ini_set( 'error_reporting', E_ALL );
     print "<br>";
 
     print "行先1"."<br>";
-    print "<input type ='text' name = 'nmry1' size='40' maxlength='40' value = ".$rec['kanmry1']." onkeypress='if(window.event.keyCode==13) { form2.tmha1.focus(); }' style='ime-mode: active;'>";
+    print "<input type ='text' name = 'nmry1' size='40' maxlength='40' onkeypress='if(window.event.keyCode==13) { form2.tmha1.focus(); }' style='ime-mode: active;' value = ".$rec['kanmry1'].">";
     print "着時間 ";
-    print "<input type ='text' name = 'tmha1' size='10' value = ".$rec['katmha1']." value = ".$rec['kanmry1']." onkeypress='if(window.event.keyCode==13) { form2.biko1.focus(); }' style='ime-mode: disabled;'>";
+    print "<input type ='text' name = 'tmha1' size='10' onkeypress='if(window.event.keyCode==13) { form2.biko1.focus(); }' style='ime-mode: disabled;' value = ".$rec['katmha1'].">";
     print "<br>";
 
     print "備考"."<br>";
@@ -99,10 +99,10 @@ ini_set( 'error_reporting', E_ALL );
     print "<br>";
 
     print "行先2"."<br>";
-    print "<input type ='text' name = 'nmry2' size='40' maxlength='40' value = ".$rec['kanmry2']." onkeypress='if(window.event.keyCode==13) { form2.tmha2.focus(); }' style='ime-mode: active;'>".$rec['kabiko1']."</textarea>";
+    print "<input type ='text' name = 'nmry2' size='40' maxlength='40' onkeypress='if(window.event.keyCode==13) { form2.tmha2.focus(); }' style='ime-mode: active;' value = ".$rec['kanmry2'].">";
     print "<br>";
     print "着時間 ";
-    print "<input type ='text' name = 'tmha2' size='10' value = ".$rec['katmha2']." onkeypress='if(window.event.keyCode==13) { form2.biko2.focus(); }' style='ime-mode: disabled;'>";
+    print "<input type ='text' name = 'tmha2' size='10' onkeypress='if(window.event.keyCode==13) { form2.biko2.focus(); }' style='ime-mode: disabled;' value = ".$rec['katmha2'].">";
     print "<br>";
 
     print "備考"."<br>";
