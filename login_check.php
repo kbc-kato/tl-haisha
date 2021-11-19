@@ -39,7 +39,9 @@ try
     {
         print "<br><br>";
         print "社員コードが未入力です。<br>";
-        print "<input type='button' style='width:100px;height:50px' value='戻る' onclick='location.href='index.php''>";
+?>
+        <input type='button' style='width:100px;height:50px' value='戻る' onclick='location.href="index.php"'>
+<?php
 //        <input type='button' style='width:200px;height:50px' value='配車情報　検索' onclick='location.href="haisha_top.php"'>
         //        print "<a href = 'index.php'>戻る</a>";
     }
@@ -49,8 +51,10 @@ try
         {
             print "<br><br>";
             print "社員コードが間違っています。<br>";
-            print "<input type='button' style='width:100px;height:50px' value='戻る' onclick='index.php'>";
-//            print "<a href = 'index.php'>戻る</a>";
+?>
+            <input type='button' style='width:100px;height:50px' value='戻る' onclick='location.href="index.php"'>
+<?php
+            //            print "<a href = 'index.php'>戻る</a>";
         }
         else
         {
@@ -58,8 +62,10 @@ try
             {
                 print "<br><br>";
                 print "パスワードが未入力です。<br>";
-                print "<input type='button' style='width:100px;height:50px' value='戻る' onclick='index.php'>";
-//                print "<a href = 'index.php'>戻る</a>";
+?>
+                <input type='button' style='width:100px;height:50px' value='戻る' onclick='location.href="index.php"'>
+<?php
+                //                print "<a href = 'index.php'>戻る</a>";
             }
             else
             {
@@ -67,8 +73,10 @@ try
                 {
                     print "<br><br>";
                     print "パスワードが間違っています。<br>";
-                    print "<input type='button' style='width:100px;height:50px' value='戻る' onclick='index.php'>";
-//                    print "<a href = 'index.php'>戻る</a>";
+?>
+                    <input type='button' style='width:100px;height:50px' value='戻る' onclick='location.href="index.php"'>
+<?php
+                    //                    print "<a href = 'index.php'>戻る</a>";
                 }
                 else
                 {
@@ -90,7 +98,7 @@ catch (exception $e)
 //    print $e->getMessage()."<br>";
     print "ただいま障害により大変ご迷惑をお掛けしております。" ;
 }
-?>    
+?>
         </div>
     </body>
 </html>
