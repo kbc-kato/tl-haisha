@@ -39,7 +39,8 @@ try
     {
         print "<br><br>";
         print "社員コードが未入力です。<br>";
-        print "<a href = 'index.php'>戻る</a>";
+        print "<input type='button' style='width:100px;height:50px' value='戻る' onclick='index.php'>";
+//        print "<a href = 'index.php'>戻る</a>";
     }
     else
     {
@@ -47,7 +48,8 @@ try
         {
             print "<br><br>";
             print "社員コードが間違っています。<br>";
-            print "<a href = 'index.php'>戻る</a>";
+            print "<input type='button' style='width:100px;height:50px' value='戻る' onclick='index.php'>";
+//            print "<a href = 'index.php'>戻る</a>";
         }
         else
         {
@@ -55,7 +57,8 @@ try
             {
                 print "<br><br>";
                 print "パスワードが未入力です。<br>";
-                print "<a href = 'index.php'>戻る</a>";
+                print "<input type='button' style='width:100px;height:50px' value='戻る' onclick='index.php'>";
+//                print "<a href = 'index.php'>戻る</a>";
             }
             else
             {
@@ -63,7 +66,8 @@ try
                 {
                     print "<br><br>";
                     print "パスワードが間違っています。<br>";
-                    print "<a href = 'index.php'>戻る</a>";                    
+                    print "<input type='button' style='width:100px;height:50px' value='戻る' onclick='index.php'>";
+//                    print "<a href = 'index.php'>戻る</a>";
                 }
                 else
                 {

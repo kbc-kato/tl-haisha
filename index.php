@@ -23,7 +23,7 @@
     print "<label>パスワード :";
     print "<input type ='password' size='10' name = 'pass' autocomplete='off' onkeypress='if(window.event.keyCode==13) { submitflag = 1; form2.btn.focus(); }'></label>";
     print "<br><br>";
-    print "<input type='button' name='btn' onClick='submit();' value = 'ログイン'>";
+    print "<input type='button' name='btn' onClick='submit();' value = ' ログイン '>";
 //    print "<input type ='submit' value = 'ログイン'>";
     print "</form>";
 //    print "<hr>";

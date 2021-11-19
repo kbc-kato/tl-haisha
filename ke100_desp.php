@@ -169,9 +169,10 @@ try
         print "</tr>";
     }
     print "</table>";
-    print "</div>";
     print "<br>";
-    print "<a href='ke100_top.php'>日付選択へ</a><br>";   
+    print "<input type='button' style='width:200px;height:50px' value='日付選択へ' onclick='ke100_top.php'>";
+//    print "<a href='ke100_top.php'>日付選択へ</a><br>";
+    print "</div>";
     print "<br>";
 }
 catch (exception $e)

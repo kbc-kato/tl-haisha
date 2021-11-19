@@ -47,9 +47,10 @@
                     <br>
                     <input type='submit' value=' 検索 '>
                 </form>
+                <br><br>
+                <input type="button" style="width:200px;height:50px" value="メニューへ戻る" onclick="menu.php">
+            <!--    <a href= 'menu.php'>メニューへ戻る</a><br> -->
             </div>
-            <br>
-            <a href= 'menu.php'>メニューへ戻る</a><br>
         </div>
     </body>
 </html>

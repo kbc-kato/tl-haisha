@@ -47,9 +47,10 @@
                     <br>
                     <input type='submit' value=' 検索 '>
                 </form>
+                <br>
+                <input type='button' style='width:200px;height:50px' value='配車状況メニューへ' onclick='kanri_top.php'>
+            <!--    <a href= 'kanri_top.php'>配車状況メニューへ</a><br> -->
             </div>
-            <br>
-            <a href= 'kanri_top.php'>配車状況メニューへ</a><br>
         </div>
     </body>
 </html>

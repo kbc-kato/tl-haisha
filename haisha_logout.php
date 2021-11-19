@@ -22,7 +22,8 @@
             <br><br>
             ログアウトしました。<br>
             <br>
-            <a href="index.php">ログイン画面へ</a>    
+            <input type="button" style="width:200px;height:50px" value="ログイン画面へ" onclick="index.php">
+        <!--    <a href="index.php">ログイン画面へ</a> -->
         </div>
     </body> 
 </html>

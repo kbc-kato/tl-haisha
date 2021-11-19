@@ -32,7 +32,7 @@
         print "<input type='button' style='width:200px;height:50px' value='搬入計画一覧' onclick='ke100_top.php'>";
 //        print "<a href = 'ke100_top.php'>搬入計画一覧</a>";
         print "<br><br>";
-        print "<input type='button' style='width:200px;height:50px' value='搬入計画一覧' onclick='ke100_top.php'>";
+        print "<input type='button' style='width:200px;height:50px' value='配車状況確認' onclick='ke100_top.php'>";
 //        print "<a href = 'kanri_top.php'>配車状況確認</a>";
     }
 

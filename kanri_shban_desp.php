@@ -194,12 +194,14 @@ ini_set( 'error_reporting', E_ALL );
     print "<input type ='submit' name='edit' value='修正'>";
     print "<input type ='submit' name='delete' value='削除'>";
     print "</form>";
+    print "<br>";
+    print "<input type='button' style='width:200px;height:50px' value='新規登録' onclick='kanri_input.php'>";
+//    print "<a href='kanri_input.php'>新規登録</a><br>";
+    print "<br>";
+    print "<br>";
+    print "<input type='button' style='width:200px;height:50px' value='車番選択へ' onclick='kanri_shban.php'>";
+//    print "<a href='kanri_shban.php'>車番選択へ</a><br>";
     print "</div>";
-    print "<br>";
-    print "<a href='kanri_input.php'>新規登録</a><br>";
-    print "<br>";
-    print "<br>";
-    print "<a href='kanri_shban.php'>車番選択へ</a><br>";
     print "<br>";
 }
 catch (exception $e)

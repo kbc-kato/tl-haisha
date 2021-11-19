@@ -25,7 +25,8 @@ try
     {
         print "<br><br>";
         print "日付が間違っています。<br>";
-        print "<a href = 'ke100_top.php'>日付選択へ</a>";
+        print "<input type='button' style='width:200px;height:50px' value='日付選択へ' onclick='ke100_top.php'>";
+//        print "<a href = 'ke100_top.php'>日付選択へ</a>";
     }
     else
     {

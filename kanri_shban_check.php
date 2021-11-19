@@ -39,7 +39,8 @@ try
     {
         print "<br><br>";
         print "車番が未入力です。"."<br>";
-        print "<a href = 'kanri_shban.php'>戻る</a>";
+        print "<input type='button' style='width:100px;height:50px' value='戻る' onclick='kanri_shban.php'>";
+//        print "<a href = 'kanri_shban.php'>戻る</a>";
         exit();
     }
     else
@@ -48,7 +49,8 @@ try
         {
             print "<br><br>";
             print "車番が未入力です。"."<br>";
-            print "<a href = 'kanri_shban.php'>戻る</a>";
+            print "<input type='button' style='width:100px;height:50px' value='戻る' onclick='kanri_shban.php'>";
+//            print "<a href = 'kanri_shban.php'>戻る</a>";
             exit();
         }
         else

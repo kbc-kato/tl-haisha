@@ -103,9 +103,10 @@ try
         print "</tr>";
     }
     print "</table>";
-    print "</div>";
     print "<br>";
-    print "<a href='menu.php'>メニューへ</a><br>";    
+    print "<input type='button' style='width:200px;height:50px' value='メニューへ戻る' onclick='menu.php'>";
+//    print "<a href='menu.php'>メニューへ戻る</a><br>";    
+    print "</div>";
     print "<br>";
 }
 catch (exception $e)

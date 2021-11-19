@@ -48,7 +48,8 @@ try
     {
         print "<br><br>";
         print "日付が未入力です。1"."<br>";
-        print "<a href = 'kanri_input.php'>戻る</a>";
+        print "<input type='button' style='width:100px;height:50px' value='戻る' onclick='kanri_input.php'>";
+//        print "<a href = 'kanri_input.php'>戻る</a>";
         exit();
     }
     else
@@ -57,7 +58,8 @@ try
         {
             print "<br><br>";
             print "日付が未入力です。"."<br>";
-            print "<a href = 'kanri_input.php'>戻る</a>";
+            print "<input type='button' style='width:100px;height:50px' value='戻る' onclick='kanri_input.php'>";
+//            print "<a href = 'kanri_input.php'>戻る</a>";
             exit();
         }
     }
@@ -67,7 +69,8 @@ try
     {
         print "<br><br>";
         print "車番が未入力です。"."<br>";
-        print "<a href = 'kanri_input.php'>戻る</a>";
+        print "<input type='button' style='width:100px;height:50px' value='戻る' onclick='kanri_input.php'>";
+//        print "<a href = 'kanri_input.php'>戻る</a>";
         exit();
     }
     else
@@ -76,7 +79,8 @@ try
         {
             print "<br><br>";
             print "車番が未入力です。"."<br>";
-            print "<a href = 'kanri_input.php'>戻る</a>";
+            print "<input type='button' style='width:100px;height:50px' value='戻る' onclick='kanri_input.php'>";
+//            print "<a href = 'kanri_input.php'>戻る</a>";
             exit();
         }
     }
@@ -86,7 +90,8 @@ try
     {
         print "<br><br>";
         print "運送会社が未入力です。"."<br>";
-        print "<a href = 'kanri_input.php'>戻る</a>";
+        print "<input type='button' style='width:100px;height:50px' value='戻る' onclick='kanri_input.php'>";
+//        print "<a href = 'kanri_input.php'>戻る</a>";
         exit();
     }
     else
@@ -95,7 +100,8 @@ try
         {
             print "<br><br>";
             print "車番が未入力です。"."<br>";
-            print "<a href = 'kanri_input.php'>戻る</a>";
+            print "<input type='button' style='width:100px;height:50px' value='戻る' onclick='kanri_input.php'>";
+//            print "<a href = 'kanri_input.php'>戻る</a>";
             exit();
         }
     }
