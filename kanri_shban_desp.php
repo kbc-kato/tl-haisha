@@ -191,8 +191,8 @@ ini_set( 'error_reporting', E_ALL );
     print "</table>";
 
     print "<br>";
-    print "<input type ='submit' name='edit' value='修正'>";
-    print "<input type ='submit' name='delete' value='削除'>";
+    print "<input type ='submit' name='edit' style='width:200px;height:50px' value='修正'>";
+    print "<input type ='submit' name='delete' style='width:200px;height:50px' value='削除'>";
     print "</form>";
     print "<br>";
 ?>
