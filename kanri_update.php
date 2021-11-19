@@ -67,11 +67,11 @@ ini_set( 'error_reporting', E_ALL );
     print "<form method='POST' name='form2' action='kanri_update_check.php'>";
     
     print "№"."<br>";
-    print "<input type ='text' name = 'seq' size='5' value = ".$rec['seq']." readonly>";
+    print "<input type ='text' name = 'seq' size='5' value = ".$rec['seq']." readonly onkeypress='if(window.event.keyCode==13) { form2.hiha.focus(); }' style='ime-mode: disabled;'>";
     print "<br>";
 
     print "配車日"."<br>";
-    print "<input type ='date' name = 'hiha' value = ".$rec['kahika'].">";
+    print "<input type ='date' name = 'hiha' value = ".$rec['kahika']." onkeypress='if(window.event.keyCode==13) { form2.shban.focus(); }' style='ime-mode: disabled;'>";
     print "<br>";
 
     print "車番"."<br>";
@@ -89,27 +89,28 @@ ini_set( 'error_reporting', E_ALL );
     print "<br>";
 
     print "行先1"."<br>";
-    print "<input type ='text' name = 'nmry1' size='40' maxlength='40' value = ".$rec['kanmry1'].">";
+    print "<input type ='text' name = 'nmry1' size='40' maxlength='40' value = ".$rec['kanmry1']." onkeypress='if(window.event.keyCode==13) { form2.tmha1.focus(); }' style='ime-mode: active;'>";
     print "着時間 ";
-    print "<input type ='text' name = 'tmha1' size='10' value = ".$rec['katmha1'].">";
+    print "<input type ='text' name = 'tmha1' size='10' value = ".$rec['katmha1']." value = ".$rec['kanmry1']." onkeypress='if(window.event.keyCode==13) { form2.biko1.focus(); }' style='ime-mode: disabled;'>";
     print "<br>";
 
     print "備考"."<br>";
-    print "<textarea name = 'biko1' cols='40' rows='5'>".$rec['kabiko1']."</textarea>";
+    print "<textarea name = 'biko1' cols='40' rows='5' onkeypress='if(window.event.keyCode==13) { form2.nmry2.focus(); }' style='ime-mode: active;'>".$rec['kabiko1']."</textarea>";
     print "<br>";
 
     print "行先2"."<br>";
-    print "<input type ='text' name = 'nmry2' size='40' maxlength='40' value = ".$rec['kanmry2'].">";
+    print "<input type ='text' name = 'nmry2' size='40' maxlength='40' value = ".$rec['kanmry2']." onkeypress='if(window.event.keyCode==13) { form2.tmha2.focus(); }' style='ime-mode: active;'>".$rec['kabiko1']."</textarea>";
+    print "<br>";
     print "着時間 ";
-    print "<input type ='text' name = 'tmha2' size='10' value = ".$rec['katmha2'].">";
+    print "<input type ='text' name = 'tmha2' size='10' value = ".$rec['katmha2']." onkeypress='if(window.event.keyCode==13) { form2.biko2.focus(); }' style='ime-mode: disabled;'>";
     print "<br>";
 
     print "備考"."<br>";
-    print "<textarea name = 'biko2' cols='40' rows='5'>".$rec['kabiko2']."</textarea>";
+    print "<textarea name = 'biko2' cols='40' rows='5' onkeypress='if(window.event.keyCode==13) { submitflag = 1; form2.submit.focus(); }'>".$rec['kabiko2']."</textarea>";
     print "<br><br>";
 
-//   print "<input type='button' onClick='submit();' value = '更新'>";
-    print "<input type ='submit' value = '更新'>";
+   print "<input type='button' name='submit' onClick='submit();' value = '更新'>";
+//    print "<input type ='submit' value = '更新'>";
     print "</form>";
     print "<br><br>";
 

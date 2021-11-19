@@ -74,7 +74,7 @@ function sanitize($before)
         $stmt->execute($params); //挿入する値が入った変数をexecuteにセットしてSQLを実行
         
         $PDO = null;        //データベースから切断
-        print "<select name = 'shban'>";
+        print "<select name = 'shban' onkeypress='if(window.event.keyCode==13) { form2.cdun.focus(); }' style='ime-mode: disabled;'>";
 
         while(true)
         {
@@ -114,7 +114,7 @@ function sanitize($before)
         
         $PDO = null;        //データベースから切断
         
-        print "<select name = 'cdun' class='mainselect'>";
+        print "<select name = 'cdun' class='mainselect' onkeypress='if(window.event.keyCode==13) { form2.cddr_".$_SESSION["cdun"].".focus(); }' style='ime-mode: disabled;'>";
         while(true)
         {
             $rec = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -171,7 +171,7 @@ function sanitize($before)
                     print "</select>"; 
                 }
 //                $cnt++;
-                print "<select name = 'cddr_".$rec['DRCDUN']."' id = ".$rec['DRCDUN']." class='subbox'>";
+                print "<select name = 'cddr_".$rec['DRCDUN']."' id = ".$rec['DRCDUN']." class='subbox' onkeypress='if(window.event.keyCode==13) { form2.nmry1.focus(); }' style='ime-mode: disabled;'>";
 
                 $id = $rec['DRCDUN'];
             }
