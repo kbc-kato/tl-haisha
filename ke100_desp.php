@@ -22,6 +22,9 @@ try
 
 //    $post = sanitize($_POST);                 //前画面からのデータを変数にセット
 
+    $code= $_SESSION["login_code"];
+    $kbjg= $_SESSION["login_kbjg"];
+
     $year= $_SESSION["hanyu_year"];            //$post["year"];
     $month= $_SESSION["hanyu_month"];          //$post["month"];
     $day= $_SESSION["hanyu_day"];              //$post["day"];
@@ -31,18 +34,36 @@ try
     $dbh = new PDO($dsn, $user, $password); //SqlServerのデータベースに接続
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); //PDOのエラーレポートを表示
 
-    $sql = " SELECT *
-    FROM ST_KE100_MYSQL
-    WHERE substring(KEHIKE,1,4)=?
-      AND substring(KEHIKE,6,2)=?
-      AND substring(KEHIKE,9,2)=?  
-    ORDER BY ST_KE100_MYSQL.BKNOKA, ST_KE100_MYSQL.KENOBK, ST_KE100_MYSQL.KENOHY, ST_KE100_MYSQL.KELTHA";         // SELECT文を変数に格納。
+    if($kbjg==1)
+    {
+        $sql = " SELECT *
+        FROM ST_KE100_MYSQL
+        WHERE substring(KEHIKE,1,4)=?
+          AND substring(KEHIKE,6,2)=?
+          AND substring(KEHIKE,9,2)=?  
+        ORDER BY ST_KE100_MYSQL.BKNOKA, ST_KE100_MYSQL.KENOBK, ST_KE100_MYSQL.KENOHY desc, ST_KE100_MYSQL.KENOGY desc";         // SELECT文を変数に格納。
 
-    $stmt = $dbh->prepare($sql); //挿入する値は空のまま、SQL実行の準備をする
-    $params[] = $year;          // 挿入する値を配列に格納する
-    $params[] = $month;          
-    $params[] = $day;   
-    
+        $stmt = $dbh->prepare($sql); //挿入する値は空のまま、SQL実行の準備をする
+        $params[] = $year;          // 挿入する値を配列に格納する
+        $params[] = $month;          
+        $params[] = $day;   
+    }
+    else
+    {
+        $sql = " SELECT *
+        FROM ST_KE100_MYSQL
+        WHERE substring(KEHIKE,1,4)=?
+          AND substring(KEHIKE,6,2)=?
+          AND substring(KEHIKE,9,2)=?
+          AND KECDUK=?            
+        ORDER BY ST_KE100_MYSQL.BKNOKA, ST_KE100_MYSQL.KENOBK, ST_KE100_MYSQL.KENOHY desc, ST_KE100_MYSQL.KENOGY desc";         // SELECT文を変数に格納。
+
+        $stmt = $dbh->prepare($sql); //挿入する値は空のまま、SQL実行の準備をする
+        $params[] = $year;          // 挿入する値を配列に格納する
+        $params[] = $month;          
+        $params[] = $day;           
+        $params[] = $code; 
+    }
     $stmt->execute($params); //挿入する値が入った変数をexecuteにセットしてSQLを実行
     
     $PDO = null;        //データベースから切断
@@ -73,6 +94,7 @@ try
     print "<th>"."時間"."</th>";
 
     print "<th>"."可大車両"."</th>";
+    print "<th>"."荷受人"."</th>";
     print "<th>"."最終納入決定日"."</th>";
     print "<th>"."最終出荷可能日"."</th>";
     print "<th>"."発注ﾘﾐｯﾄ"."</th>";
@@ -122,6 +144,7 @@ try
             print "<td>".date('H:i',strtotime($rec['KETMKE']))."</td>";
         }
         print "<td>".$rec['KESITEI']."</td>";
+        print "<td>".$rec['KENMUK']."</td>";
         if (is_null($rec['KEHISY_ME']))
         {
             print "<td> </td>";
