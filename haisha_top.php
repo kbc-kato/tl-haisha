@@ -18,7 +18,10 @@
     {
         print "<br><br>";
         print "ログインされていません。<br>";
-        print "<a href = 'index.php'>ログイン画面へ</a>";
+?>
+        <input type="button" style="width:200px;height:40px" value="ログイン画面へ" onclick="location.href='index.php'">
+<?php
+//        print "<a href = 'index.php'>ログイン画面へ</a>";
         exit();
     }
     else
@@ -48,7 +51,7 @@
                     <input type='submit' value=' 検索 '>
                 </form>
                 <br><br>
-                <input type="button" style="width:200px;height:50px" value="メニューへ戻る" onclick="location.href='menu.php'">
+                <input type="button" style="width:200px;height:40px" value="メニューへ戻る" onclick="location.href='menu.php'">
             <!--    <a href= 'menu.php'>メニューへ戻る</a><br> -->
             </div>
         </div>

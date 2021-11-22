@@ -28,14 +28,14 @@ ini_set( 'error_reporting', E_ALL );
         if($_SESSION["shori_kbn"]=="1")
         {
 ?>
-            <input type='button' style='width:100px;height:50px' value='戻る' onclick='location.href="kanri_hiha_desp.php"'>
+            <input type='button' style='width:100px;height:40px' value='戻る' onclick='location.href="kanri_hiha_desp.php"'>
 <?php
 //            print "<a href='kanri_hiha_desp.php'>戻る</a>";           
         }
         else
         {
 ?>
-            <input type='button' style='width:100px;height:50px' value='戻る' onclick='location.href="kanri_shban_desp.php"'>
+            <input type='button' style='width:100px;height:40px' value='戻る' onclick='location.href="kanri_shban_desp.php"'>
 <?php
 //            print "<a href='kanri_shban_desp.php'>戻る</a>";             
         }
