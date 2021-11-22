@@ -48,7 +48,7 @@ try
     if($hiha=='')
     {
         print "<br><br>";
-        print "日付が未入力です。1"."<br>";
+        print "日付が未入力です。"."<br>";
 ?>
         <input type='button' style='width:100px;height:40px' value='戻る' onclick='location.href="kanri_input.php"'>
 <?php
