@@ -41,7 +41,7 @@ try
         print "<br><br>";
         print "社員コードが未入力です。<br>";
 ?>
-        <input type='button' style='width:100px;height:50px' value='戻る' onclick='location.href="index.php"'>
+        <input type='button' style='width:100px;height:40px' value='戻る' onclick='location.href="index.php"'>
 <?php
         //        print "<a href = 'index.php'>戻る</a>";
     }
@@ -52,7 +52,7 @@ try
             print "<br><br>";
             print "社員コードが間違っています。<br>";
 ?>
-            <input type='button' style='width:100px;height:50px' value='戻る' onclick='location.href="index.php"'>
+            <input type='button' style='width:100px;height:40px' value='戻る' onclick='location.href="index.php"'>
 <?php
             //            print "<a href = 'index.php'>戻る</a>";
         }
@@ -63,7 +63,7 @@ try
                 print "<br><br>";
                 print "パスワードが未入力です。<br>";
 ?>
-                <input type='button' style='width:100px;height:50px' value='戻る' onclick='location.href="index.php"'>
+                <input type='button' style='width:100px;height:40px' value='戻る' onclick='location.href="index.php"'>
 <?php
                 //                print "<a href = 'index.php'>戻る</a>";
             }
@@ -74,7 +74,7 @@ try
                     print "<br><br>";
                     print "パスワードが間違っています。<br>";
 ?>
-                    <input type='button' style='width:100px;height:50px' value='戻る' onclick='location.href="index.php"'>
+                    <input type='button' style='width:100px;height:40px' value='戻る' onclick='location.href="index.php"'>
 <?php
                     //                    print "<a href = 'index.php'>戻る</a>";
                 }
