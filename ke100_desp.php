@@ -172,7 +172,7 @@ try
     print "</table>";
     print "<br>";
 ?>
-    <input type='button' style='width:200px;height:50px' value='日付選択へ' onclick='location.href="ke100_top.php"'>
+    <input type='button' style='width:200px;height:40px' value='日付選択へ' onclick='location.href="ke100_top.php"'>
 <?php
 //    print "<a href='ke100_top.php'>日付選択へ</a><br>";
     print "</div>";

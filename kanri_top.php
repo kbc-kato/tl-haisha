@@ -18,18 +18,18 @@
     print "<div id='menu'>";
     print "<p>";
 ?>
-    <input type='button' style='width:200px;height:50px' value='日付検索' onclick='location.href="kanri_hiha.php"'>
+    <input type='button' style='width:200px;height:40px' value='日付検索' onclick='location.href="kanri_hiha.php"'>
 <?php
     //    print "<a href = 'kanri_hiha.php'>日付検索</a>";
     print "<br><br>";
 ?>
-    <input type='button' style='width:200px;height:50px' value='車番検索' onclick='location.href="kanri_shban.php"'>
+    <input type='button' style='width:200px;height:40px' value='車番検索' onclick='location.href="kanri_shban.php"'>
 <?php
     //    print "<a href = 'kanri_shban.php'>車番検索</a>";
     print "</p>";
     print "<br><br>";
 ?>
-    <input type='button' style='width:200px;height:50px' value='メニューへ戻る' onclick='location.href="menu.php"'>
+    <input type='button' style='width:200px;height:40px' value='メニューへ戻る' onclick='location.href="menu.php"'>
 <?php
     //    print "<a href= 'menu.php'>メニューへ戻る</a><br>";
     print "</div>";

@@ -183,18 +183,18 @@ ini_set( 'error_reporting', E_ALL );
     print "</table>";
 
     print "<br>";
-    print "<input type ='submit' name='edit' style='width:200px;height:50px' value='修正'>";
-    print "<input type ='submit' name='delete' style='width:200px;height:50px' value='削除'>";
+    print "<input type ='submit' name='edit' style='width:200px;height:40px' value='修正'>";
+    print "<input type ='submit' name='delete' style='width:200px;height:40px' value='削除'>";
     print "</form>";
     print "<br>";
 ?>
-    <input type='button' style='width:200px;height:50px' value='新規登録' onclick='location.href="kanri_input.php"'>
+    <input type='button' style='width:200px;height:40px' value='新規登録' onclick='location.href="kanri_input.php"'>
 <?php
 //    print "<a href='kanri_input.php'>新規登録</a><br>";
     print "<br>";
     print "<br>";
 ?>
-    <input type='button' style='width:200px;height:50px' value='日付選択へ' onclick='location.href="kanri_hiha.php"'>
+    <input type='button' style='width:200px;height:40px' value='日付選択へ' onclick='location.href="kanri_hiha.php"'>
 <?php
     //    print "<a href='kanri_hiha.php'>日付選択へ</a><br>";
     print "</div>";

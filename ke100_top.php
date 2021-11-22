@@ -48,7 +48,7 @@
                     <input type='submit' value=' 検索 '>
                 </form>
                 <br>
-                <input type='button' style='width:200px;height:50px' value='メニューへ戻る' onclick='location.href="menu.php"'>
+                <input type='button' style='width:200px;height:40px' value='メニューへ戻る' onclick='location.href="menu.php"'>
             <!--    <a href= 'menu.php'>メニューへ戻る</a><br> -->
             </div>
         </div>
