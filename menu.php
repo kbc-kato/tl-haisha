@@ -29,8 +29,15 @@
 ?>
         <br><br>
         <input type='button' style='width:200px;height:40px' value='欠品遅れ情報' onclick='location.href="keppin_desp.php"'>
-        <br><br>
+<?php
+    }
+?>
+      <br><br>
         <input type='button' style='width:200px;height:40px' value='搬入計画一覧' onclick='location.href="ke100_top.php"'>
+<?php
+    if($_SESSION["login_kbjg"]==1)
+    {
+?>
         <br><br>
         <input type='button' style='width:200px;height:40px' value='配車状況確認' onclick='location.href="kanri_top.php"'>
 <?php
