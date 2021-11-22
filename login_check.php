@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scele=1">
         <link rel="stylesheet" href="base.css">
         <link rel="stylesheet" media= "screen and (max-width:800px)" href="base_sp.css">
+        <link rel="stylesheet" href="form.css">
         <title>株式会社 高崎リビング</title>
     </head>
     <body>
@@ -42,7 +43,6 @@ try
 ?>
         <input type='button' style='width:100px;height:50px' value='戻る' onclick='location.href="index.php"'>
 <?php
-//        <input type='button' style='width:200px;height:50px' value='配車情報　検索' onclick='location.href="haisha_top.php"'>
         //        print "<a href = 'index.php'>戻る</a>";
     }
     else
