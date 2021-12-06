@@ -16,6 +16,10 @@
 <?php    
 try
 {
+ini_set( 'display_errors', 1 );
+ini_set( 'error_reporting', E_ALL );
+
+
     session_start();
     session_regenerate_id(true);            //セッションIDを変える
     
@@ -68,7 +72,8 @@ print "ymd=".$year."/".$month."/".$day;
     }
     $stmt->execute($params); //挿入する値が入った変数をexecuteにセットしてSQLを実行
 
-var_dump($stmt);
+var_dump($param);
+//var_dump($stmt);
 
     $PDO = null;        //データベースから切断
     
