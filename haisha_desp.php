@@ -51,8 +51,8 @@ print "ymd=".$year."/".$month."/".$day;
 
         $stmt = $dbh->prepare($sql); //挿入する値は空のまま、SQL実行の準備をする
         $params[] = $year;          // 挿入する値を配列に格納する
-        $params[] = $month;          
-        $params[] = $day;          
+        $params[] = sprintf("%02d", $month);          
+        $params[] = sprintf("%02d",$day);          
     }
     else
     {
@@ -66,8 +66,8 @@ print "ymd=".$year."/".$month."/".$day;
 
         $stmt = $dbh->prepare($sql); //挿入する値は空のまま、SQL実行の準備をする
         $params[] = $year;          // 挿入する値を配列に格納する
-        $params[] = $month;          
-        $params[] = $day;          
+        $params[] = sprintf("%02d",$month);          
+        $params[] = sprintf("%02d",$day);          
         $params[] = $code;          
     }
     $stmt->execute($params); //挿入する値が入った変数をexecuteにセットしてSQLを実行
