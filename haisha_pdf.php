@@ -7,7 +7,7 @@
 require_once('tcpdf/tcpdf.php');
  
 // TCPDFインスタンスを作成
-$orientation = 'Landscape'; // 用紙の向き Portrait (default) 縦 Portrait (default) 縦
+$orientation = 'Landscape'; // 用紙の向き Portrait (default) 縦 Landscape 横
 $unit = 'mm'; // 単位
 $format = 'A4'; // 用紙フォーマット
 $unicode = true; // ドキュメントテキストがUnicodeの場合にTRUEとする
