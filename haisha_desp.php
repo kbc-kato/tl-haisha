@@ -16,8 +16,8 @@
 <?php    
 try
 {
-ini_set( 'display_errors', 1 );
-ini_set( 'error_reporting', E_ALL );
+//ini_set( 'display_errors', 1 );
+//ini_set( 'error_reporting', E_ALL );
 
 
     session_start();
@@ -33,7 +33,7 @@ ini_set( 'error_reporting', E_ALL );
     $year= $_SESSION["haisha_year"];            //$post["year"];
     $month= $_SESSION["haisha_month"];          //$post["month"];
     $day= $_SESSION["haisha_day"];              //$post["day"];
-print "ymd=".$year."/".$month."/".$day;
+//print "ymd=".$year."/".$month."/".$day;
 
     include ('userfile.php');
 
@@ -51,8 +51,8 @@ print "ymd=".$year."/".$month."/".$day;
 
         $stmt = $dbh->prepare($sql); //挿入する値は空のまま、SQL実行の準備をする
         $params[] = $year;          // 挿入する値を配列に格納する
-        $params[] = sprintf("%02d", $month);          
-        $params[] = sprintf("%02d",$day);          
+        $params[] = sprintf("%02d", $month);        //前ゼロ2桁         
+        $params[] = sprintf("%02d",$day);        //前ゼロ2桁           
     }
     else
     {
@@ -66,13 +66,13 @@ print "ymd=".$year."/".$month."/".$day;
 
         $stmt = $dbh->prepare($sql); //挿入する値は空のまま、SQL実行の準備をする
         $params[] = $year;          // 挿入する値を配列に格納する
-        $params[] = sprintf("%02d",$month);          
-        $params[] = sprintf("%02d",$day);          
+        $params[] = sprintf("%02d",$month);        //前ゼロ2桁           
+        $params[] = sprintf("%02d",$day);        //前ゼロ2桁           
         $params[] = $code;          
     }
     $stmt->execute($params); //挿入する値が入った変数をexecuteにセットしてSQLを実行
 
-var_dump($params);
+//var_dump($params);
 //var_dump($stmt);
 
     $PDO = null;        //データベースから切断
