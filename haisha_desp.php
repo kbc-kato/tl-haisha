@@ -72,7 +72,7 @@ print "ymd=".$year."/".$month."/".$day;
     }
     $stmt->execute($params); //挿入する値が入った変数をexecuteにセットしてSQLを実行
 
-var_dump($param);
+var_dump($params);
 //var_dump($stmt);
 
     $PDO = null;        //データベースから切断
